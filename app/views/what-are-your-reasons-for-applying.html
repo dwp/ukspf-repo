@@ -1,0 +1,46 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Eligibility page
+{% endblock %}
+  {% block beforeContent %}
+          <a href="#" class="govuk-back-link">Back</a>
+  {% endblock %}
+
+  {% block content %}
+  <div class="govuk-character-count" data-module="govuk-character-count" data-maxlength="500">
+    <div class="govuk-form-group">
+      <h1 class="govuk-label-wrapper"><label class="govuk-label govuk-label--l" for="with-hint">
+          What are your reasons for applying?
+        </label>
+      </h1>
+      <p>Include the <a href="">invitation</a> you are applying for.</p>
+
+         <p>You should include:</p>
+         <ul class="govuk-list govuk-list--bullet">
+           <li>who you want to help</li>
+           <li>which [needs] are being addressed in the invitation you are applying for</li>
+           <li>how your project will meet these [needs]</li>
+         </ul>
+
+      <div id="with-hint-hint" class="govuk-hint">
+        Enter your answer here
+      </div>
+      <textarea class="govuk-textarea govuk-js-character-count" id="with-hint" name="with-hint" rows="10" aria-describedby="with-hint-info with-hint-hint"></textarea>
+    </div>
+
+    <div id="with-hint-info" class="govuk-hint govuk-character-count__message" aria-live="polite">
+    </div>
+  </div>
+  <div>
+    <a href="tell-us-about-you" role="button" draggable="false" class="govuk-button" data-module="govuk-button">
+      Save and continue
+    </a>
+  </div>
+  {% endblock %}
+  Include the invitation you are applying for.
+
+  You should include:
+  who you want to help
+  which [needs] are being addressed in the invitation you are applying for
+  how your project will meet these [needs]

@@ -1,0 +1,35 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Eligibility page
+{% endblock %}
+  {% block beforeContent %}
+          <a href="#" class="govuk-back-link">Back</a>
+  {% endblock %}
+
+  {% block content %}
+
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+
+        <h1 class="govuk-heading-l">
+          How much money are you applying for?
+        </h1>
+
+        <p>The invitation tells you how much money you can apply for.</p>
+
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="event-name">
+            Amount
+          </label>
+          <input class="govuk-input govuk-!-width-one-third" id="event-name" name="event-name" type="text">
+        </div>
+      </div>
+      <div class="govuk-grid-column-two-thirds">
+        <a href="what-will-you-use-the-money-for" role="button" draggable="false" class="govuk-button" data-module="govuk-button">
+          Save and continue
+        </a>
+      </div>
+    </div>
+
+  {% endblock %}

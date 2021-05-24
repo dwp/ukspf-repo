@@ -1,0 +1,35 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Eligibility page
+{% endblock %}
+  {% block beforeContent %}
+          <a href="#" class="govuk-back-link">Back</a>
+  {% endblock %}
+
+  {% block content %}
+  <div class="govuk-character-count" data-module="govuk-character-count" data-maxlength="500">
+    <div class="govuk-form-group">
+      <h1 class="govuk-label-wrapper"><label class="govuk-label govuk-label--l" for="with-hint">
+          How will you manage the money?
+        </label>
+      </h1>
+      <p>We need you to demonstrate that you will manage the grant money in a secure way and that it is audited.</p>
+       <div class="govuk-inset-text">
+         This can include hiring other people to help you do this.
+      </div>
+      <div id="with-hint-hint" class="govuk-hint">
+        Enter your answer here
+      </div>
+      <textarea class="govuk-textarea govuk-js-character-count" id="with-hint" name="with-hint" rows="10" aria-describedby="with-hint-info with-hint-hint"></textarea>
+    </div>
+
+    <div id="with-hint-info" class="govuk-hint govuk-character-count__message" aria-live="polite">
+    </div>
+  </div>
+  <div>
+    <a href="how-will-you-make-sure" role="button" draggable="false" class="govuk-button" data-module="govuk-button">
+      Save and continue
+    </a>
+  </div>
+  {% endblock %}

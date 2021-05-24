@@ -1,0 +1,39 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Eligibility
+{% endblock %}
+  {% block beforeContent %}
+          <a href="#" class="govuk-back-link">Back</a>
+  {% endblock %}
+
+  {% block content %}
+
+  <div class="govuk-form-group">
+    <fieldset class="govuk-fieldset">
+      <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+        <h1 class="govuk-fieldset__heading">
+          Does your organisation have a UK bank account?
+        </h1>
+      </legend>
+      <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
+        <div class="govuk-radios__item">
+          <input class="govuk-radios__input" id="reg-check-1" name="reg-check" type="radio" value="ch-registered" data-aria-controls="conditional-reg-check-1">
+          <label class="govuk-label govuk-radios__label" for="reg-check-1">
+            Yes
+          </label>
+        </div>
+        <div class="govuk-radios__item">
+          <input class="govuk-radios__input" id="reg-check-2" name="reg-check" type="radio" value="not-ch-registered" data-aria-controls="conditional-reg-check-2">
+          <label class="govuk-label govuk-radios__label" for="reg-check-2">
+            No
+          </label>
+        </div>
+    </fieldset>
+  </div>
+  <div>
+    <a href="eligibility-3" role="button" draggable="false" class="govuk-button" data-module="govuk-button">
+      Save and continue
+    </a>
+  </div>
+  {% endblock %}

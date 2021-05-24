@@ -1,0 +1,43 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Eligibility page
+{% endblock %}
+  {% block beforeContent %}
+          <a href="#" class="govuk-back-link">Back</a>
+  {% endblock %}
+
+  {% block content %}
+
+        <div class="govuk-width-container">
+          <main class="govuk-main-wrapper govuk-main-wrapper--l" id="main-content" role="main">
+            <div class="govuk-grid-row">
+              <div class="govuk-grid-column-two-thirds">
+                <div class="govuk-panel govuk-panel--confirmation">
+                  <h1 class="govuk-panel__title">
+                    Application submitted
+                  </h1>
+                  <div class="govuk-panel__body">
+                    Your reference number<br><strong>HDJ2123F</strong>
+                  </div>
+                </div>
+
+                <p class="govuk-body">We have sent you a confirmation email.</p>
+
+                <h2 class="govuk-heading-m">What happens next</h2>
+
+                <p class="govuk-body">
+                  We will contact if we require more information about your your application.
+                </p>
+
+              </div>
+            </div>
+            <div>
+              <a href="index" role="button" draggable="false" class="govuk-button" data-module="govuk-button">
+                Finish
+              </a>
+            </div>
+          </main>
+        </div>
+
+  {% endblock %}
