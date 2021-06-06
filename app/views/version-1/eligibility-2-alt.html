@@ -1,7 +1,7 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-  Eligibility page
+  Eligibility
 {% endblock %}
   {% block beforeContent %}
   <div class="govuk-phase-banner">
@@ -23,12 +23,9 @@
     <fieldset class="govuk-fieldset">
       <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
         <h1 class="govuk-fieldset__heading">
-          Is your company registered with Companies House?
+          Does your organisation have a UK bank account?
         </h1>
       </legend>
-      <div id="contact-hint" class="govuk-hint">
-        Select one option.
-      </div>
       <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
         <div class="govuk-radios__item">
           <input class="govuk-radios__input" id="reg-check-1" name="reg-check" type="radio" value="ch-registered" data-aria-controls="conditional-reg-check-1">
@@ -36,23 +33,21 @@
             Yes
           </label>
         </div>
-        <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-reg-check-1">
-          <div class="govuk-form-group">
-            <label class="govuk-label" for="contact-by-email">
-              Enter your organisation's Companies House number
-            </label>
-            <input class="govuk-input govuk-!-width-one-third" id="contact-by-email" name="contact-by-email" type="email" spellcheck="false"></div>
-        </div>
-        <div class="govuk-radios__item">
-          <input class="govuk-radios__input" id="reg-check-2" name="reg-check" type="radio" value="not-ch-registered" data-aria-controls="conditional-reg-check-2">
-          <label class="govuk-label govuk-radios__label" for="reg-check-2">
-            No
-          </label>
-        </div>
+
     </fieldset>
   </div>
+  <details class="govuk-details" data-module="govuk-details">
+    <summary class="govuk-details__summary">
+      <span class="govuk-details__summary-text">
+        My organisation doesn't have a UK bank account
+      </span>
+    </summary>
+    <div class="govuk-details__text">
+      <p>Before you can apply for a UK Shared Prosperity Fund (UKSPF) grant you must have a UK bank account.</p>
+    </div>
+  </details>
   <div>
-    <a href="how-much-money-are-you-applying-for" role="button" draggable="false" class="govuk-button" data-module="govuk-button">
+    <a href="eligibility-3" role="button" draggable="false" class="govuk-button" data-module="govuk-button">
       Save and continue
     </a>
   </div>

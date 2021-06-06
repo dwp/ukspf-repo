@@ -1,70 +1,49 @@
+
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-  Start page
+  GOV.UK Prototype Kit
 {% endblock %}
-  {% block beforeContent %}
-  <div class="govuk-breadcrumbs">
-    <ol class="govuk-breadcrumbs__list">
-      <li class="govuk-breadcrumbs__list-item">
-        <a class="govuk-breadcrumbs__link" href="https://www.gov.uk">Home</a>
-      </li>
-      <li class="govuk-breadcrumbs__list-item">
-        <a class="govuk-breadcrumbs__link" href="#">Section</a>
-      </li>
-      <li class="govuk-breadcrumbs__list-item">
-        <a class="govuk-breadcrumbs__link">Subsection</a>
-      </li>
-    </ol>
-  </div>
-  {% endblock %}
 
-  {% block content %}
-<div class="govuk-grid-row">
-      <div class="govuk-grid-column-two-thirds">
-        <h1 class="govuk-heading-l">
-          Apply for a UK Shared Prosperity Fund grant
-        </h1>
-        <p>If you're an organisation looking to support people facing multiple or complex needs across the UK, you can apply for a grant from the UK Shared Prosperity Fund.</p>
-      </div>
+{% block content %}
 
-      <div class="govuk-grid-column-two-thirds">
-        <h2 class="govuk-heading-m">How the fund works</h2>
-        <h3 class="govuk-heading-s">Are you applying for the maximum in your invitation?</h3>
-        <p>The funding is split between different geographical locations with invitations for each area. You can apply for funding for your area. The invitation details the criteria that has been set for each area.</p>
-        <h3 class="govuk-heading-s">How to apply</h3>
-        <p>You can apply for a grant from the UK Shared Prosperity Fund by:</p>
-        <ul class="govuk-list govuk-list--bullet">
-          <li>applying online yourself</li>
-          <li>applying through another organisation by partnering with them</li>
-        </ul>
-      </div>
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-xl">
+        UK Shared Prosperity Fund Prototypes
+      </h1>
 
-      <div class="govuk-grid-column-two-thirds">
-        <h3 class="govuk-heading-s">What is an invitation?</h3>
-        <p>Each area of the UK has an invitation that states what the local needs are. The invitations have been written through discussions with local authorities. These discussions have highlighted what local needs should be addressed in that invitation. Organisations can choose to apply for the invitation linked to their local area.</p>
-      </div>
+      <h2 class="govuk-heading-m">Eligibility and criteria journey</h2>
 
-      <div class="govuk-grid-column-two-thirds">
-        <h2 class="govuk-heading-m">What you'll get</h2>
-        <p>You'll get money to support a project that supports the needs of your local area. How much money you can apply for depends on the amount outlined in the invitation for your local area.</p>
-      </div>
+      <p>
+        Version 1 is a partial flow of the UKSPF application service. It includes the start, eligibility and criteria pages only.
+      </p>
 
-
-      <div class="govuk-grid-column-two-thirds">
-        <a href="/sign-in" role="button" draggable="false" class="govuk-button govuk-button--start govuk-!-margin-top-2 govuk-!-margin-bottom-8"  data-module="govuk-button">
-            Start
+      <div>
+        <a href="version-1/start" role="button" draggable="false" class="govuk-button govuk-button--start govuk-!-margin-top-2 govuk-!-margin-bottom-8"  data-module="govuk-button">
+            Version 1
             <svg class="govuk-button__start-icon" xmlns="http://www.w3.org/2000/svg" width="17.5" height="19" viewBox="0 0 33 40" role="presentation" focusable="false">
               <path fill="currentColor" d="M0 0h13l20 20-20 20H0l20-20z"></path>
             </svg>
         </a>
       </div>
-
-      <div class="govuk-grid-column-two-thirds">
-        <h3 class="govuk-heading-m">Before you Start</h3>
-        <p>Check which <a href="">invitation</a> you are applying for before you start your application.</p>
-        <p>You can also <a href="">register by post</a>.</p>
-      </div>
+    </div>
 
   </div>
-  {% endblock %}
+
+    <h2 class="govuk-heading-m">A-B testing</h2>
+    <p>Do you know which invitation you are applying for?</p>
+    <ul class="govuk-list govuk-list--bullet">
+      <li><a class="govuk-link" href="version-1/eligibility-1">A test</a></li>
+      <li><a class="govuk-link" href="version-1/eligibility-1-alt">B test</a></li>
+    </ul>
+
+    <div>
+      <h2 class="govuk-heading-m">Previous versions of the prototype</h2>
+      <p>
+        There are no previous versions.
+      </p>
+    <div>
+  </div>
+
+{% endblock %}

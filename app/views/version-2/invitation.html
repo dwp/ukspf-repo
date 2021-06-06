@@ -1,0 +1,48 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Example - Passing data
+{% endblock %}
+
+{% block beforeContent %}
+  {% include "includes/breadcrumb_examples.html" %}
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <form action="check-your-answers" method="post" class="form">
+
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+              <h1 class="govuk-fieldset__heading">
+                What type of vehicle do you have?
+              </h1>
+            </legend>
+            <div class="govuk-radios">
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="invitation-yes" name="invitation-type" type="radio" value="Yes" {{ checked("invitation-type", "Yes") }}>
+                <label class="govuk-label govuk-radios__label" for="invitation-yes">
+                  Yes
+                </label>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="invitation-no" name="invitation-type" type="radio" value="No" {{ checked("invitation-type", "No") }}>
+                <label class="govuk-label govuk-radios__label" for="invitation-no">
+                  No
+                </label>
+              </div>
+
+          </fieldset>
+        </div>
+
+        <button class="govuk-button" data-module="govuk-button">Continue</button>
+
+      </form>
+
+    </div>
+  </div>
+{% endblock %}
