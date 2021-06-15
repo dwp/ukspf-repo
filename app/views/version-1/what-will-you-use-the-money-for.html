@@ -21,34 +21,31 @@
 
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
+      <div class="govuk-character-count" data-module="govuk-character-count" data-maxwords="500">
+        <div class="govuk-form-group">
+          <h1 class="govuk-label-wrapper">
+            <label class="govuk-label govuk-label--l" for="word-count">
+              What will you use the money for?
+            </label>
+          </h1>
+          <p>Tell us:</p>
+          <ul class="govuk-list govuk-list--bullet">
+            <li>all the things you are planning to do</li>
+            <li>their costs</li>
+          </ul>
+          <p>We need this so we can check that these costs are reasonable.</p>
+          <textarea class="govuk-textarea govuk-js-character-count" id="word-count" name="word-count" rows="10" aria-describedby="word-count-info"></textarea>
+        </div>
 
-      <div class="govuk-character-count" data-module="govuk-character-count" data-maxlength="500">
-        <form action="organisation-details" method="post" class="form">
-          <div class="govuk-form-group">
-            <h1 class="govuk-label-wrapper">
-              <label class="govuk-label govuk-label--l" for="with-hint">
-                What will you use the money for?
-              </label>
-            </h1>
-            <p>Tell us:</p>
-            <ul class="govuk-list govuk-list--bullet">
-              <li>all the things you are planning to do</li>
-              <li>their costs</li>
-            </ul>
-            <p>We need this so we can check that these costs are reasonable.</p>
-            <textarea class="govuk-textarea govuk-js-character-count" id="with-hint" name="with-hint" rows="10" aria-describedby="with-hint-info with-hint-hint"></textarea>
-          </div>
-        </form>
-
-        <div id="with-hint-info" class="govuk-hint govuk-character-count__message" aria-live="polite"></div>
+        <div id="word-count-info" class="govuk-hint govuk-character-count__message" aria-live="polite">
+          You can enter up to 150 words
+        </div>
       </div>
-
       <div>
         <a href="how-will-you-manage-the-money" role="button" draggable="false" class="govuk-button" data-module="govuk-button">
           Continue
         </a>
       </div>
-
+    </div>
   </div>
-</div>
   {% endblock %}
