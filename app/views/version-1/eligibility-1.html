@@ -19,47 +19,39 @@
 
   {% block content %}
 
-  <div class="govuk-form-group">
-    <fieldset class="govuk-fieldset">
-      <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
-        <h1 class="govuk-fieldset__heading">
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <form action="/branch-eligibility-1" method="post" class="form">
+        <h1 class="govuk-heading-l">
           Do you know which invitation you are applying for?
         </h1>
-      </legend>
-      <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
-        <div class="govuk-radios__item">
-          <input class="govuk-radios__input" id="reg-check-1" name="ch-registered" type="radio" value="ch-registered" data-aria-controls="conditional-reg-check-1">
-          <label class="govuk-label govuk-radios__label" for="reg-check-1">
-            Yes
-          </label>
-        </div>
-        <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-reg-check-1">
-          <div class="govuk-form-group">
-            <label class="govuk-label" for="contact-by-email">
-              Enter the invitation reference number
-            </label>
-            <input class="govuk-input govuk-!-width-one-third" id="contact-by-email" name="contact-by-email" type="email" spellcheck="false"></div>
-        </div>
-        <div class="govuk-radios__item">
-          <input class="govuk-radios__input" id="reg-check-2" name="reg-check" type="radio" value="not-ch-registered" data-aria-controls="conditional-reg-check-2">
-          <label class="govuk-label govuk-radios__label" for="reg-check-2">
-            No
-          </label>
-        </div>
-        <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-reg-check-2">
-          <div class="govuk-fieldset__heading">
-            <h2>
-              Find your invitation before you apply
-            </h2>
-            <p>Before you can apply for a UK Shared Prosperity Fund (UKSPF) grant you need to know which invitation you are applying for.</p>
-            <p>You can find the invitation that is linked to your area on the
-UKSPF invitation</p>
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset">
+          <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="invitation-check-yes" name="invitation-check" type="radio" value="ch-registered" data-aria-controls="conditional-reg-check-1">
+              <label class="govuk-label govuk-radios__label" for="invitation-check-yes">
+                Yes
+              </label>
+            </div>
+            <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-reg-check-1">
+              <div class="govuk-form-group">
+                <label class="govuk-label" for="reg-check-yes">
+                  Enter the invitation reference number
+                </label>
+                <input class="govuk-input govuk-!-width-one-third" id="invitation-ref" name="invitation-ref" type="text" spellcheck="false"></div>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="invitation-check-no" name="invitation-check" type="radio" value="false">
+              <label class="govuk-label govuk-radios__label" for="invitation-check-no">
+                No
+              </label>
+            </div>
           </div>
-    </fieldset>
-  </div>
-  <div>
-    <a href="eligibility-2" role="button" draggable="false" class="govuk-button" data-module="govuk-button">
-      Save and continue
-    </a>
+          </fieldset>
+        </div>
+        <button class="govuk-button" data-module="govuk-button">Continue</button>
+      </form>
+    </div>
   </div>
   {% endblock %}

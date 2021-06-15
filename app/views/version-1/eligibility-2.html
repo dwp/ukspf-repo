@@ -14,36 +14,40 @@
       </span>
     </p>
   </div>
-          <a href="eligibility-1" class="govuk-back-link">Back</a>
+          <a href="/branch-eligibility-2" class="govuk-back-link">Back</a>
   {% endblock %}
 
   {% block content %}
 
-  <div class="govuk-form-group">
-    <fieldset class="govuk-fieldset">
-      <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
-        <h1 class="govuk-fieldset__heading">
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <form action="/branch-eligibility-2" method="post" class="form">
+        <h1 class="govuk-heading-l">
           Does your organisation have a UK bank account?
         </h1>
-      </legend>
-      <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
-        <div class="govuk-radios__item">
-          <input class="govuk-radios__input" id="reg-check-1" name="reg-check" type="radio" value="ch-registered" data-aria-controls="conditional-reg-check-1">
-          <label class="govuk-label govuk-radios__label" for="reg-check-1">
-            Yes
-          </label>
+
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset">
+          <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="bank-check-yes" name="bank-check" type="radio" value="bank-registered" data-aria-controls="conditional-bank-check-1">
+              <label class="govuk-label govuk-radios__label" for="bank-check-yes">
+                Yes
+              </label>
+            </div>
+
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="bank-check-no" name="bank-check" type="radio" value="false">
+              <label class="govuk-label govuk-radios__label" for="bank-check-no">
+                No
+              </label>
+            </div>
+          </div>
+          </fieldset>
         </div>
-        <div class="govuk-radios__item">
-          <input class="govuk-radios__input" id="reg-check-2" name="reg-check" type="radio" value="not-ch-registered" data-aria-controls="conditional-reg-check-2">
-          <label class="govuk-label govuk-radios__label" for="reg-check-2">
-            No
-          </label>
-        </div>
-    </fieldset>
+        <button class="govuk-button" data-module="govuk-button">Continue</button>
+      </form>
+    </div>
   </div>
-  <div>
-    <a href="eligibility-3" role="button" draggable="false" class="govuk-button" data-module="govuk-button">
-      Save and continue
-    </a>
-  </div>
+
   {% endblock %}
