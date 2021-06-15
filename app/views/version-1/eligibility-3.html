@@ -14,7 +14,7 @@
       </span>
     </p>
   </div>
-          <a href="eligibility-3-no" class="govuk-back-link">Back</a>
+          <a href="eligibility-2" class="govuk-back-link">Back</a>
   {% endblock %}
 
   {% block content %}
@@ -40,7 +40,7 @@
                   <label class="govuk-label" for="ch-check-yes">
                     Enter your organisation's Companies House number
                   </label>
-                  <input class="govuk-input govuk-!-width-one-third" id="ch-ref" name="ch-ref" type="text" spellcheck="false"></div>
+                  <input class="govuk-input govuk-!-width-one-third" id="ch-ref" name="companies-house-number" value="{{ data['companies-house-number'] }}" type="text" spellcheck="false"></div>
               </div>
 
               <div class="govuk-radios__item">

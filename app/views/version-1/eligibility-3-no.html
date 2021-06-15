@@ -14,12 +14,14 @@
       </span>
     </p>
   </div>
-          <a href="#" class="govuk-back-link">Back</a>
+          <a href="eligibility-3" class="govuk-back-link">Back</a>
   {% endblock %}
 
   {% block content %}
 
   <div class="govuk-form-group">
+    <form action="how-much-money-are-you-applying-for" method="post" class="form">
+
     <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
       <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
         <h1 class="govuk-fieldset__heading">
@@ -29,17 +31,17 @@
 
       <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
         <div class="govuk-radios__item">
-          <input class="govuk-radios__input" id="contact" name="contact" type="radio" value="email" data-aria-controls="conditional-contact">
+          <input class="govuk-radios__input" id="contact" name="contact" type="radio" value="text" data-aria-controls="conditional-contact">
           <label class="govuk-label govuk-radios__label" for="contact">
             Charity Commission
           </label>
         </div>
         <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-contact">
           <div class="govuk-form-group">
-            <label class="govuk-label" for="contact-by-email">
+            <label class="govuk-label" for="charity-commission-number">
               Enter your Charity Commission Number
             </label>
-            <input class="govuk-input govuk-!-width-one-third" id="contact-by-email" name="contact-by-email" type="email" spellcheck="false"></div>
+            <input class="govuk-input govuk-!-width-one-third" id="charity-commission-number" name="charity-commission-number" value="{{ data['charity-commission-number'] }}" type="text" spellcheck="false"></div>
         </div>
 
         <div class="govuk-radios__item">
@@ -53,7 +55,7 @@
             <label class="govuk-label" for="contact-by-phone">
               Enter your Office of the Scotish Charity Regulator number
             </label>
-            <input class="govuk-input govuk-!-width-one-third" id="contact-by-phone" name="contact-by-phone" type="tel"></div>
+            <input class="govuk-input govuk-!-width-one-third" id="contact-by-phone" name="scotish-charity-regulator" value="{{ data['scotish-charity-regulator'] }}" type="text"></div>
         </div>
 
         <div class="govuk-radios__item">
@@ -74,7 +76,7 @@
             <label class="govuk-label" for="contact-by-text">
               Enter the name of an accredited body
             </label>
-            <input class="govuk-input govuk-!-width-one-third" id="contact-by-text" name="contact-by-text" type="tel"></div>
+            <input class="govuk-input govuk-!-width-one-third" id="contact-by-text" name="accredited-body" value="{{ data['accredited-body'] }}" type="text"></div>
         </div>
 
         <div class="govuk-radios__item">
@@ -85,11 +87,11 @@
         </div>
 
     </fieldset>
+
   </div>
 
   <div>
-    <a href="how-much-money-are-you-applying-for" role="button" draggable="false" class="govuk-button" data-module="govuk-button">
-      Continue
-    </a>
+    <button class="govuk-button" data-module="govuk-button">Continue</button>
   </div>
+  </form>
   {% endblock %}
