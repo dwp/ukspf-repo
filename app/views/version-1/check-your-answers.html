@@ -30,16 +30,14 @@
         <dl class="govuk-summary-list">
           <div class="govuk-summary-list__row">
             <dt class="govuk-summary-list__key">
-              Do you know which invitation you are applying for?
+              Enter the number of your invitation
             </dt>
             <dd class="govuk-summary-list__value">
-              Yes
-              <br></br>
-              {{ data['invitation'] }}
+              {{ data['invitation-ref-number'] }}
             </dd>
             <dd class="govuk-summary-list__actions">
               <a class="govuk-link" href="eligibility-1">
-              Change <span class="govuk-visually-hidden">companies-house-registered</span>
+              Change <span class="govuk-visually-hidden">invitation-reference-number</span>
               </a>
             </dd>
           </div>
@@ -48,49 +46,13 @@
         <dl class="govuk-summary-list">
           <div class="govuk-summary-list__row">
             <dt class="govuk-summary-list__key">
-              Does your organisation have a UK bank account?
+              Who is your company registered with?
             </dt>
             <dd class="govuk-summary-list__value">
-              Yes
-            </dd>
-            <dd class="govuk-summary-list__actions">
-              <a class="govuk-link" href="eligibility-2">
-              Change <span class="govuk-visually-hidden">bank-account</span>
-              </a>
-            </dd>
-          </div>
-        </dl>
-
-        <dl class="govuk-summary-list">
-          <div class="govuk-summary-list__row">
-            <dt class="govuk-summary-list__key">
-              Is your organisation registered with companies house?
-            </dt>
-            <dd class="govuk-summary-list__value">
-              No
-              <br></br>
               Companies House number: {{ data['companies-house-number'] }}
             </dd>
             <dd class="govuk-summary-list__actions">
               <a class="govuk-link" href="eligibility-3">
-                Change <span class="govuk-visually-hidden">registered-organisation</span>
-              </a>
-            </dd>
-          </div>
-        </dl>
-
-        <dl class="govuk-summary-list">
-          <div class="govuk-summary-list__row">
-            <dt class="govuk-summary-list__key">
-                Who is your company registered with?
-            </dt>
-            <dd class="govuk-summary-list__value">
-                Charity Commission number: {{ data['charity-commission-number'] }}<br></br>
-                Office of the Scotish Charity Regulator: {{ data['scotish-charity-regulator'] }}<br></br>
-                Other: {{ data['accredited-body'] }}
-            </dd>
-            <dd class="govuk-summary-list__actions">
-              <a class="govuk-link" href="eligibility-3-no">
                 Change <span class="govuk-visually-hidden">registered-organisation</span>
               </a>
             </dd>
@@ -176,8 +138,7 @@
             </dd>
           </div>
         </dl>
-
-        <br></br>
+<br></br>
         <h2 class="govuk-heading-m">
                 Organisation details
         </h2>
@@ -248,7 +209,7 @@
               </a>
             </dd>
           </div>
-          
+
           <div class="govuk-summary-list__row">
             <dt class="govuk-summary-list__key">
               Email
@@ -262,10 +223,8 @@
               </a>
             </dd>
           </div>
-
         </dl>
-
-        <br></br>
+<br></br>
         <h2 class="govuk-heading-m">
                 Bank details
         </h2>
@@ -326,10 +285,24 @@
           </dd>
         </div>
       </dl>
+<br></br>
+      <div>
+        <h2 class="govuk-label-wrapper"><label class="govuk-label govuk-label--m" for="with-hint">
+            Declaration
+          </label>
+        </h2>
+        <p>By sending this application you confirm that:</p>
+        <ul class="govuk-list govuk-list--bullet">
+          <li>the information you've given is complete and correct as far as you know</li>
+          <li>this project is not already funded by any other government grants</li>
+        </ul>
 
-        <a href="declaration" role="button" draggable="false" class="govuk-button" data-module="govuk-button">
-          Continue
-        </a>
-      </div>
+        <div>
+          <a href="application-submitted-confirmation" role="button" draggable="false" class="govuk-button" data-module="govuk-button">
+          I agree - send application
+          </a>
+        </div>
     </div>
+  </div>
+</div>
   {% endblock %}
