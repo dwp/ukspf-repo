@@ -1,7 +1,7 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-  Eligibility page
+  Amount being applied for
 {% endblock %}
   {% block beforeContent %}
   <div class="govuk-phase-banner">
@@ -26,14 +26,16 @@
         <h1 class="govuk-heading-l">
           How much money are you applying for?
         </h1>
-
-        <p>The invitation tells you how much money you can apply for.</p>
-
         <div class="govuk-form-group">
-          <label class="govuk-label" for="amount-applying-for">
-            Amount
-          </label>
-          <input class="govuk-input govuk-!-width-one-third" id="amount-applying-for" name="amount-applying-for"  value="{{ data['amount-applying-for'] }}" type="text">
+          <h1 class="govuk-label-wrapper">
+            <label class="govuk-label" for="amount-applying-for">
+              Enter the amount in pounds
+            </label>
+          </h1>
+          <div class="govuk-input__wrapper">
+            <div class="govuk-input__prefix" aria-hidden="true">£</div>
+            <input class="govuk-input govuk-!-width-one-third" id="amount-applying-for" name="amount-applying-for"  value="{{ data['amount-applying-for'] }}" type="number" spellcheck="false">
+          </div>
         </div>
 
         <div>
