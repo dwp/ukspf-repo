@@ -1,0 +1,343 @@
+{% extends "layouts/journey.njk" %}
+
+{% from "casa/components/date-input/macro.njk" import casaGovukDateInput with context %}
+
+
+{% block casaPageTitle %}
+  {{ t('check-your-answers:pageTitle') }}
+{% endblock %}
+
+
+{% block journey_form %}
+
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      alpha
+    </strong>
+    <span class="govuk-phase-banner__text govuk-body">
+      This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+    </span>
+  </p>
+</div>
+</br>
+
+{#
+*** commenting out back button ***
+        <a href="bank-details" class="govuk-back-link">Back</a>
+#}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+      <h1 class="govuk-heading-l">
+        Check your answers before submitting your application
+      </h1>
+
+<div class="govuk-!-display-block">
+      <h2 class="govuk-heading-m">
+        Invitation
+      </h2>
+</div>
+
+      <dl class="govuk-summary-list">
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Enter the number of your invitation
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data['invitation-ref-number'] }}
+            12345678
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="invitation-number">
+            Change <span class="govuk-visually-hidden">invitation-number</span>
+            </a>
+          </dd>
+        </div>
+      </dl>
+<br></br>
+
+<h2 class="govuk-heading-m">
+        Organisation details
+</h2>
+
+<dl class="govuk-summary-list">
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+      Full name
+    </dt>
+    <dd class="govuk-summary-list__value">
+      {{ data['full-name'] }}
+      Charity Mike
+    </dd>
+    <dd class="govuk-summary-list__actions">
+      <a class="govuk-link" href="organisation-details">
+        Change <span class="govuk-visually-hidden">name</span>
+      </a>
+    </dd>
+  </div>
+
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+      Phone number
+    </dt>
+    <dd class="govuk-summary-list__value">
+      {{ data['telephone-number'] }}
+      07999999999
+    </dd>
+    <dd class="govuk-summary-list__actions">
+      <a class="govuk-link" href="organisation-details">
+        Change <span class="govuk-visually-hidden">telephone-number</span>
+      </a>
+    </dd>
+  </div>
+
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+      Email
+    </dt>
+    <dd class="govuk-summary-list__value">
+      {{ data['email'] }}
+      mike@myemail.com
+    </dd>
+    <dd class="govuk-summary-list__actions">
+      <a class="govuk-link" href="organisation-details">
+        Change <span class="govuk-visually-hidden">email</span>
+      </a>
+    </dd>
+  </div>
+</dl>
+
+<dl class="govuk-summary-list">
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+        Organisation name
+    </dt>
+    <dd class="govuk-summary-list__value">
+    Back To Work Alliance
+{#
+        {{ data['organisation-name'] }}
+#}
+    </dd>
+    <dd class="govuk-summary-list__actions">
+      <a class="govuk-link" href="organisation-details">
+        Change <span class="govuk-visually-hidden">address-postcode</span>
+      </a>
+    </dd>
+  </div>
+
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+        Organisation address
+    </dt>
+    <dd class="govuk-summary-list__value">
+        33 Middleton Row<br>
+        Chillingworth<br>
+        York<br>
+        CH22 8DS
+{#
+        {{ data['address-line-1'] }}<br>
+        {{ data['address-line-2'] }}<br>
+        {{ data['address-town'] }}<br>
+        {{ data['address-county'] }}<br>
+        {{ data['address-postcode'] }}
+#}
+    </dd>
+
+
+    <dd class="govuk-summary-list__actions">
+      <a class="govuk-link" href="organisation-details">
+        Change <span class="govuk-visually-hidden">building-and-street</span>
+      </a>
+    </dd>
+  </div>
+</dl>
+
+<dl class="govuk-summary-list">
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+      Who is your company registered with?
+    </dt>
+    <dd class="govuk-summary-list__value">
+      Companies House number: 0000999 {{ data['companies-house-number'] }}
+    </dd>
+    <dd class="govuk-summary-list__actions">
+      <a class="govuk-link" href="regulatory-body">
+        Change <span class="govuk-visually-hidden">registered-organisation</span>
+      </a>
+    </dd>
+  </div>
+</dl>
+
+<dl class="govuk-summary-list">
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+        Name on the account
+    </dt>
+    <dd class="govuk-summary-list__value">
+    Charity Mike
+{#
+        {{ data['account-holder-name'] }}
+#}
+    </dd>
+    <dd class="govuk-summary-list__actions">
+      <a class="govuk-link" href="bank-details">
+        Change <span class="govuk-visually-hidden">account-holder-name</span>
+      </a>
+    </dd>
+  </div>
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+        Sort code
+    </dt>
+    <dd class="govuk-summary-list__value">
+    11-22-33
+{#
+        {{ data['sort-code'] }}
+#}
+    </dd>
+    <dd class="govuk-summary-list__actions">
+      <a class="govuk-link" href="bank-details">
+        Change <span class="govuk-visually-hidden">sort-code</span>
+      </a>
+    </dd>
+  </div>
+
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+        Account number
+    </dt>
+    <dd class="govuk-summary-list__value">
+        446688
+{#
+        {{ data['account-number'] }}
+#}
+    </dd>
+    <dd class="govuk-summary-list__actions">
+      <a class="govuk-link" href="bank-details">
+        Change <span class="govuk-visually-hidden">account-number</span>
+      </a>
+    </dd>
+  </div>
+
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+        Building society roll number
+    </dt>
+    <dd class="govuk-summary-list__value">
+        1234
+{#
+        {{ data['roll-number'] }}
+#}
+    </dd>
+    <dd class="govuk-summary-list__actions">
+      <a class="govuk-link" href="bank-details">
+        Change <span class="govuk-visually-hidden">building-society-roll-number</span>
+      </a>
+  </dd>
+</div>
+</dl>
+<br></br>
+
+      <h2 class="govuk-heading-m">
+        Project details
+      </h2>
+
+      <dl class="govuk-summary-list">
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+              How much money are you applying for?
+          </dt>
+          <dd class="govuk-summary-list__value">
+              £10000 {{ data['amount-applying-for'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="project-details-1">
+              Change <span class="govuk-visually-hidden">amount-applied-for</span>
+            </a>
+          </dd>
+        </div>
+      </dl>
+
+      <dl class="govuk-summary-list">
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+              What will you use the money for?
+          </dt>
+          <dd class="govuk-summary-list__value">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque vitae commodo arcu, at tristique ex. Maecenas egestas condimentum ex id mattis...
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="project-details-2">
+              Change <span class="govuk-visually-hidden">money-for</span>
+            </a>
+          </dd>
+        </div>
+      </dl>
+
+      <dl class="govuk-summary-list">
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+              How will you manage the money?
+          </dt>
+          <dd class="govuk-summary-list__value">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque vitae commodo arcu, at tristique ex. Maecenas egestas condimentum ex id mattis...
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="project-details-3">
+              Change <span class="govuk-visually-hidden">manage-the-money</span>
+            </a>
+          </dd>
+        </div>
+      </dl>
+
+      <dl class="govuk-summary-list">
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+              How will your project meet the needs listed in your invitation?
+          </dt>
+          <dd class="govuk-summary-list__value">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque vitae commodo arcu, at tristique ex. Maecenas egestas condimentum ex id mattis...
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="project-details-4">
+              Change <span class="govuk-visually-hidden">monitoring</span>
+            </a>
+          </dd>
+        </div>
+      </dl>
+
+      <dl class="govuk-summary-list">
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+              How will you manage the performance of your project?
+          </dt>
+          <dd class="govuk-summary-list__value">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque vitae commodo arcu, at tristique ex. Maecenas egestas condimentum ex id mattis...
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="project-details-5">
+              Change <span class="govuk-visually-hidden">reason-for-applying</span>
+            </a>
+          </dd>
+        </div>
+      </dl>
+<br></br>
+
+
+    <div>
+      <h2 class="govuk-label-wrapper"><label class="govuk-label govuk-label--m" for="with-hint">
+          Declaration
+        </label>
+      </h2>
+      <p class="govuk-body">By sending this application you confirm that:</p>
+      <ul class="govuk-list govuk-list--bullet">
+        <li>the information you've given is complete and correct as far as you know</li>
+        <li>this project is not already funded by any other government grants</li>
+      </ul>
+
+      </div>
+    </div>
+</div>
+
+{% endblock %}
