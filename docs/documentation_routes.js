@@ -72,9 +72,9 @@ router.post('/examples/branching/over-18-answer', function (req, res) {
   const over18 = req.session.data['over-18']
 
   if (over18 === 'false') {
-    res.redirect('/docs/examples/branching/under-18')
+    res.redirect('/version-2/return-to-an-application')
   } else {
-    res.redirect('/docs/examples/branching/over-18')
+    res.redirect('/version-2/start-a-new-application')
   }
 })
 

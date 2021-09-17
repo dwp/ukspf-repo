@@ -20,9 +20,190 @@
     {% block content %}
     <div class="govuk-grid-row">
       <div class="govuk-grid-column-full">
+
         <h1 class="govuk-heading-l">
           Check your answers before submitting your application
         </h1>
+
+        <div class="govuk-!-display-block">
+              <h2 class="govuk-heading-m">
+                Invitation
+              </h2>
+        </div>
+
+              <dl class="govuk-summary-list">
+                <div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key">
+                    Enter the number of your invitation
+                  </dt>
+                  <dd class="govuk-summary-list__value">
+                    {{ data['invitation-ref-number'] }}
+                    12345678
+                  </dd>
+                  <dd class="govuk-summary-list__actions">
+                    <a class="govuk-link" href="invitation-number">
+                    Change <span class="govuk-visually-hidden">invitation-number</span>
+                    </a>
+                  </dd>
+                </div>
+              </dl>
+
+<br></br>
+        <h2 class="govuk-heading-m">
+                Organisation details
+        </h2>
+        <h2 class="govuk-heading-m">
+          Contact details
+        </h2>
+
+        <dl class="govuk-summary-list">
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Full name
+            </dt>
+            <dd class="govuk-summary-list__value">
+              Mike Downing
+              {{ data['full-name'] }}
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="organisation-details">
+                Change <span class="govuk-visually-hidden">name</span>
+              </a>
+            </dd>
+          </div>
+
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Phone number
+            </dt>
+            <dd class="govuk-summary-list__value">
+              07123456789
+              {{ data['telephone-number'] }}
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="organisation-details">
+                Change <span class="govuk-visually-hidden">telephone-number</span>
+              </a>
+            </dd>
+          </div>
+
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Email
+            </dt>
+            <dd class="govuk-summary-list__value">
+              mike.downing@charitableacts.com
+              {{ data['email'] }}
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="organisation-details">
+                Change <span class="govuk-visually-hidden">email</span>
+              </a>
+            </dd>
+          </div>
+        </dl>
+<br></br>
+
+        <dl class="govuk-summary-list">
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+                Organisation name
+            </dt>
+            <dd class="govuk-summary-list__value">
+                Charitable Acts
+                {{ data['organisation-name'] }}
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="organisation-details">
+                Change <span class="govuk-visually-hidden">address-postcode</span>
+              </a>
+            </dd>
+          </div>
+
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+                Address
+            </dt>
+            <dd class="govuk-summary-list__value">
+              33 Middleton Row<br>
+              Chillingworth<br>
+              York<br>
+              CH22 8DS
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="organisation-details">
+                Change <span class="govuk-visually-hidden">building-and-street</span>
+              </a>
+            </dd>
+          </div>
+        </dl>
+        <h2 class="govuk-heading-m">
+                Bank details
+        </h2>
+
+        <dl class="govuk-summary-list">
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+                Name on the account
+            </dt>
+            <dd class="govuk-summary-list__value">
+                Mr Mike C Downing
+                {{ data['account-holder-name'] }}
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="bank-details">
+                Change <span class="govuk-visually-hidden">account-holder-name</span>
+              </a>
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+                Sort code
+            </dt>
+            <dd class="govuk-summary-list__value">
+              11-22-33
+                {{ data['sort-code'] }}
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="bank-details">
+                Change <span class="govuk-visually-hidden">sort-code</span>
+              </a>
+            </dd>
+          </div>
+
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+                Account number
+            </dt>
+            <dd class="govuk-summary-list__value">
+                12345678
+                {{ data['account-number'] }}
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="bank-details">
+                Change <span class="govuk-visually-hidden">account-number</span>
+              </a>
+            </dd>
+          </div>
+
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+                Building society roll number
+            </dt>
+            <dd class="govuk-summary-list__value">
+              A12345
+                {{ data['roll-number'] }}
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="bank-details">
+                Change <span class="govuk-visually-hidden">building-society-roll-number</span>
+              </a>
+          </dd>
+        </div>
+      </dl>
+
+<br></br>
+
         <h2 class="govuk-heading-m">
           Project details
         </h2>
@@ -30,26 +211,10 @@
         <dl class="govuk-summary-list">
           <div class="govuk-summary-list__row">
             <dt class="govuk-summary-list__key">
-              Enter the number of your invitation
-            </dt>
-            <dd class="govuk-summary-list__value">
-              {{ data['invitation-ref-number'] }}
-            </dd>
-            <dd class="govuk-summary-list__actions">
-              <a class="govuk-link" href="eligibility-1">
-              Change <span class="govuk-visually-hidden">invitation-reference-number</span>
-              </a>
-            </dd>
-          </div>
-        </dl>
-
-        <dl class="govuk-summary-list">
-          <div class="govuk-summary-list__row">
-            <dt class="govuk-summary-list__key">
               Who is your company registered with?
             </dt>
             <dd class="govuk-summary-list__value">
-              Companies House number: {{ data['companies-house-number'] }}
+              Companies House number: 181818 {{ data['companies-house-number'] }}
             </dd>
             <dd class="govuk-summary-list__actions">
               <a class="govuk-link" href="eligibility-3">
@@ -65,7 +230,8 @@
                 How much money are you applying for?
             </dt>
             <dd class="govuk-summary-list__value">
-                £{{ data['amount-applying-for'] }}
+                £ 10000
+                {{ data['amount-applying-for'] }}
             </dd>
             <dd class="govuk-summary-list__actions">
               <a class="govuk-link" href="how-much-money-are-you-applying-for">
@@ -139,153 +305,7 @@
           </div>
         </dl>
 <br></br>
-        <h2 class="govuk-heading-m">
-                Organisation details
-        </h2>
 
-        <dl class="govuk-summary-list">
-          <div class="govuk-summary-list__row">
-            <dt class="govuk-summary-list__key">
-                Organisation name
-            </dt>
-            <dd class="govuk-summary-list__value">
-                {{ data['organisation-name'] }}
-            </dd>
-            <dd class="govuk-summary-list__actions">
-              <a class="govuk-link" href="organisation-details">
-                Change <span class="govuk-visually-hidden">address-postcode</span>
-              </a>
-            </dd>
-          </div>
-
-          <div class="govuk-summary-list__row">
-            <dt class="govuk-summary-list__key">
-                Address
-            </dt>
-            <dd class="govuk-summary-list__value">
-                {{ data['address-line-1'] }}<br>
-                {{ data['address-line-2'] }}<br>
-                {{ data['address-town'] }}<br>
-                {{ data['address-county'] }}<br>
-                {{ data['address-postcode'] }}
-            </dd>
-            <dd class="govuk-summary-list__actions">
-              <a class="govuk-link" href="organisation-details">
-                Change <span class="govuk-visually-hidden">building-and-street</span>
-              </a>
-            </dd>
-          </div>
-        </dl>
-
-        <h2 class="govuk-heading-m">
-          Contact details
-        </h2>
-
-        <dl class="govuk-summary-list">
-          <div class="govuk-summary-list__row">
-            <dt class="govuk-summary-list__key">
-              Full name
-            </dt>
-            <dd class="govuk-summary-list__value">
-              {{ data['full-name'] }}
-            </dd>
-            <dd class="govuk-summary-list__actions">
-              <a class="govuk-link" href="organisation-details">
-                Change <span class="govuk-visually-hidden">name</span>
-              </a>
-            </dd>
-          </div>
-
-          <div class="govuk-summary-list__row">
-            <dt class="govuk-summary-list__key">
-              Phone number
-            </dt>
-            <dd class="govuk-summary-list__value">
-              {{ data['telephone-number'] }}
-            </dd>
-            <dd class="govuk-summary-list__actions">
-              <a class="govuk-link" href="organisation-details">
-                Change <span class="govuk-visually-hidden">telephone-number</span>
-              </a>
-            </dd>
-          </div>
-
-          <div class="govuk-summary-list__row">
-            <dt class="govuk-summary-list__key">
-              Email
-            </dt>
-            <dd class="govuk-summary-list__value">
-              {{ data['email'] }}
-            </dd>
-            <dd class="govuk-summary-list__actions">
-              <a class="govuk-link" href="organisation-details">
-                Change <span class="govuk-visually-hidden">email</span>
-              </a>
-            </dd>
-          </div>
-        </dl>
-<br></br>
-        <h2 class="govuk-heading-m">
-                Bank details
-        </h2>
-
-        <dl class="govuk-summary-list">
-          <div class="govuk-summary-list__row">
-            <dt class="govuk-summary-list__key">
-                Name on the account
-            </dt>
-            <dd class="govuk-summary-list__value">
-                {{ data['account-holder-name'] }}
-            </dd>
-            <dd class="govuk-summary-list__actions">
-              <a class="govuk-link" href="bank-details">
-                Change <span class="govuk-visually-hidden">account-holder-name</span>
-              </a>
-            </dd>
-          </div>
-          <div class="govuk-summary-list__row">
-            <dt class="govuk-summary-list__key">
-                Sort code
-            </dt>
-            <dd class="govuk-summary-list__value">
-                {{ data['sort-code'] }}
-            </dd>
-            <dd class="govuk-summary-list__actions">
-              <a class="govuk-link" href="bank-details">
-                Change <span class="govuk-visually-hidden">sort-code</span>
-              </a>
-            </dd>
-          </div>
-
-          <div class="govuk-summary-list__row">
-            <dt class="govuk-summary-list__key">
-                Account number
-            </dt>
-            <dd class="govuk-summary-list__value">
-                {{ data['account-number'] }}
-            </dd>
-            <dd class="govuk-summary-list__actions">
-              <a class="govuk-link" href="bank-details">
-                Change <span class="govuk-visually-hidden">account-number</span>
-              </a>
-            </dd>
-          </div>
-
-          <div class="govuk-summary-list__row">
-            <dt class="govuk-summary-list__key">
-                Building society roll number
-            </dt>
-            <dd class="govuk-summary-list__value">
-                {{ data['roll-number'] }}
-            </dd>
-            <dd class="govuk-summary-list__actions">
-              <a class="govuk-link" href="bank-details">
-                Change <span class="govuk-visually-hidden">building-society-roll-number</span>
-              </a>
-          </dd>
-        </div>
-      </dl>
-<br></br>
       <div>
         <h2 class="govuk-label-wrapper"><label class="govuk-label govuk-label--m" for="with-hint">
             Declaration
