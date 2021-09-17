@@ -33,10 +33,11 @@
               Enter the number of your invitation
             </dt>
             <dd class="govuk-summary-list__value">
+              123456789
               {{ data['invitation-ref-number'] }}
             </dd>
             <dd class="govuk-summary-list__actions">
-              <a class="govuk-link" href="eligibility-1">
+              <a class="govuk-link" href="invitation-number">
               Change <span class="govuk-visually-hidden">invitation-reference-number</span>
               </a>
             </dd>
@@ -49,16 +50,17 @@
               Who is your company registered with?
             </dt>
             <dd class="govuk-summary-list__value">
-              Companies House number: {{ data['companies-house-number'] }}
+              Companies House number: 123456
+              {{ data['companies-house-number'] }}
             </dd>
             <dd class="govuk-summary-list__actions">
-              <a class="govuk-link" href="eligibility-3">
+              <a class="govuk-link" href="regulatory-body">
                 Change <span class="govuk-visually-hidden">registered-organisation</span>
               </a>
             </dd>
           </div>
         </dl>
-
+{# Commented out. Our working assumption is that the application is for the full invitation amount
         <dl class="govuk-summary-list">
           <div class="govuk-summary-list__row">
             <dt class="govuk-summary-list__key">
@@ -74,7 +76,7 @@
             </dd>
           </div>
         </dl>
-
+#}
         <dl class="govuk-summary-list">
           <div class="govuk-summary-list__row">
             <dt class="govuk-summary-list__key">
@@ -149,6 +151,7 @@
                 Organisation name
             </dt>
             <dd class="govuk-summary-list__value">
+              Back To Work Alliance
                 {{ data['organisation-name'] }}
             </dd>
             <dd class="govuk-summary-list__actions">
@@ -163,11 +166,17 @@
                 Address
             </dt>
             <dd class="govuk-summary-list__value">
+                33 Middleton Row<br>
+                Chillingworth<br>
+                York<br>
+                CH22 8DS
+{# Hiding variables
                 {{ data['address-line-1'] }}<br>
                 {{ data['address-line-2'] }}<br>
                 {{ data['address-town'] }}<br>
                 {{ data['address-county'] }}<br>
                 {{ data['address-postcode'] }}
+#}
             </dd>
             <dd class="govuk-summary-list__actions">
               <a class="govuk-link" href="organisation-details">
@@ -187,6 +196,7 @@
               Full name
             </dt>
             <dd class="govuk-summary-list__value">
+              John Doe
               {{ data['full-name'] }}
             </dd>
             <dd class="govuk-summary-list__actions">
@@ -201,6 +211,7 @@
               Phone number
             </dt>
             <dd class="govuk-summary-list__value">
+              07468428911
               {{ data['telephone-number'] }}
             </dd>
             <dd class="govuk-summary-list__actions">
@@ -215,6 +226,7 @@
               Email
             </dt>
             <dd class="govuk-summary-list__value">
+              john.doe@backtoworkalliance.com
               {{ data['email'] }}
             </dd>
             <dd class="govuk-summary-list__actions">
@@ -235,6 +247,7 @@
                 Name on the account
             </dt>
             <dd class="govuk-summary-list__value">
+                John F Doe
                 {{ data['account-holder-name'] }}
             </dd>
             <dd class="govuk-summary-list__actions">
@@ -248,6 +261,7 @@
                 Sort code
             </dt>
             <dd class="govuk-summary-list__value">
+                112233
                 {{ data['sort-code'] }}
             </dd>
             <dd class="govuk-summary-list__actions">
@@ -262,6 +276,7 @@
                 Account number
             </dt>
             <dd class="govuk-summary-list__value">
+              999999999
                 {{ data['account-number'] }}
             </dd>
             <dd class="govuk-summary-list__actions">
@@ -276,6 +291,7 @@
                 Building society roll number
             </dt>
             <dd class="govuk-summary-list__value">
+                A12345
                 {{ data['roll-number'] }}
             </dd>
             <dd class="govuk-summary-list__actions">
