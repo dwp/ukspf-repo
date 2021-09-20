@@ -1,7 +1,7 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-  Rest memorable word
+  Resend save and return number
 {% endblock %}
   {% block beforeContent %}
   <div class="govuk-phase-banner">
@@ -21,9 +21,9 @@
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
 
-      <h1 class="govuk-heading-l">Reset memorable word</h1>
+      <h1 class="govuk-heading-l">Resend save and return number</h1>
 
-      <form action="reset-memorable-word-email-sent" method="post" novalidate>
+      <form action="resend-save-and-return-number-confirmation" method="post" novalidate>
 
         {{ govukInput({
           label: {
@@ -42,10 +42,11 @@
           }
         }) }}
 
+
 <br>
 
         {{ govukButton({
-          text: "Reset memorable word"
+          text: "Resend save and return number"
         }) }}
 
 

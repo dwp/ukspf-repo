@@ -42,6 +42,19 @@
           }
         }) }}
 
+        <div>
+          <details class="govuk-details" data-module="govuk-details">
+            <summary class="govuk-details__summary">
+              <span class="govuk-details__summary-text">
+                 I don't know my save and return number
+              </span>
+            </summary>
+            <div class="govuk-details__text">
+              <p>To continue, you will need your save and return number. <br><a href="resend-save-and-return-number"> Resend my save and return number</a></p>
+            </div>
+          </details>
+        </div>
+
         {{ govukInput({
         label: {
           text: "Memorable word"
@@ -55,8 +68,19 @@
           }
         }) }}
 
-        <p><a href="reset-memorable-word">I've forgotten my memorable word</a></p>
-<br>
+        <div>
+          <details class="govuk-details" data-module="govuk-details">
+            <summary class="govuk-details__summary">
+              <span class="govuk-details__summary-text">
+                 I've forgotten my memorable word
+              </span>
+            </summary>
+            <div class="govuk-details__text">
+              <p>To continue, you will need to reset your memorable word.<br><a href="reset-memorable-word"> Reset memorable word</a></p>
+            </div>
+          </details>
+        </div>
+
 
         {{ govukButton({
           text: "Find my application"
