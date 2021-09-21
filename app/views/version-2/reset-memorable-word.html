@@ -42,6 +42,37 @@
           }
         }) }}
 
+        {{ govukInput({
+          label: {
+            text: "Save and return number"
+          },
+          hint: {
+            text: "This was emailed to you"
+          },
+          id: "saveandreturnnumber",
+          name: "saveandreturnnumber",
+          type: "text",
+          autocomplete: "saveandreturnnumber",
+          classes: "govuk-input--width-20",
+          attributes: {
+            spellcheck: "false"
+          }
+        }) }}
+
+        <div>
+          <details class="govuk-details" data-module="govuk-details">
+            <summary class="govuk-details__summary">
+              <span class="govuk-details__summary-text">
+                 I don't know my save and return number
+              </span>
+            </summary>
+            <div class="govuk-details__text">
+              <p>If you don't have your save and return number, you will need to start a new application. <a href="start-a-new-application">Start a new application</a></p>
+            </div>
+          </details>
+        </div>
+
+
 <br>
 
         {{ govukButton({
