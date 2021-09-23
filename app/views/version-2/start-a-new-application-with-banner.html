@@ -19,9 +19,16 @@
 
 {% block content %}
   <div class="govuk-grid-row">
+    <div class="govuk-notification-banner govuk-grid-column-two-thirds role="region" aria-labelledby="govuk-notification-banner-title" data-module="govuk-notification-banner">
+      <div class="govuk-notification-banner__content">
+        <p class="govuk-notification-banner__heading">
+          We have emailed your save and return number to the email address you entered below.
+        </p>
+      </div>
+    </div>
     <div class="govuk-grid-column-two-thirds">
-
       <h1 class="govuk-heading-l">Start a new application</h1>
+
 {#
       <div class="govuk-panel govuk-panel--confirmation">
         <div class="govuk-panel__body">
@@ -29,6 +36,7 @@
         </div>
       </div>
 #}
+
       <p>You can save your application and return to it at any time. To do so, you will need your save and return number that we will email to you, and the memorable word you create below. By providing your email address you will be able to reset your memorable word if you forget it.</p>
 <br>
       <form action="invitation-number" method="post" novalidate>
@@ -68,7 +76,7 @@
 
 
         {{ govukButton({
-          text: "Save and continue"
+          text: "Continue"
         }) }}
 
 
