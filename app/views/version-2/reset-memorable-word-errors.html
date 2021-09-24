@@ -21,9 +21,26 @@
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
 
+      {% from "govuk/components/error-summary/macro.njk" import govukErrorSummary %}
+
+      {{ govukErrorSummary({
+        titleText: "There is a problem",
+        errorList: [
+          {
+            text: "Enter a valid email address",
+            href: "#email"
+          },
+          {
+            text: "Enter a valid save and return number",
+            href: "#save-and-return-number"
+          }
+        ]
+      }) }}
+
       <h1 class="govuk-heading-l">Reset memorable word</h1>
 
       <form action="reset-memorable-word-email-sent" method="post" novalidate>
+        {% from "govuk/components/input/macro.njk" import govukInput %}
 
         {{ govukInput({
           label: {
@@ -35,13 +52,15 @@
           id: "email",
           name: "email",
           type: "email",
-          autocomplete: "email",
-          classes: "govuk-input--width-20",
           attributes: {
             spellcheck: "false"
+          },
+          errorMessage: {
+            text: "Enter a valid email address"
           }
         }) }}
 
+        {% from "govuk/components/input/macro.njk" import govukInput %}
         {{ govukInput({
           label: {
             text: "Save and return number"
@@ -49,13 +68,14 @@
           hint: {
             text: "This was emailed to you"
           },
-          id: "saveandreturnnumber",
-          name: "saveandreturnnumber",
-          type: "text",
-          autocomplete: "saveandreturnnumber",
           classes: "govuk-input--width-20",
+          id: "save-and-return-number",
+          name: "save-and-return-number",
+          type: "text",
           attributes: {
-            spellcheck: "false"
+            spellcheck: "false"},
+          errorMessage: {
+            text: "Enter a valid save and return number"
           }
         }) }}
 

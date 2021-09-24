@@ -21,51 +21,66 @@
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
 
+      {% from "govuk/components/error-summary/macro.njk" import govukErrorSummary %}
+
+      {{ govukErrorSummary({
+        titleText: "There is a problem",
+        errorList: [
+          {
+            text: "Enter a valid email address",
+            href: "#email"
+          },
+          {
+            text: "Enter a memorable word",
+            href: "#memorable-word"
+          }
+        ]
+      }) }}
+
       <h1 class="govuk-heading-l">Start a new application</h1>
 
       <p>You can save your application and return to it at any time. To do so, you will need your save and return number that we will email to you, and the memorable word you create below. By providing your email address you will be able to reset your memorable word if you forget it.</p>
 <br>
       <form action="invitation-number" method="post" novalidate>
 
+        {% from "govuk/components/input/macro.njk" import govukInput %}
+
         {{ govukInput({
           label: {
-            text: "Enter your email address to receive your save and return number"
+            text: "Email address"
           },
           hint: {
             text: "This should be an email address only you have access to"
           },
           id: "email",
           name: "email",
-          type: "email",
-          autocomplete: "email",
-          classes: "govuk-input--width-20",
-          attributes: {
-            spellcheck: "false"
+          errorMessage: {
+            text: "Enter a valid email address"
           }
         }) }}
 
+        {% from "govuk/components/input/macro.njk" import govukInput %}
         {{ govukInput({
-        label: {
-          text: "Create your memorable word"
-        },
-        hint: {
-          text: "Must be 6 letters or more"
-        },
+          label: {
+            text: "Create your memorable word"
+          },
+          hint: {
+            text: "Must be 6 letters or more"
+          },
           classes: "govuk-input--width-20",
-          id: "password",
-          name: "password",
-          type: "password",
-          attributes: {
-            spellcheck: "false"
+          id: "memorable-word",
+          name: "memorable-word",
+          type: "memorable-word",
+          errorMessage: {
+            text: "Enter a memorable word"
           }
         }) }}
-
-
-        {{ govukButton({
-          text: "Save and continue"
-        }) }}
-
       </form>
+
+              {{ govukButton({
+                text: "Save and continue"
+              }) }}
+
     </div>{# /govuk-grid-column-two-thirds #}
   </div>{# /govuk-grid-row #}
 
