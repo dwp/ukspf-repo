@@ -21,10 +21,8 @@
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
 
-      <h1 class="govuk-heading-l">Start a new application</h1>
+      <h1 class="govuk-heading-l">Saving your application progress</h1>
 
-      <p>You can save your application and return to it at any time. To do so, you will need your save and return number that we will email to you, and the memorable word you create below. By providing your email address you will be able to reset your memorable word if you forget it.</p>
-<br>
       <form action="save-and-return-email-sent" method="post" novalidate>
 
         {{ govukInput({
@@ -32,7 +30,7 @@
             text: "Enter your email address to receive your save and return number"
           },
           hint: {
-            text: "This should be an email address only you have access to"
+            text: "You can save your application and return to it at any time"
           },
           id: "email",
           name: "email",
@@ -62,7 +60,7 @@
 
 
         {{ govukButton({
-          text: "Save and continue"
+          text: "Continue"
         }) }}
 
       </form>

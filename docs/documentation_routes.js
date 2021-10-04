@@ -86,7 +86,7 @@ router.post('/examples/branching', function (req, res) {
   const over18 = req.session.data['over-18']
 
   if (over18 === 'false') {
-    res.redirect('/version-2a/return-to-an-application')
+    res.redirect('/version-2a/return-to-application')
   } else {
     res.redirect('/version-2a/invitation-number')
   }
@@ -100,7 +100,7 @@ router.post('/examples/branching-version-2b', function (req, res) {
   const over18 = req.session.data['over-18']
 
   if (over18 === 'false') {
-    res.redirect('/version-2b/return-to-an-application')
+    res.redirect('/version-2b/return-to-application')
   } else {
     res.redirect('/version-2b/start-a-new-application')
   }
