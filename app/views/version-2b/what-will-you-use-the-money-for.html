@@ -1,7 +1,7 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-  How will you manage the performance
+  What will the money be used for
 {% endblock %}
   {% block beforeContent %}
   <div class="govuk-phase-banner">
@@ -14,7 +14,7 @@
       </span>
     </p>
   </div>
-          <a href="how-will-you-manage-the-money" class="govuk-back-link">Back</a>
+          <a href="regulatory-body" class="govuk-back-link">Back</a>
   {% endblock %}
 
   {% block content %}
@@ -25,14 +25,16 @@
         <div class="govuk-form-group">
           <h1 class="govuk-label-wrapper">
             <label class="govuk-label govuk-label--l" for="word-count">
-              How will you manage the performance of your project?
+              What will you use the money for?
             </label>
           </h1>
+
           <p>You must tell us:</p>
           <ul class="govuk-list govuk-list--bullet">
-            <li>what processes you will use to check how well your project is performing</li>
-            <li>what you will do if your project is not performing well</li>
+            <li>what you are planning to do</li>
+            <li>how much it costs</li>
           </ul>
+          <p>Do this for everything you plan to use the money for.</p>
           <textarea class="govuk-textarea govuk-js-character-count" id="word-count" name="word-count" rows="10" aria-describedby="word-count-info"></textarea>
         </div>
 
@@ -41,7 +43,7 @@
         </div>
       </div>
       <div>
-        <a href="check-your-answers" role="button" draggable="false" class="govuk-button" data-module="govuk-button">
+        <a href="how-will-you-manage-the-money" role="button" draggable="false" class="govuk-button" data-module="govuk-button">
           Save and continue
         </a>
       </div>

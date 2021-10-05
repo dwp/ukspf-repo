@@ -102,7 +102,7 @@ router.post('/examples/branching-version-2b', function (req, res) {
   if (over18 === 'false') {
     res.redirect('/version-2b/return-to-application')
   } else {
-    res.redirect('/version-2b/start-a-new-application')
+    res.redirect('/version-2b/invitation-number')
   }
 })
 
