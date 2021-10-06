@@ -14,7 +14,7 @@
       </span>
     </p>
   </div>
-          <a href="landing-page" class="govuk-back-link">Back</a>
+
   {% endblock %}
 {% block content %}
 
@@ -46,11 +46,11 @@
           <details class="govuk-details" data-module="govuk-details">
             <summary class="govuk-details__summary">
               <span class="govuk-details__summary-text">
-                 I don't know my save and return number
+                 I do not know my save and return number
               </span>
             </summary>
             <div class="govuk-details__text">
-              <p>If you don't have your save and return number, you will need to start a new application. <a href="invitation-number">Start a new application</a></p>
+              <p>Your save and return number is sent to the email you provide when you start an application. If you do not have a save and return number, you must <a href="invitation-number">start a new application</a>.</p>
             </div>
           </details>
         </div>
@@ -72,18 +72,18 @@
           <details class="govuk-details" data-module="govuk-details">
             <summary class="govuk-details__summary">
               <span class="govuk-details__summary-text">
-                 I've forgotten my memorable word
+                 I have forgotten my memorable word
               </span>
             </summary>
             <div class="govuk-details__text">
-              <p>To continue, you will need to reset your memorable word.<br><a href="reset-memorable-word"> Reset memorable word</a></p>
+              <p>To start or return to your application, you must <a href="reset-memorable-word">reset your memorable word</a>.</p>
             </div>
           </details>
         </div>
 
 
         {{ govukButton({
-          text: "Find my application"
+          text: "Start application"
         }) }}
 
 
