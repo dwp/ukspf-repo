@@ -41,7 +41,9 @@
 	<script>
 		function display(req, res) {
 			if(document.getElementById('GFG').checked) {
-        res.redirect('/version-3/companies-house-lookup')
+        document.getElementById("disp").innerHTML
+          = document.getElementById("HTML").value
+          + " radio button checked";
 			}
 			else if(document.getElementById('HTML').checked) {
 				document.getElementById("disp").innerHTML
