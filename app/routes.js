@@ -6,82 +6,69 @@ router.use(radioButtonRedirect)
 
 
 
+// Branching Prototype Version 3
+router.post('/version-3/you-are-eligible-to-apply-as-a-lead-applicant', function (req, res) {
+  // Get the answer from session data
+  // The name between the quotes is the same as the 'name' attribute on the input elements
+  // However in JavaScript we can't use hyphens in variable names
 
+  const q1 = req.session.data['q-1']
+  const q2 = req.session.data['q-2']
+  const q3 = req.session.data['q-3']
+  const q4 = req.session.data['q-4']
+  const q5 = req.session.data['q-5']
 
-
-
-// Branching Prototype Version 1
-router.post('branch', function (req, res) {
-  // Eligibility-1 branching
-
-  const startnew = req.session.data['start-new']
-
-  if (startnew === 'false') {
-    res.redirect('branch')
+  if (q1 === 'false') {
+    res.redirect('/version-3/you-are-not-eligible-to-apply-as-a-lead-applicant')
+  } else if (q2 === 'false'){
+      res.redirect('/version-3/you-are-not-eligible-to-apply-as-a-lead-applicant')
+  } else if (q3 === 'false'){
+    res.redirect('/version-3/you-are-not-eligible-to-apply-as-a-lead-applicant')
+  } else if (q4 === 'false'){
+    res.redirect('/version-3/you-are-not-eligible-to-apply-as-a-lead-applicant')
+  } else if (q5 === 'false'){
+    res.redirect('/version-3/you-are-not-eligible-to-apply-as-a-lead-applicant')
   } else {
-    res.redirect('version-1/eligibility-2')
+    res.redirect('/version-3/you-are-eligible-to-apply-as-a-lead-applicant')
   }
 })
 
-router.post('/branch-eligibility-2', function (req, res) {
-  // Eligibility-2 branching
+router.post('/what-type-of-organisation-are-you-branching', function (req, res) {
+  // Get the answer from session data
+  // The name between the quotes is the same as the 'name' attribute on the input elements
+  // However in JavaScript we can't use hyphens in variable names
 
-  const bankcheck = req.session.data['bank-check']
 
-  if (bankcheck === 'false') {
-    res.redirect('version-1/eligibility-2-no')
+
+      if(document.getElementById('reg-company').checked) {
+        res.redirect('/version-3/companies-house-lookup')
+      }
+      else if(document.getElementById('reg-charity').checked) {
+        res.redirect('/version-3/companies-house-lookup')
+      }
+      else if(document.getElementById('reg-no').checked) {
+        res.redirect('/version-3/companies-house-lookup')
+      }
+      else {
+        res.redirect('/version-3/companies-house-lookup')
+      }
+    })
+
+
+// *****************************************************************************
+
+// Branching
+router.post('/examples/branching/over-18-answer', function (req, res) {
+  // Get the answer from session data
+  // The name between the quotes is the same as the 'name' attribute on the input elements
+  // However in JavaScript we can't use hyphens in variable names
+
+  const over18 = req.session.data['over-18']
+
+  if (over18 === 'false') {
+    res.redirect('/version-2/return-to-an-application')
   } else {
-    res.redirect('version-1/eligibility-3')
-  }
-})
-
-router.post('/branch-eligibility-3', function (req, res) {
-  // Eligibility-3 branching
-
-  const chcheck = req.session.data['ch-check']
-
-  if (chcheck === 'false') {
-    res.redirect('version-1/eligibility-3-no')
-  } else {
-    res.redirect('version-1/how-much-money-are-you-applying-for')
-  }
-})
-
-// Branching Prototype Version 2
-
-router.post('/v2-branching-eligibility-1', function (req, res) {
-  // Eligibility-1 branching
-
-  const regcheck = req.session.data['invitation-check']
-
-  if (regcheck === 'false') {
-    res.redirect('version-2/eligibility-1-no')
-  } else {
-    res.redirect('version-2/eligibility-2')
-  }
-})
-
-router.post('/v2-branch-eligibility-2', function (req, res) {
-  // Eligibility-2 branching
-
-  const bankcheck = req.session.data['bank-check']
-
-  if (bankcheck === 'false') {
-    res.redirect('version-2/eligibility-2-no')
-  } else {
-    res.redirect('version-2/eligibility-3')
-  }
-})
-
-router.post('/v2-branch-eligibility-3', function (req, res) {
-  // Eligibility-3 branching
-
-  const chcheck = req.session.data['ch-check']
-
-  if (chcheck === 'false') {
-    res.redirect('version-2/eligibility-3-no')
-  } else {
-    res.redirect('version-2/how-much-money-are-you-applying-for')
+    res.redirect('/version-2/invitation-number')
   }
 })
 

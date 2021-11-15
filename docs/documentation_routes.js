@@ -106,6 +106,46 @@ router.post('/examples/branching-version-2b', function (req, res) {
   }
 })
 
+
+//  V3 routing start
+
+router.post('/examples/branching-version-3', function (req, res) {
+  // Get the answer from session data
+  // The name between the quotes is the same as the 'name' attribute on the input elements
+  // However in JavaScript we can't use hyphens in variable names
+
+  const over18 = req.session.data['over-18']
+
+  if (over18 === 'false') {
+    res.redirect('/version-3/dashboard')
+  } else {
+    res.redirect('/version-3/ukspf-competitions')
+  }
+})
+
+router.post('/version-3/branching', function (req, res) {
+  // Get the answer from session data
+  // The name between the quotes is the same as the 'name' attribute on the input elements
+  // However in JavaScript we can't use hyphens in variable names
+
+  const over18 = req.session.data['over-18']
+
+  if (over18 === 'false') {
+    res.redirect('/version-3/dashboard')
+  } else {
+    res.redirect('/version-3/ukspf-competitions')
+  }
+})
+
+// V3 routing end
+
+
+
+
+
+
+
+
 router.get('/making-pages', function (req, res) {
   res.redirect('/docs/make-first-prototype/create-pages')
 })

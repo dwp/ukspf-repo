@@ -43,27 +43,8 @@
   {# Set serviceName in config.js. #}
   {{ govukHeader({
     homepageUrl: "#",
-    serviceName: "UK Shared Prosperity Fund (Employment)",
-    serviceUrl: "#",
-    navigation: [
-      {
-        href: "your-dashboard",
-        text: "Dashboard",
-        active: true
-      },
-      {
-        href: "messages",
-        text: "Messages"
-      },
-      {
-        href: "uploads",
-        text: "Uploads"
-      },
-      {
-        href: "account",
-        text: "Account"
-      }
-    ]
+    serviceName: "",
+    serviceUrl: "#"
   }) }}{% endblock %}
 
 {% set mainClasses = mainClasses | default("govuk-main-wrapper--auto-spacing") %}
