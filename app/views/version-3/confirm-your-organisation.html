@@ -20,7 +20,7 @@
   {% block content %}
 
   <div class="govuk-grid-row">
-    <div  class="govuk-grid-column-full">
+    <div class="govuk-grid-two-thirds">
       <span class="govuk-caption-xl">Create account</span>
       <h1 class="govuk-heading-l">
         Confirm your organisation's details
@@ -37,13 +37,8 @@
                 Organisation name
               </dt>
               <dd class="govuk-summary-list__value">
-                Prince's Trust
+                Skills 4 life
                 {{ data['organisation-name'] }}
-              </dd>
-              <dd class="govuk-summary-list__actions">
-                <a class="govuk-link" href="enter-your-organisation-details">
-                  Change <span class="govuk-visually-hidden">organisation-name</span>
-                </a>
               </dd>
             </div>
 
@@ -52,13 +47,8 @@
                 Organisation number
               </dt>
               <dd class="govuk-summary-list__value">
-                123456
+                09876543
                 {{ data['registration-number'] }}
-              </dd>
-              <dd class="govuk-summary-list__actions">
-                <a class="govuk-link" href="enter-your-organisation-details">
-                  Change <span class="govuk-visually-hidden">email</span>
-                </a>
               </dd>
             </div>
 
@@ -67,13 +57,8 @@
                   Business type
                 </dt>
                 <dd class="govuk-summary-list__value">
-                  Charity
+                  Business
                   {{ data['organisation-type'] }}
-                </dd>
-                <dd class="govuk-summary-list__actions">
-                  <a class="govuk-link" href="enter-your-organisation-details">
-                    Change <span class="govuk-visually-hidden">organisation-details</span>
-                  </a>
                 </dd>
               </div>
 
@@ -82,9 +67,10 @@
               Registered Address
           </dt>
           <dd class="govuk-summary-list__value">
-              1 Windsor Castle<br>
-              Windsor<br>
-              SL4 1NJ
+              1 Somerset Street<br>
+              Leeds<br>
+              SW1 2AA<br>
+              England
       {# Hiding variables
               {{ data['address-line-1'] }}<br>
               {{ data['address-line-2'] }}<br>
@@ -92,11 +78,6 @@
               {{ data['address-county'] }}<br>
               {{ data['address-postcode'] }}
       #}
-          </dd>
-          <dd class="govuk-summary-list__actions">
-            <a class="govuk-link" href="enter-your-organisations-registered-address">
-              Change <span class="govuk-visually-hidden">building-and-street</span>
-            </a>
           </dd>
 
       </dl>
@@ -110,13 +91,8 @@
                     Name
                   </dt>
                   <dd class="govuk-summary-list__value">
-                    Elizebeth Windsor
+                    Paul Davis
                     {{ data['executive-officer-1'] }}
-                  </dd>
-                  <dd class="govuk-summary-list__actions">
-                    <a class="govuk-link" href="enter-your-organisation-details">
-                      Change <span class="govuk-visually-hidden">executive-officer-1</span>
-                    </a>
                   </dd>
                 </div>
 
@@ -125,16 +101,12 @@
                     Name
                   </dt>
                   <dd class="govuk-summary-list__value">
-                    William Windsor
+                    Ruby Smith
                     {{ data['executive-officer-2'] }}
-                  </dd>
-                  <dd class="govuk-summary-list__actions">
-                    <a class="govuk-link" href="enter-your-organisation-details">
-                      Change <span class="govuk-visually-hidden">executive-officer-2</span>
-                    </a>
                   </dd>
                 </div>
         </dl>
+
 
       <div>
         <a href="your-details" role="button" draggable="false" class="govuk-button" data-module="govuk-button">

@@ -18,20 +18,18 @@ router.post('/version-3/you-are-eligible-to-apply-as-a-lead-applicant', function
   const q4 = req.session.data['q-4']
   const q5 = req.session.data['q-5']
 
-  if (q1 === 'false') {
-    res.redirect('/version-3/you-are-not-eligible-to-apply-as-a-lead-applicant')
-  } else if (q2 === 'false'){
-      res.redirect('/version-3/you-are-not-eligible-to-apply-as-a-lead-applicant')
-  } else if (q3 === 'false'){
-    res.redirect('/version-3/you-are-not-eligible-to-apply-as-a-lead-applicant')
-  } else if (q4 === 'false'){
-    res.redirect('/version-3/you-are-not-eligible-to-apply-as-a-lead-applicant')
-  } else if (q5 === 'false'){
-    res.redirect('/version-3/you-are-not-eligible-to-apply-as-a-lead-applicant')
-  } else {
-    res.redirect('/version-3/you-are-eligible-to-apply-as-a-lead-applicant')
-  }
-})
+  if (q1 == 'true' &&
+         q2 == 'true' &&
+         q3 == 'true' &&
+         q4 == 'true' &&
+         q5 == 'true') {
+       res.redirect('/version-3/you-are-eligible-to-apply-as-a-lead-applicant')
+     } else {
+       res.redirect('/version-3/you-are-not-eligible-to-apply-as-a-lead-applicant')
+     }
+   })
+
+
 
 router.post('/what-type-of-organisation-are-you-branching', function (req, res) {
   // Get the answer from session data
