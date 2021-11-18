@@ -31,19 +31,28 @@
           <label class="govuk-label" for="email">
             Email
           </label>
-          <input class="govuk-input govuk-!-width-two-thirds" id="email" name="email" type="text" autocomplete="email"></div>
+          <input class="govuk-input govuk-!-width-full-width" id="email" name="email" type="text" autocomplete="email"></input>
+        </div>
 
+        <div>
+          <label class="govuk-label" for="email">
+            Retype email
+          </label>
+          <input class="govuk-input govuk-!-width-full-width" id="retype-email" name="email" type="text" autocomplete="email"></input>
+        </div>
+<br>
           <div class="govuk-form-group">
-            <label class="govuk-label" for="password">
-              Create password
-            </label>
+            <h3 class="govuk-heading-s">Create a password</h3>
             <p class="govuk-body">Your password is case-sensitive and needs to:</p>
             <ul class="govuk-list govuk-list--bullet">
               <li>be at least 12 characters long</li>
               <li>contain at least 1 capital letter</li>
               <li>contain at least 1 number</li>
             </ul>
-            <div class="govuk-hint">Your password can include spaces to make a phrase</div>
+            <p>Your password can include spaces to make a phrase.</p>
+            <label class="govuk-label" for="password">
+              Password
+            </label>
               <input class="govuk-input govuk-!-width-two-thirds" type="password" name="password" id="id_password" autocomplete="current-password"></input>
               <i class="far fa-eye" id="togglePassword" style="margin-left: -30px; cursor: pointer;"></i>
             </div>
@@ -56,16 +65,34 @@
               <i class="far fa-eye" id="togglePassword2" style="margin-left: -30px; cursor: pointer;"></i>
             </div>
 
+            <p>Read the terms and conditions <a href="">here</a> (opens in a new window).</p>
+
+            <div>
+              <div class="govuk-form-group">
+                <fieldset class="govuk-fieldset" aria-describedby="waste-hint">
+                  <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                  <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+                    <div class="govuk-checkboxes__item">
+                      <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses">
+                      <label class="govuk-label govuk-checkboxes__label" for="waste">
+                        I have read and agree to the terms and conditions
+                      </label>
+                    </div>
+                    <div class="govuk-checkboxes__item">
+                      <input class="govuk-checkboxes__input" id="waste-2" name="waste" type="checkbox" value="mines">
+                      <label class="govuk-label govuk-checkboxes__label" for="waste-2">
+                        I have the authority to create this account on the behalf of my organisation from mines or quarries
+                      </label>
+                    </div>
+                  </div>
+                </fieldset>
+              </div>
+            </div>
 
       <div class="govuk-button-group">
         <a href="verify-your-account" role="button" draggable="false" class="govuk-button" data-module="govuk-button">
           Create account
         </a>
-{# 
-        <a href="are-you-sure-you-dont-want-to-create-an-account" role="button" draggable="false" class="govuk-button govuk-button--warning" data-module="govuk-button">
-          Don't create account
-        </a>
-#}
       </div>
     </form>
 
