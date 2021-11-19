@@ -73,16 +73,26 @@
               <input class="govuk-input govuk-input--width-30" id="full-name" name="full-name" type="text" spellcheck="false" autocomplete="name"></div>
               <p class="govuk-body"><a href="#">+ Add another Executive Officer</a></p>
 <br>
-              <label class="govuk-label" for="address-number" id="reg-address">
+              <label class="govuk-label" for="address-number">
                 Registered address postcode
               </label>
               <input class="govuk-input govuk-input--width-10" id="address-number" name="address-number" type="text">
-              <a href="enter-your-organisation-details-select-address" role="button" draggable="false" class="govuk-button  govuk-button--secondary" data-module="govuk-button">
+              <a href="#" role="button" draggable="false" class="govuk-button  govuk-button--secondary" data-module="govuk-button">
                 Find UK address
               </a>
+                  <div>
+                    <label class="govuk-label" for="sort">
+                      Select an address
+                    </label>
+                    <select class="govuk-select govuk-!-width-two-thirds" id="sort" name="sort">
+                      <option value="address-1" selected>3 addresses found</option>
+                      <option value="address-2">1 Somerset Street, Leeds</option>
+                      <option value="address-3">2 Somerset Street, Leeds</option>
+                      <option value="address-4">3 Somerset Street, Leeds</option>
+                    </select>
+                  </div>
+<br>
               <p class="govuk-body"><a href="enter-organisation-details">Enter manually</a></p>
-
-
         </fieldset>
 <br>
         <button class="govuk-button" data-module="govuk-button">Save and continue</button>
