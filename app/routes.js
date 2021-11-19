@@ -53,12 +53,8 @@ router.post('/what-type-of-organisation-are-you-branching', function (req, res) 
     })
 
 
-// *****************************************************************************
-
-// Branching Prototype Version 3b
-
 // Eligibility 1
-router.post('/version-3b/will-your-organisation-deliver-projects-in-the-UK', function (req, res) {
+router.post('/version-3/will-your-organisation-deliver-projects-in-the-UK', function (req, res) {
   // Get the answer from session data
   // The name between the quotes is the same as the 'name' attribute on the input elements
   // However in JavaScript we can't use hyphens in variable names
@@ -66,14 +62,14 @@ router.post('/version-3b/will-your-organisation-deliver-projects-in-the-UK', fun
   const e1 = req.session.data['eligibility-1']
 
   if (e1 === 'false') {
-    res.redirect('/version-3b/you-are-not-eligible-to-apply-as-a-lead-applicant')
+    res.redirect('/version-3/you-are-not-eligible-to-apply-as-a-lead-applicant')
   } else {
-    res.redirect('/version-3b/will-your-organisation-deliver-projects-in-the-UK')
+    res.redirect('/version-3/will-your-organisation-deliver-projects-in-the-UK')
   }
 })
 
 // Eligibility 2
-router.post('/version-3b/does-your-organisation-have-a-uk-bank-account-or-building-society-account', function (req, res) {
+router.post('/version-3/does-your-organisation-have-a-uk-bank-account-or-building-society-account', function (req, res) {
   // Get the answer from session data
   // The name between the quotes is the same as the 'name' attribute on the input elements
   // However in JavaScript we can't use hyphens in variable names
@@ -81,14 +77,14 @@ router.post('/version-3b/does-your-organisation-have-a-uk-bank-account-or-buildi
   const e2 = req.session.data['eligibility-2']
 
   if (e2 === 'false') {
-    res.redirect('/version-3b/you-are-not-eligible-to-apply-as-a-lead-applicant')
+    res.redirect('/version-3/you-are-not-eligible-to-apply-as-a-lead-applicant')
   } else {
-    res.redirect('/version-3b/does-your-organisation-have-a-uk-bank-account-or-building-society-account')
+    res.redirect('/version-3/does-your-organisation-have-a-uk-bank-account-or-building-society-account')
   }
 })
 
 // Eligibility 3
-router.post('/version-3b/is-your-organisation-a-registered-company-charity-or-a-non-registered-public-body-such-as-a-local-authority', function (req, res) {
+router.post('/version-3/is-your-organisation-a-registered-company-charity-or-a-non-registered-public-body-such-as-a-local-authority', function (req, res) {
   // Get the answer from session data
   // The name between the quotes is the same as the 'name' attribute on the input elements
   // However in JavaScript we can't use hyphens in variable names
@@ -96,14 +92,14 @@ router.post('/version-3b/is-your-organisation-a-registered-company-charity-or-a-
   const e3 = req.session.data['eligibility-3']
 
   if (e3 === 'false') {
-    res.redirect('/version-3b/you-are-not-eligible-to-apply-as-a-lead-applicant')
+    res.redirect('/version-3/you-are-not-eligible-to-apply-as-a-lead-applicant')
   } else {
-    res.redirect('/version-3b/is-your-organisation-a-registered-company-charity-or-a-non-registered-public-body-such-as-a-local-authority')
+    res.redirect('/version-3/is-your-organisation-a-registered-company-charity-or-a-non-registered-public-body-such-as-a-local-authority')
   }
 })
 
 // Eligibility 4
-router.post('/version-3b/If-your-organisation-is-a-registered-company-or-charity-has-it-filed-a-full-set-of-accounts-within-the-last-12-months', function (req, res) {
+router.post('/version-3/If-your-organisation-is-a-registered-company-or-charity-has-it-filed-a-full-set-of-accounts-within-the-last-12-months', function (req, res) {
   // Get the answer from session data
   // The name between the quotes is the same as the 'name' attribute on the input elements
   // However in JavaScript we can't use hyphens in variable names
@@ -111,25 +107,31 @@ router.post('/version-3b/If-your-organisation-is-a-registered-company-or-charity
   const e4 = req.session.data['eligibility-4']
 
   if (e4 === 'false') {
-    res.redirect('/version-3b/you-are-not-eligible-to-apply-as-a-lead-applicant')
+    res.redirect('/version-3/you-are-not-eligible-to-apply-as-a-lead-applicant')
   } else {
-    res.redirect('/version-3b/If-your-organisation-is-a-registered-company-or-charity-has-it-filed-a-full-set-of-accounts-within-the-last-12-months')
+    res.redirect('/version-3/If-your-organisation-is-a-registered-company-or-charity-has-it-filed-a-full-set-of-accounts-within-the-last-12-months')
   }
 })
 
 // Eligibility 5
-router.post('/version-3b/you-are-eligible-to-apply-as-a-lead-applicant', function (req, res) {
+router.post('/version-3/you-are-eligible-to-apply-as-a-lead-applicant', function (req, res) {
   // Get the answer from session data
   // The name between the quotes is the same as the 'name' attribute on the input elements
   // However in JavaScript we can't use hyphens in variable names
 
-  const e5 = req.session.data['eligibility-5']
 
-  if (e5 === 'true'){
-    res.redirect('/version-3b/you-are-eligible-to-apply-as-a-lead-applicant')
-  } else {
-    res.redirect('/version-3b/you-are-not-eligible-to-apply-as-a-lead-applicant')
-  }
+if(document.getElementById('eligibility-5-yes').checked) {
+  res.redirect('/version-3/you-are-eligible-to-apply-as-a-lead-applicant')
+}
+else if(document.getElementById('eligibility-5-no').checked) {
+  res.redirect('/version-3/you-are-eligible-to-apply-as-a-lead-applicant')
+}
+else if(document.getElementById('eligibility-5-non-registered').checked) {
+  res.redirect('/version-3/you-are-eligible-to-apply-as-a-lead-applicant')
+}
+else {
+  res.redirect('/version-3/you-are-eligible-to-apply-as-a-lead-applicant')
+}
 })
 
 // *****************************************************************************
