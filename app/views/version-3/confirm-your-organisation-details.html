@@ -20,126 +20,29 @@
   {% block content %}
 
   <div class="govuk-grid-row">
-    <div  class="govuk-grid-column-full">
-      <span class="govuk-caption-xl">Create account</span>
+    <div class="govuk-grid-two-thirds">
+      <span class="govuk-caption-xl">Create an account</span>
       <h1 class="govuk-heading-l">
-        Confirm your organisation's details
+        Confirm your organisation as a lead applicant
       </h1>
-      <p class="govuk-body">This organisation will lead the application.</p>
+      <p class="govuk-body">This organisation will be the lead applicant in all applications started from this account.</p>
 
-      <h2 class="govuk-heading-m">
-        Organisation details
-      </h2>
-
-  <dl class="govuk-summary-list">
-            <div class="govuk-summary-list__row">
-              <dt class="govuk-summary-list__key">
-                Organisation name
-              </dt>
-              <dd class="govuk-summary-list__value">
-                Skills 4 life
-                {{ data['organisation-name'] }}
-              </dd>
-              <dd class="govuk-summary-list__actions">
-                <a class="govuk-link" href="enter-your-organisation-details">
-                  Change <span class="govuk-visually-hidden">organisation-name</span>
-                </a>
-              </dd>
-            </div>
-
-            <div class="govuk-summary-list__row">
-              <dt class="govuk-summary-list__key">
-                Organisation number
-              </dt>
-              <dd class="govuk-summary-list__value">
-                09876543
-                {{ data['registration-number'] }}
-              </dd>
-              <dd class="govuk-summary-list__actions">
-                <a class="govuk-link" href="enter-your-organisation-details">
-                  Change <span class="govuk-visually-hidden">email</span>
-                </a>
-              </dd>
-            </div>
-
-              <div class="govuk-summary-list__row">
-                <dt class="govuk-summary-list__key">
-                  Business type
-                </dt>
-                <dd class="govuk-summary-list__value">
-                  Business
-                  {{ data['organisation-type'] }}
-                </dd>
-                <dd class="govuk-summary-list__actions">
-                  <a class="govuk-link" href="enter-your-organisation-details">
-                    Change <span class="govuk-visually-hidden">organisation-details</span>
-                  </a>
-                </dd>
-              </div>
-
-        <div class="govuk-summary-list__row">
-          <dt class="govuk-summary-list__key">
-              Registered Address
-          </dt>
-          <dd class="govuk-summary-list__value">
-              1 Somerset Street<br>
-              Leeds<br>
-              SW1 2AA<br>
-              England
-      {# Hiding variables
-              {{ data['address-line-1'] }}<br>
-              {{ data['address-line-2'] }}<br>
-              {{ data['address-town'] }}<br>
-              {{ data['address-county'] }}<br>
-              {{ data['address-postcode'] }}
-      #}
-          </dd>
-          <dd class="govuk-summary-list__actions">
-            <a class="govuk-link" href="enter-your-organisations-registered-address">
-              Change <span class="govuk-visually-hidden">building-and-street</span>
-            </a>
-          </dd>
-
-      </dl>
-
-      <h2 class="govuk-heading-m">
-        Executive officers
-      </h2>
-      <dl class="govuk-summary-list">
-                <div class="govuk-summary-list__row">
-                  <dt class="govuk-summary-list__key">
-                    Name
-                  </dt>
-                  <dd class="govuk-summary-list__value">
-                    Paul Davis
-                    {{ data['executive-officer-1'] }}
-                  </dd>
-                  <dd class="govuk-summary-list__actions">
-                    <a class="govuk-link" href="enter-your-organisation-details">
-                      Change <span class="govuk-visually-hidden">executive-officer-1</span>
-                    </a>
-                  </dd>
-                </div>
-
-                <div class="govuk-summary-list__row">
-                  <dt class="govuk-summary-list__key">
-                    Name
-                  </dt>
-                  <dd class="govuk-summary-list__value">
-                    Ruby Smith
-                    {{ data['executive-officer-2'] }}
-                  </dd>
-                  <dd class="govuk-summary-list__actions">
-                    <a class="govuk-link" href="enter-your-organisation-details">
-                      Change <span class="govuk-visually-hidden">executive-officer-2</span>
-                    </a>
-                  </dd>
-                </div>
-        </dl>
-
+      <p class="govuk-body govuk-!-font-weight-bold">Organisation type</p>
+      <p>Business</p>
+      <p class="govuk-body govuk-!-font-weight-bold">Organisation names</p>
+      <p>Skills for life</p>
+      <p class="govuk-body govuk-!-font-weight-bold">Organisation registration number</p>
+      <p>09876543</p>
+      <p class="govuk-body govuk-!-font-weight-bold">Registered address</p>
+      <ul class="govuk-list">
+        <li>1 Somewhere Street</li>
+        <li>Leeds</li>
+        <li>England</li>
+        <li>LS1 2AT</li>
+      </ul>
       <div>
         <a href="your-details" role="button" draggable="false" class="govuk-button" data-module="govuk-button">
-          Confirm and continue
+          Save and continue
         </a>
       </div>
   </div>

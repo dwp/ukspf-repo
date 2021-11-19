@@ -24,11 +24,10 @@
       <form action="enter-your-organisations-registered-address" method="post" class="form">
         <fieldset class="govuk-fieldset">
           <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
-            <span class="govuk-caption-xl">Create a UKSPF account</span>
-            <h1 class="govuk-fieldset__heading">
+            <span class="govuk-caption-xl">Create an account</span>
+            <h1 class="govuk-heading-l">
               Enter your organisation's details
             </h1>
-<br>
             <p class="govuk-body">This page is only for organisations that cannot be registered on Companies House, for example:</p>
 
             <ul class="govuk-list govuk-list--bullet">
@@ -39,12 +38,13 @@
               <li>sole traders</li>
               <li>trusts</li>
             </ul>
+            <p>Please make sure you enter your organisation's details correctly. Any errors you make will slow down the application process, which could delay your funding payments.</p>
           </legend>
             <div class="govuk-form-group">
               <label class="govuk-label" for="organisation-name">
                 Organisation name
               </label>
-              <input class="govuk-input" id="organisation-name" name="organisation-name" type="text">
+              <input class="govuk-input govuk-input--width-30" id="organisation-name" name="organisation-name" type="text">
             </div>
             <div class="govuk-form-group">
               <label class="govuk-label" for="organisation-number">
@@ -53,13 +53,13 @@
               <div id="org-number" class="govuk-hint">
                 Enter your organisation's unique identification number, such as your HMRC Unique Taxpayer Reference (UTR), UK charity number or other unique reference number.
               </div>
-              <input class="govuk-input" id="organisation-number" name="organisation-number" type="text">
+              <input class="govuk-input govuk-input--width-10" id="organisation-number" name="organisation-number" type="text">
             </div>
             <div class="govuk-form-group">
               <label class="govuk-label" for="business-type">
                 Business type
               </label>
-              <input class="govuk-input" id="business-type" name="business-type" type="text">
+              <input class="govuk-input govuk-input--width-10" id="business-type" name="business-type" type="text">
             </div>
             <div class="govuk-form-group">
               <label class="govuk-label" for="executive-officers">
@@ -70,11 +70,19 @@
               </div>
             </div>
             <div class="govuk-form-group">
-              <label class="govuk-label" for="full-name">
-                Full name
-              </label>
-              <input class="govuk-input" id="full-name" name="full-name" type="text" spellcheck="false" autocomplete="name"></div>
+              <input class="govuk-input govuk-input--width-30" id="full-name" name="full-name" type="text" spellcheck="false" autocomplete="name"></div>
               <p class="govuk-body"><a href="#">+ Add another Executive Officer</a></p>
+<br>
+              <label class="govuk-label" for="address-number">
+                Registered address postcode
+              </label>
+              <input class="govuk-input govuk-input--width-10" id="address-number" name="address-number" type="text">
+              <a href="your-details" role="button" draggable="false" class="govuk-button  govuk-button--secondary" data-module="govuk-button">
+                Find UK address
+              </a>
+              <p class="govuk-body"><a href="#">Enter manually</a></p>
+
+
         </fieldset>
 <br>
         <button class="govuk-button" data-module="govuk-button">Save and continue</button>
