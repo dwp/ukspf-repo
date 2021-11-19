@@ -114,25 +114,21 @@ router.post('/version-3/If-your-organisation-is-a-registered-company-or-charity-
 })
 
 // Eligibility 5
-router.post('/version-3/you-are-eligible-to-apply-as-a-lead-applicant', function (req, res) {
+router.post('/version-3/eligibility-5', function (req, res) {
   // Get the answer from session data
   // The name between the quotes is the same as the 'name' attribute on the input elements
   // However in JavaScript we can't use hyphens in variable names
 
 
-if(document.getElementById('eligibility-5-yes').checked) {
-  res.redirect('/version-3/you-are-eligible-to-apply-as-a-lead-applicant')
-}
-else if(document.getElementById('eligibility-5-no').checked) {
-  res.redirect('/version-3/you-are-eligible-to-apply-as-a-lead-applicant')
-}
-else if(document.getElementById('eligibility-5-non-registered').checked) {
-  res.redirect('/version-3/you-are-eligible-to-apply-as-a-lead-applicant')
-}
-else {
-  res.redirect('/version-3/you-are-eligible-to-apply-as-a-lead-applicant')
-}
-})
+  const option2 = req.session.data['option-2']
+
+
+  if (option2 == 'true'){
+       res.redirect('/version-3/you-are-not-eligible-to-apply-as-a-lead-applicant')
+     } else {
+       res.redirect('/version-3/you-are-eligible-to-apply-as-a-lead-applicant')
+     }
+   })
 
 // *****************************************************************************
 

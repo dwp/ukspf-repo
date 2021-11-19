@@ -21,40 +21,63 @@
 
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
-      <form action="you-are-eligible-to-apply-as-a-lead-applicant" method="post" class="form">
-        <div class="govuk-form-group">
-          <fieldset class="govuk-fieldset" aria-describedby="changed-name-hint">
-            <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
-              <span class="govuk-caption-xl">Eligibility question 5 of 5</span>
-              <h1 class="govuk-heading-l">
-                If your organisation is a registered company or charity, has it filed a full set of accounts within the last 12 months?
-              </h1>
-            </legend>
-            <p>These details help us to assess the financial viability of your organisation.</p>
-            <div class="govuk-radios">
-              <div class="govuk-radios__item">
-                <input class="govuk-radios__input" id="eligibility-5-yes" name="eligibility-5" type="radio" required>
-                <label class="govuk-label govuk-radios__label" for="eligibility-5-yes">
-                  Yes
-                </label>
-              </div>
-              <div class="govuk-radios__item">
-                <input class="govuk-radios__input" id="eligibility-5-no" name="eligibility-5" type="radio" >
-                <label class="govuk-label govuk-radios__label" for="eligibility-5-no">
-                  No
-                </label>
-              </div>
-              <div class="govuk-radios__item">
-                <input class="govuk-radios__input" id="eligibility-5-non-registered" name="eligibility-5" type="radio" >
-                <label class="govuk-label govuk-radios__label" for="eligibility-5-non-registered">
-                  Non-registered public body
-                </label>
-              </div>
-            </div>
+      <form method="post" class="form">
+    <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
+      <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+        <span class="govuk-caption-xl">Eligibility question 5 of 5</span>
+        <h1 class="govuk-fieldset__heading">
+          If your organisation is a registered company or charity, has it filed a full set of accounts within the last 12 months?
+        </h1>
+      </legend>
+      <p>These details help us to assess the financial viability of your organisation.</p>
+      <div class="govuk-radios">
+        <div class="govuk-radios__item">
+          <input class="govuk-radios__input" id="option1" name="option1" type="radio" value="companieshouse" data-aria-controls="conditional-contact-1">
+          <label class="govuk-label govuk-radios__label" for="option1">
+            Yes
+          </label>
+        </div>
 
-          </fieldset>
-        </div>        <button class="govuk-button" data-module="govuk-button">Continue</button>
-      </form>
-    </div>
-  </div>
+        <div class="govuk-radios">
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="option2" name="option2" type="radio" value="charity" data-aria-controls="conditional-contact">
+            <label class="govuk-label govuk-radios__label" for="option2">
+              No
+            </label>
+          </div>
+
+        <div class="govuk-radios">
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="option3" name="option3" type="radio" value="notregistered" data-aria-controls="conditional-contact-5">
+            <label class="govuk-label govuk-radios__label" for="option2">
+                Non-registered public body
+            </label>
+          </div>
+    </fieldset>
+<br>
+        <div>
+          <button class="govuk-button" data-module="govuk-button" type="button" onclick="display()">Continue</button>
+        </div>
+  </form>
+</div>
+</div>
+
+  <script>
+    function display() {
+      if(document.getElementById('option1').checked) {
+          location.replace('/version-3/you-are-eligible-to-apply-as-a-lead-applicant')
+      }
+      else if(document.getElementById('option2').checked) {
+        location.replace('/version-3/you-are-not-eligible-to-apply-as-a-lead-applicant')
+      }
+      else if(document.getElementById('option3').checked) {
+        location.replace('/version-3/you-are-eligible-to-apply-as-a-lead-applicant')
+      }
+      else {
+        document.getElementById("disp").innerHTML
+          = "No one selected";
+      }
+    }
+  </script>
+
   {% endblock %}
