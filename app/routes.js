@@ -125,10 +125,10 @@ router.post('/version-3b/you-are-eligible-to-apply-as-a-lead-applicant', functio
 
   const e5 = req.session.data['eligibility-5']
 
-  if (e5 === 'false') {
-    res.redirect('/version-3b/you-are-not-eligible-to-apply-as-a-lead-applicant')
-  } else {
+  if (e5 === 'true'){
     res.redirect('/version-3b/you-are-eligible-to-apply-as-a-lead-applicant')
+  } else {
+    res.redirect('/version-3b/you-are-not-eligible-to-apply-as-a-lead-applicant')
   }
 })
 
