@@ -22,11 +22,21 @@
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
       <form action="charity-commision-lookup-results" method="post" class="form">
-        <span class="govuk-caption-xl">Create account</span>
+        <span class="govuk-caption-xl">Create an account</span>
           <h1 class="govuk-heading-l">
-            Enter your registration number
+            Enter your organisation's details
           </h1>
           <p>Enter your Charity Commision registration number. We will look for your charity's details and tell you what to do next.</p>
+          <details class="govuk-details" data-module="govuk-details">
+            <summary class="govuk-details__summary">
+              <span class="govuk-details__summary-text">
+                Where to find your charity registration number
+              </span>
+            </summary>
+            <div class="govuk-details__text">
+              Placeholder text
+            </div>
+          </details>
 
           <div class="govuk-form-group">
               <label class="govuk-label" for="one-third">
@@ -35,10 +45,8 @@
               <input class="govuk-input govuk-!-width-one-third" id="reg-number" name="reg-number" type="text">
           </div>
           <div>
-              <button class="govuk-button" data-module="govuk-button">Look for my company details</button>
+              <button class="govuk-button" data-module="govuk-button">Search</button>
           </div>
-          <h3 class="govuk-heading-s">My organisation is not registered on the Charity Commission</h3>
-          <p>If you are not registered you can manually enter your details <a href="enter-your-organisation-details">here.</a></p>
       </form>
     </div>
 

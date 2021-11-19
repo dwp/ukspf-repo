@@ -18,10 +18,11 @@
   {% endblock %}
 
   {% block content %}
-
+<div>
   	<form method="post" class="form">
       <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
         <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+          <span class="govuk-caption-xl">Create account</span>
           <h1 class="govuk-fieldset__heading">
             What type of non-registered organisation are you?
           </h1>
@@ -67,13 +68,12 @@
                     </label>
                   </div>
       </fieldset>
-<br>
-          <div>
-            <a href="enter-your-organisation-details" role="button" draggable="false" class="govuk-button data-module="govuk-button">
-              Continue
-            </a>
-          </div>
   	</form>
+<br>
+    <p><a href="enter-your-organisation-details" role="button" draggable="false" class="govuk-button data-module="govuk-button">
+      Save and continue
+    </a></p>
+</div>
 
 
 {% endblock %}

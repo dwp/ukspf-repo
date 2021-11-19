@@ -52,22 +52,19 @@
         active: false
       },
       {
-        href: "messages",
-        text: "Messages",
-        active: false
-      },
-      {
-        href: "uploads",
-        text: "Uploads",
-        active: false
-      },
-      {
         href: "account",
         text: "Account",
         active: true
+      },
+      {
+        href: "sign-in",
+        text: "Sign out",
+        active: false
       }
     ]
-  }) }}{% endblock %}
+  })
+}}
+{% endblock %}
 
 {% set mainClasses = mainClasses | default("govuk-main-wrapper--auto-spacing") %}
 
