@@ -1,0 +1,35 @@
+{% extends "layout-r3-coming-back.html" %}
+
+{% set pageTitle = "Sorry-there-is-a-problem" %}
+
+{% block pageTitle %}
+  {{ pageTitle }} {% include "r3/_page-title-slug.html" %}
+{% endblock %}
+
+{% block beforeContent %}
+  {% include "r3/_beta-banner.html" %}
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      </div>
+
+      <h1 class="govuk-heading-l">Sorry, there is a problem</h1>
+
+      <p>Your supporting evidence was not sent.</p>
+
+      <p><a href="supporting-evidence-uploaded-1">Try again</a></p>
+
+      <p>If you keep seeing this message and need to post your supporting evidence instead, contact:</p>
+
+      <div class="indent-hairline">
+        {% include "r3/_contact.html" %}
+      </div>
+
+
+    </div>{# /govuk-grid-column-one-third #}
+  </div>{# /govuk-grid-row #}
+{% endblock %}

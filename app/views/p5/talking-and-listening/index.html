@@ -1,0 +1,46 @@
+{% set pageTitle = "Does your condition affect you talking, listening and understanding?" %}
+
+{% extends "layout-p5.html" %}
+
+{% block pageTitle %}
+  {{ pageTitle }} {% include "p5/_page-title-slug.html" %}
+{% endblock %}
+
+{% block beforeContent %}
+  {% include "p5/_beta-banner.html" %}
+  {% include "p5/_back-link.html" %}
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <form action="/p5/talking-and-listening/index-answer" method="post" novalidate>
+
+      <span class="govuk-caption-l">Declarations</span>
+      <h1 class="govuk-heading-l">
+        False or incomplete information
+      </h1>
+      <p>If your organisation gives false or incomplete information to obtain a grant or uses funds for a purpose not stated in the application, you risk prosecution (under but not limited to the Bribery Act 2010, Fraud Act 2006 and anti-money laundering regulations). In such circumstances, any funding provided may be repayable and future payments stopped.</p>
+
+      <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="false-info" name="false-info" type="checkbox" value="">
+              <label class="govuk-label govuk-checkboxes__label" for="false-info">
+                I have read and understand the statement above
+              </label>
+            </div>
+      </div>
+<br>
+      {{ govukButton({
+        text: "Save and continue"
+      }) }}
+
+    </form>
+
+    {% include "p5/talking-and-listening/_return-link.html" %}
+
+  </div><!-- govuk-grid-column-two-thirds -->
+</div><!-- govuk-grid-row -->
+{% endblock %}
