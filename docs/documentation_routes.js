@@ -7,6 +7,9 @@ const express = require('express')
 const marked = require('marked')
 const router = express.Router()
 
+// Local dependencies
+const utils = require('../lib/utils.js')
+
 // Page routes
 
 // Docs index
@@ -28,27 +31,13 @@ router.get('/install/:page', function (req, res) {
   redirectMarkdown(req.params.page, res)
   var doc = fs.readFileSync(path.join(__dirname, '/documentation/install/', req.params.page + '.md'), 'utf8')
   var html = marked(doc)
-  res.render('install_template', { document: html })
+  res.render('install_template', { 'document': html })
 })
 
-// When in 'promo mode', redirect to download the current release zip from
-// GitHub, based on the version number from package.json
-//
-// Otherwise, redirect to the latest release page on GitHub, to avoid just
-// linking to the same version being run by someone referring to the copy of the
-// docs running in their kit
+// Redirect to the zip of the latest release of the Prototype Kit on GitHub
 router.get('/download', function (req, res) {
-  if (req.app.locals.promoMode === 'true') {
-    const version = require('../package.json').version
-
-    res.redirect(
-      `https://github.com/alphagov/govuk-prototype-kit/archive/v${version}.zip`
-    )
-  } else {
-    res.redirect(
-      'https://github.com/alphagov/govuk-prototype-kit/releases/latest'
-    )
-  }
+  var url = utils.getLatestRelease()
+  res.redirect(url)
 })
 
 // Examples - examples post here
@@ -60,7 +49,7 @@ router.post('/tutorials-and-examples', function (req, res) {
 
 // Passing data into a page
 router.get('/examples/template-data', function (req, res) {
-  res.render('examples/template-data', { name: 'Foo' })
+  res.render('examples/template-data', { 'name': 'Foo' })
 })
 
 // Branching
@@ -69,85 +58,13 @@ router.post('/examples/branching/over-18-answer', function (req, res) {
   // The name between the quotes is the same as the 'name' attribute on the input elements
   // However in JavaScript we can't use hyphens in variable names
 
-  const over18 = req.session.data['over-18']
+  let over18 = req.session.data['over-18']
 
   if (over18 === 'false') {
-    res.redirect('/version-2/return-to-an-application')
+    res.redirect('/docs/examples/branching/under-18')
   } else {
-    res.redirect('/version-2/invitation-number')
+    res.redirect('/docs/examples/branching/over-18')
   }
-})
-
-router.post('/examples/branching', function (req, res) {
-  // Get the answer from session data
-  // The name between the quotes is the same as the 'name' attribute on the input elements
-  // However in JavaScript we can't use hyphens in variable names
-
-  const over18 = req.session.data['over-18']
-
-  if (over18 === 'false') {
-    res.redirect('/version-2a/return-to-application')
-  } else {
-    res.redirect('/version-2a/invitation-number')
-  }
-})
-
-router.post('/examples/branching-version-2b', function (req, res) {
-  // Get the answer from session data
-  // The name between the quotes is the same as the 'name' attribute on the input elements
-  // However in JavaScript we can't use hyphens in variable names
-
-  const over18 = req.session.data['over-18']
-
-  if (over18 === 'false') {
-    res.redirect('/version-2b/return-to-application')
-  } else {
-    res.redirect('/version-2b/invitation-number')
-  }
-})
-
-
-//  V3 routing start
-
-router.post('/examples/branching-version-3', function (req, res) {
-  // Get the answer from session data
-  // The name between the quotes is the same as the 'name' attribute on the input elements
-  // However in JavaScript we can't use hyphens in variable names
-
-  const over18 = req.session.data['over-18']
-
-  if (over18 === 'false') {
-    res.redirect('/version-3/dashboard')
-  } else {
-    res.redirect('/version-3/ukspf-competitions')
-  }
-})
-
-router.post('/version-3/branching', function (req, res) {
-  // Get the answer from session data
-  // The name between the quotes is the same as the 'name' attribute on the input elements
-  // However in JavaScript we can't use hyphens in variable names
-
-  const over18 = req.session.data['over-18']
-
-  if (over18 === 'false') {
-    res.redirect('/version-3/dashboard')
-  } else {
-    res.redirect('/version-3/ukspf-competitions')
-  }
-})
-
-// V3 routing end
-
-
-
-
-
-
-
-
-router.get('/making-pages', function (req, res) {
-  res.redirect('/docs/make-first-prototype/create-pages')
 })
 
 module.exports = router
