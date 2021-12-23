@@ -1,104 +1,128 @@
+{% set pageTitle = "Page title" %}
+
 {% extends "layout-no-nav.html" %}
 
 {% block pageTitle %}
-  UKSPF competitions
+  {{ pageTitle }} {% include "version-4/_page-title-slug.html" %}
 {% endblock %}
-  {% block beforeContent %}
-  <div class="govuk-phase-banner">
-    <p class="govuk-phase-banner__content">
-      <strong class="govuk-tag govuk-phase-banner__content__tag">
-        alpha
-      </strong>
-      <span class="govuk-phase-banner__text">
-        This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
-      </span>
-    </p>
-  </div>
-  {% endblock %}
 
-  {% block content %}
-  <div class="govuk-grid-row">
-    <div class="govuk-grid-column-two-thirds">
-      <h1 class="govuk-heading-l">UK Shared Prosperity competitions</h1>
-    </div>
+{% block beforeContent %}
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      alpha
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+    </span>
+  </p>
+</div>
+{% endblock %}
 
-  </div>
-  <div class="govuk-grid-row">
-    <div class="govuk-grid-column-one-third">
-      <h3 class="govuk-heading-s">Filter competitions</h3>
-      <hr>
-      <div class="govuk-form-group">
-        <label class="govuk-label" for="filter">
-          Keywords
-        </label>
-        <input class="govuk-input" id="event-name" name="event-name" type="text">
-      </div>
-      <div class="govuk-form-group">
-        <label class="govuk-label" for="sort">
-          Sort by
-        </label>
-        <select class="govuk-select" id="sort" name="sort">
-          <option value="published" selected>Location</option>
-          <option value="people" >People</option>
-          <option value="places">Places</option>
-          <option value="area">Area</option>
-          <option value="grant amount">Grant amount</option>
-        </select>
-      </div>
-      <button class="govuk-button" data-module="govuk-button">
-        Update results
-      </button>
-    </div>
-    <div class="govuk-grid-column-two-thirds">
-      <h3 class="govuk-heading-s">2 competitions</h3>
-      <hr>
-      <h3 class="govuk-heading-s"><a href="competition/summary">PE12345 - Strengthening Employment Skills for the over 50s</a></h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque vitae commodo arcu, at tristique ex. Maecenas egestas condimentum ex id mattis. Nulla felis metus, vehicula non cursus cursus, laoreet non sapien. Duis pharetra nibh tellus, ut euismod lorem pretium eu. </p>
-      <h3 class="govuk-heading-s">Eligibility</h3>
-      <p>Contracts will be awarded to a single legal entity only, however you can involve subcontractors in your project work. This work will still be the responsibility of the lead applicant.</p>
-      <h3 class="govuk-heading-s">Open now</h3>
-      <div class="govuk-grid-row">
-        <div class="govuk-grid-column-one-quarter">
-            <p>Opened:</p>
-        </div>
-        <div class="govuk-grid-column-two-thirds">
-            <p>7 October 2021 at 12:00</p>
-        </div>
-      </div>
-      <div class="govuk-grid-row">
-        <div class="govuk-grid-column-one-quarter">
-            <p>Closes:</p>
-        </div>
-        <div class="govuk-grid-column-two-thirds">
-            <p>21 March 2022 at 12:00</p>
-        </div>
-      </div>
-      <hr></hr>
-      <h3 class="govuk-heading-s"><a href="#">PE98765 - Support for the homeless</a></h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque vitae commodo arcu, at tristique ex. Maecenas egestas condimentum ex id mattis. Nulla felis metus, vehicula non cursus cursus, laoreet non sapien. Duis pharetra nibh tellus, ut euismod lorem pretium eu. </p>
-      <h3 class="govuk-heading-s">Eligibility</h3>
-      <p>Contracts will be awarded to a single legal entity only, however you can involve subcontractors in your project work. This work will still be the responsibility of the lead applicant.</p>
-      <h3 class="govuk-heading-s">Open now</h3>
-      <div class="govuk-grid-row">
-        <div class="govuk-grid-column-one-quarter">
-            <p>Opened:</p>
-        </div>
-        <div class="govuk-grid-column-two-thirds">
-            <p>1 November 2021 at 12:00</p>
-        </div>
-      </div>
-      <div class="govuk-grid-row">
-        <div class="govuk-grid-column-one-quarter">
-            <p>Closes:</p>
-        </div>
-        <div class="govuk-grid-column-two-thirds">
-            <p>31 December 2022 at 12:00</p>
-        </div>
-      </div>
-      <hr></hr>
+{% block content %}
+
+
+{%- from "moj/components/side-navigation/macro.njk" import mojSideNavigation -%}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full-width">
+    <div class="govuk-grid-column-three-quarters">
+      <h1 class="govuk-heading-l">UK Shared Prosperity Fund competitions</h1>
     </div>
   </div>
+</div>
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-one-quarter">
+    <h3 class="govuk-heading-s">Filter competitions</h3>
+    <hr>
+    <div class="govuk-form-group">
+      <label class="govuk-label" for="filter">
+        Keywords
+      </label>
+      <input class="govuk-input" id="event-name" name="event-name" type="text">
+    </div>
+
+    <div class="govuk-form-group">
+      <fieldset class="govuk-fieldset" aria-describedby="waste-hint">
+        <div>
+          <p>Sort by:</p>
+        </div>
+        <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
+          <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses">
+            <label class="govuk-label govuk-checkboxes__label" for="waste">
+              Open
+            </label>
+          </div>
+          <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input" id="waste-2" name="waste" type="checkbox" value="mines">
+            <label class="govuk-label govuk-checkboxes__label" for="waste-2">
+              Closed
+            </label>
+          </div>
+          <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="farm">
+            <label class="govuk-label govuk-checkboxes__label" for="waste-3">
+              Area
+            </label>
+          </div>
+          <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="farm">
+            <label class="govuk-label govuk-checkboxes__label" for="waste-3">
+              Grant amount
+            </label>
+          </div>
+        </div>
+
+      </fieldset>
+    </div>
+
+    <button class="govuk-button" data-module="govuk-button">
+      Update results
+    </button>
+  </div>
+
+  <div class="govuk-grid-column-three-quarters">
+    <h3 class="govuk-heading-s">2 competitions</h3>
+    <hr>
+  </div>
+
+  <div class="govuk-grid-column-one-quarter">
+    <p></p>
+  </div>
+  <div class="govuk-grid-column-three-quarters">
+    <h3 class="govuk-heading-s"><a href="competition/summary">OPEN - Strengthening Employment Skills for the over 50s</a></h3>
+    <h3 class="govuk-heading-s govuk-!-margin-bottom-1">Area</h3>
+    <p>Greater Manchester</p>
+    <h3 class="govuk-heading-s govuk-!-margin-bottom-1">Fund amount</h3>
+    <p>£600,000 over 3 years</p>
+    <h3 class="govuk-heading-s govuk-!-margin-bottom-1">Funding projects</h3>
+    <p>Funding is awarded to lead applicants only. Lead applicants are also responsible for the project delivery.</p>
+    <h3 class="govuk-heading-s govuk-!-margin-bottom-1">When to apply</h3>
+    <p class="govuk-!-margin-bottom-1">Open date: 7 October 2021 at 12:00 am</p>
+    <p>Closing date: 20 October 2021 at 12:00 am</p>
+    <hr>
+  </div>
+
+  <div class="govuk-grid-column-one-quarter">
+    <p></p>
+  </div>
+    <div class="govuk-grid-column-three-quarters">
+      <br>
+      <h3 class="govuk-heading-s"><a href="competition/summary">OPEN - Support for the homeless</a></h3>
+      <h3 class="govuk-heading-s govuk-!-margin-bottom-1">Area</h3>
+      <p>Greater Manchester</p>
+      <h3 class="govuk-heading-s govuk-!-margin-bottom-1">Fund amount</h3>
+      <p>£600,000 over 3 years</p>
+      <h3 class="govuk-heading-s govuk-!-margin-bottom-1">Funding projects</h3>
+      <p>Funding is awarded to lead applicants only. Lead applicants are also responsible for the project delivery.</p>
+      <h3 class="govuk-heading-s govuk-!-margin-bottom-1">When to apply</h3>
+      <p class="govuk-!-margin-bottom-1">Open date: 7 October 2021 at 12:00 am</p>
+      <p>Closing date: 20 October 2021 at 12:00 am</p>
+    </div>
+
+</div>
 
 
-
-  {% endblock %}
+{% endblock %}
