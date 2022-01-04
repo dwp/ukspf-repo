@@ -14,7 +14,7 @@
       </span>
     </p>
   </div>
-  <a href="#" class="govuk-back-link">Back</a>
+  <a href="will-your-organisation-deliver-projects-in-the-uk" class="govuk-back-link">Back</a>
   {% endblock %}
 
   {% block content %}
@@ -47,8 +47,21 @@
             </div>
 
           </fieldset>
-        </div>        <button class="govuk-button" data-module="govuk-button">Continue</button>
+        </div>
+        <button class="govuk-button" data-module="govuk-button" type="button" onclick="display()">Continue</button>
       </form>
     </div>
   </div>
+
+  <script>
+    function display() {
+      if(document.getElementById('eligibility-3-yes').checked) {
+          location.replace('/version-4/is-your-organisation-a-registered-company-charity-or-a-non-registered-public-body-such-as-a-local-authority')
+      }
+      else {
+        location.replace('/version-4/you-are-not-eligible-to-apply-as-a-lead-applicant')
+      }
+    }
+  </script>
+
   {% endblock %}

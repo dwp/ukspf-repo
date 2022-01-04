@@ -14,7 +14,7 @@
       </span>
     </p>
   </div>
-  <a href="#" class="govuk-back-link">Back</a>
+  <a href="does-your-organisation-have-a-uk-bank-account-or-building-society-account" class="govuk-back-link">Back</a>
   {% endblock %}
 
   {% block content %}
@@ -47,8 +47,21 @@
             </div>
 
           </fieldset>
-        </div>        <button class="govuk-button" data-module="govuk-button">Continue</button>
+        </div>
+        <button class="govuk-button" data-module="govuk-button" type="button" onclick="display()">Continue</button>
       </form>
     </div>
   </div>
+
+  <script>
+    function display() {
+      if(document.getElementById('eligibility-4-yes').checked) {
+          location.replace('/version-4/If-your-organisation-is-a-registered-company-or-charity-has-it-filed-a-full-set-of-accounts-within-the-last-12-months')
+      }
+      else {
+        location.replace('/version-4/you-are-not-eligible-to-apply-as-a-lead-applicant')
+      }
+    }
+  </script>
+
   {% endblock %}

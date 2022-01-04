@@ -14,14 +14,14 @@
       </span>
     </p>
   </div>
-  <a href="#" class="govuk-back-link">Back</a>
+  <a href="do-you-have-an-account" class="govuk-back-link">Back</a>
   {% endblock %}
 
   {% block content %}
 
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
-      <form action="will-your-organisation-deliver-projects-in-the-uk" method="post" class="form">
+      <form method="post" class="form">
         <div class="govuk-form-group">
           <fieldset class="govuk-fieldset" aria-describedby="changed-name-hint">
             <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
@@ -33,13 +33,13 @@
             <p>You must be able to meet all of the needs listed to apply as a lead applicant and single organisation. Alternatively, you can form a consortium as a lead or supporting organisation to meet all of the needs as a collective.</p>
             <div class="govuk-radios govuk-radios--inline">
               <div class="govuk-radios__item">
-                <input class="govuk-radios__input" id="eligibility-1-yes" name="eligibility-1" type="radio" value="true" required>
+                <input class="govuk-radios__input" id="eligibility-1-yes" name="eligibility-1" type="radio" value="can" required>
                 <label class="govuk-label govuk-radios__label" for="eligibility-1-yes">
                   Yes
                 </label>
               </div>
               <div class="govuk-radios__item">
-                <input class="govuk-radios__input" id="eligibility-1-no" name="eligibility-1" type="radio" value="false">
+                <input class="govuk-radios__input" id="eligibility-1-no" name="eligibility-1" type="radio" value="cannot">
                 <label class="govuk-label govuk-radios__label" for="eligibility-1-no">
                   No
                 </label>
@@ -47,8 +47,21 @@
             </div>
 
           </fieldset>
-        </div>        <button class="govuk-button" data-module="govuk-button">Continue</button>
+        </div>
+        <button class="govuk-button" data-module="govuk-button" type="button" onclick="display()">Continue</button>
       </form>
     </div>
   </div>
+
+  <script>
+    function display() {
+      if(document.getElementById('eligibility-1-yes').checked) {
+          location.replace('/version-4/will-your-organisation-deliver-projects-in-the-uk')
+      }
+      else {
+        location.replace('/version-4/you-are-not-eligible-to-apply-as-a-lead-applicant')
+      }
+    }
+  </script>
+
   {% endblock %}
