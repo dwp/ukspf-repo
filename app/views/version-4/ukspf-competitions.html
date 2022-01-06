@@ -7,6 +7,7 @@
 {% endblock %}
 
 {% block beforeContent %}
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
 <div class="govuk-phase-banner">
   <p class="govuk-phase-banner__content">
     <strong class="govuk-tag govuk-phase-banner__content__tag">
@@ -17,6 +18,7 @@
     </span>
   </p>
 </div>
+
 {% endblock %}
 
 {% block content %}
@@ -35,19 +37,111 @@
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-one-quarter">
     <div class="govuk-form-group">
-      <label class="govuk-label" for="filter">
-        Search competitions
-      </label>
-      <input class="govuk-input" id="event-name" name="event-name" type="text">
+      <h3 class="govuk-heading-s">Search competitions</h3>
+      <label class="govuk-label" for="input-with-suffix"> Keywords </label>
+      <div class="govuk-input__wrapper">
+        <input class="govuk-input" id="input-with-suffix" name="weight" type="text">
+        <div class="govuk-input__suffix" aria-hidden="true">
+          <a href="/version-4/sign-in"><i class="fa fa-search icon searchicon"></i></a>
+        </div>
+      </div>
     </div>
-    <button class="govuk-button" data-module="govuk-button">
-      Search
-    </button>
+    <div>
+      <p>Filters:</p>
+      <p class="govuk-body govuk-!-font-weight-bold">Area</p>
+    </div>
+
+    <div class="govuk-form-group ex1">
+        <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
+          <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="hmrc">
+            <label class="govuk-label govuk-checkboxes__label" for="organisation">
+              Area 1
+            </label>
+          </div>
+          <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input" id="organisation-2" name="organisation" type="checkbox" value="employment-tribunal">
+            <label class="govuk-label govuk-checkboxes__label" for="organisation-2">
+              Area 2
+            </label>
+          </div>
+          <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input" id="organisation-3" name="organisation" type="checkbox" value="MOD">
+            <label class="govuk-label govuk-checkboxes__label" for="organisation-3">
+              Area 3
+            </label>
+          </div>
+          <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input" id="organisation-4" name="organisation" type="checkbox" value="DfT">
+            <label class="govuk-label govuk-checkboxes__label" for="organisation-4">
+              Area 4
+            </label>
+          </div>
+          <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input" id="organisation-4" name="organisation" type="checkbox" value="DfT">
+            <label class="govuk-label govuk-checkboxes__label" for="organisation-4">
+              Area 5
+            </label>
+          </div>
+          <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input" id="organisation-4" name="organisation" type="checkbox" value="DfT">
+            <label class="govuk-label govuk-checkboxes__label" for="organisation-4">
+              Area 6
+            </label>
+          </div>
+          <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input" id="organisation-4" name="organisation" type="checkbox" value="DfT">
+            <label class="govuk-label govuk-checkboxes__label" for="organisation-4">
+              Area 7
+            </label>
+          </div>
+          <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input" id="organisation-4" name="organisation" type="checkbox" value="DfT">
+            <label class="govuk-label govuk-checkboxes__label" for="organisation-4">
+              Area 8
+            </label>
+          </div>
+        </div>
+    </div>
+  <hr>
+
+  <div>
+    <p class="govuk-body govuk-!-font-weight-bold">Fund amount</p>
+  </div>
+  <div class="govuk-form-group ex1">
+      <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
+        <div class="govuk-checkboxes__item">
+          <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="hmrc">
+          <label class="govuk-label govuk-checkboxes__label" for="organisation">
+            £100k - £500k
+          </label>
+        </div>
+        <div class="govuk-checkboxes__item">
+          <input class="govuk-checkboxes__input" id="organisation-2" name="organisation" type="checkbox" value="employment-tribunal">
+          <label class="govuk-label govuk-checkboxes__label" for="organisation-2">
+            £500k - £1m
+          </label>
+        </div>
+        <div class="govuk-checkboxes__item">
+          <input class="govuk-checkboxes__input" id="organisation-3" name="organisation" type="checkbox" value="MOD">
+          <label class="govuk-label govuk-checkboxes__label" for="organisation-3">
+            £1m - £2m
+          </label>
+        </div>
+        <div class="govuk-checkboxes__item">
+          <input class="govuk-checkboxes__input" id="organisation-4" name="organisation" type="checkbox" value="DfT">
+          <label class="govuk-label govuk-checkboxes__label" for="organisation-4">
+            £2m - £3m
+          </label>
+        </div>
+      </div>
+  </div>
+<hr>
 
     <div class="govuk-form-group">
       <fieldset class="govuk-fieldset" aria-describedby="sort-hint">
         <div>
-          <p>Sort by:</p>
+          <p class="govuk-body govuk-!-font-weight-bold">Status</p>
         </div>
         <div class="govuk-radios govuk-radios--small" data-module="govuk-radios">
           <div class="govuk-radios__item">
@@ -69,7 +163,6 @@
             </label>
           </div>
         </div>
-
       </fieldset>
     </div>
   </div>
@@ -90,7 +183,7 @@
     <p>£600,000 over 3 years</p>
     <h3 class="govuk-heading-s govuk-!-margin-bottom-1">When to apply</h3>
     <p class="govuk-!-margin-bottom-1">Open date: 7 October 2021 at 12:00 am</p>
-    <p>Closing date: 20 October 2021 at 12:00 am</p>
+    <p>Closing date: 7 January 2022 at 12:00 am</p>
     <hr>
   </div>
 
@@ -101,15 +194,41 @@
       <br>
       <h3 class="govuk-heading-s"><a href="competition/summary">OPEN - Support for the homeless</a></h3>
       <h3 class="govuk-heading-s govuk-!-margin-bottom-1">Area</h3>
-      <p>Greater Manchester</p>
+      <p>London</p>
       <h3 class="govuk-heading-s govuk-!-margin-bottom-1">Fund amount</h3>
-      <p>£600,000 over 3 years</p>
+      <p>£1,000,000 over 3 years</p>
       <h3 class="govuk-heading-s govuk-!-margin-bottom-1">When to apply</h3>
-      <p class="govuk-!-margin-bottom-1">Open date: 7 October 2021 at 12:00 am</p>
-      <p>Closing date: 20 October 2021 at 12:00 am</p>
+      <p class="govuk-!-margin-bottom-1">Open date: 11 February 2022 at 12:00 am</p>
+      <p>Closing date: 7 June 2022 at 12:00 am</p>
     </div>
 
 </div>
 
+<style>
+  /* Set a style for the submit button */
 
+.searchicon {
+  color: white;
+  cursor: pointer;
+  opacity: 0.9;
+}
+
+.searchicon:hover {
+  opacity: 0.8;
+}
+
+.govuk-input__suffix{
+  background-color: #1d70b8;
+  color: white;
+  border: ffffff;
+  cursor: pointer;
+}
+
+div.ex1 {
+  height: 150px;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+</style>
 {% endblock %}

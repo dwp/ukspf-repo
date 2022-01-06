@@ -1,0 +1,180 @@
+{% set pageTitle = "Page title" %}
+
+{% extends "layout-create-account.html" %}
+
+{% block pageTitle %}
+  {{ pageTitle }} {% include "version-4/_page-title-slug.html" %}
+{% endblock %}
+
+{% block beforeContent %}
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      alpha
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+    </span>
+  </p>
+</div>
+
+{% endblock %}
+
+{% block content %}
+
+
+{%- from "moj/components/side-navigation/macro.njk" import mojSideNavigation -%}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full-width">
+    <div class="govuk-grid-column-three-quarters">
+      <h1 class="govuk-heading-l">UK Shared Prosperity Fund competitions</h1>
+    </div>
+  </div>
+</div>
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-one-quarter">
+    <div class="govuk-form-group">
+      <label class="govuk-label" for="input-with-suffix"> Search competitions </label>
+      <div class="govuk-input__wrapper">
+        <input class="govuk-input" id="input-with-suffix" name="weight" type="text">
+        <div class="govuk-input__suffix" aria-hidden="true">
+          <a href="/version-4/sign-in"><i class="fa fa-search icon searchicon"></i></a>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="govuk-form-group">
+      <label class="govuk-label" for="sort">
+        Area
+      </label>
+      <select class="govuk-select" id="sort" name="sort">
+        <option value="Area 1" selected>Show all areas</option>
+        <option value="Area 2">Area 1</option>
+        <option value="Area 2">Area 2</option>
+        <option value="Area 3">Area 3</option>
+        <option value="Area 4">Area 4</option>
+        <option value="Area 5">Area 5</option>
+        <option value="Area 6">Area 6</option>
+        <option value="Area 7">Area 7</option>
+        <option value="Area 8">Area 8</option>
+        <option value="Area 9">Area 9</option>
+        <option value="Area 10">Area 10</option>
+      </select>
+    </div>
+
+    <div class="govuk-form-group">
+      <label class="govuk-label" for="sort">
+        Fund amount
+      </label>
+      <select class="govuk-select" id="sort" name="sort">
+        <option value="Amount 1" selected>Show all amounts</option>
+        <option value="Amount 2">Amount 1</option>
+        <option value="Amount 2">Amount 2</option>
+        <option value="Amount 3">Amount 3</option>
+        <option value="Amount 4">Amount 4</option>
+        <option value="Amount 5">Amount 5</option>
+        <option value="Amount 6">Amount 6</option>
+        <option value="Amount 7">Amount 7</option>
+        <option value="Amount 8">Amount 8</option>
+        <option value="Amount 9">Amount 9</option>
+        <option value="Amount 10">Amount 10</option>
+      </select>
+    </div>
+    <button class="govuk-button" data-module="govuk-button">
+      Update results
+    </button>
+
+{# ***** R1 will have only open competitions
+    <div class="govuk-form-group">
+      <fieldset class="govuk-fieldset" aria-describedby="sort-hint">
+        <div>
+          <p>Sort by:</p>
+        </div>
+        <div class="govuk-radios govuk-radios--small" data-module="govuk-radios">
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="sort-1" name="sort" type="radio" value="open">
+            <label class="govuk-label govuk-radios__label" for="sort-1">
+              Open
+            </label>
+          </div>
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="sort-2" name="sort" type="radio" value="closed">
+            <label class="govuk-label govuk-radios__label" for="sort-2">
+              Closed
+            </label>
+          </div>
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="sort-3" name="sort" type="radio" value="upcoming">
+            <label class="govuk-label govuk-radios__label" for="sort-3">
+              Upcoming
+            </label>
+          </div>
+        </div>
+
+      </fieldset>
+    </div>
+*****#}
+  </div>
+
+  <div class="govuk-grid-column-three-quarters">
+    <h3 class="govuk-heading-s">2 competitions</h3>
+    <hr>
+  </div>
+
+  <div class="govuk-grid-column-one-quarter">
+    <p></p>
+  </div>
+  <div class="govuk-grid-column-three-quarters">
+    <h3 class="govuk-heading-s"><a href="competition/summary">OPEN - Strengthening Employment Skills for the over 50s</a></h3>
+    <h3 class="govuk-heading-s govuk-!-margin-bottom-1">Area</h3>
+    <p>Greater Manchester</p>
+    <h3 class="govuk-heading-s govuk-!-margin-bottom-1">Fund amount</h3>
+    <p>£600,000 over 3 years</p>
+    <h3 class="govuk-heading-s govuk-!-margin-bottom-1">When to apply</h3>
+    <p class="govuk-!-margin-bottom-1">Open date: 7 October 2021 at 12:00 am</p>
+    <p>Closing date: 7 January 2022 at 12:00 am</p>
+    <hr>
+  </div>
+
+  <div class="govuk-grid-column-one-quarter">
+    <p></p>
+  </div>
+    <div class="govuk-grid-column-three-quarters">
+      <br>
+      <h3 class="govuk-heading-s"><a href="competition/summary">OPEN - Support for the homeless</a></h3>
+      <h3 class="govuk-heading-s govuk-!-margin-bottom-1">Area</h3>
+      <p>London</p>
+      <h3 class="govuk-heading-s govuk-!-margin-bottom-1">Fund amount</h3>
+      <p>£1,000,000 over 3 years</p>
+      <h3 class="govuk-heading-s govuk-!-margin-bottom-1">When to apply</h3>
+      <p class="govuk-!-margin-bottom-1">Open date: 11 February 2022 at 12:00 am</p>
+      <p>Closing date: 7 June 2022 at 12:00 am</p>
+    </div>
+
+</div>
+
+<style>
+  /* Set a style for the submit button */
+.searchicon {
+  color: white;
+  cursor: pointer;
+  opacity: 0.9;
+}
+
+.searchicon:hover {
+  opacity: 0.8;
+}
+
+.govuk-input__suffix{
+  background-color: #1d70b8;
+  color: white;
+  border: ffffff;
+  cursor: pointer;
+}
+
+</style>
+{% endblock %}
