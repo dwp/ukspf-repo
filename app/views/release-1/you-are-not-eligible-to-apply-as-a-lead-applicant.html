@@ -1,7 +1,7 @@
 {% extends "layout-no-nav.html" %}
 
 {% block pageTitle %}
-  You are not eligible to apply as a lead applicant
+  You are not an eligible applicant for the UK Shared Prosperity Fund
 {% endblock %}
   {% block beforeContent %}
   <div class="govuk-phase-banner">
@@ -23,44 +23,42 @@
         <div class="govuk-form-group">
           <span class="govuk-caption-l">Eligibility result</span>
             <h1 class="govuk-heading-l">
-                You are not eligible to apply as a lead applicant
+                You are not an eligible applicant for the UK Shared Prosperity Fund
               </h1>
-              <p>Your organisation does not match our eligibility criteria for lead applicants.</p>
-              <p>The eligibility criteria is defined in the competition brief. Please refer back to this to find out how you can become a partner of a lead applicant in a consortium.</p>
-              <p>Based on the answers you have provided, you cannot apply because:</p>
+              <p>Your organisation does not meet our eligibility criteria for lead applicants because:</p>
               <ul class="govuk-list govuk-list--bullet govuk-list--spaced">
                 {% if(data['eligibility-1'] == 'no') %}
                 <li>
-                  <p>your organisation cannot meet all of the needs listed in the competition</p>
+                  <p>Your organisation cannot fulfil all of the needs listed in the competition, either as a single organisation or as a consortium</p>
                 </li>
                 {% endif %}
 
                 {% if(data['eligibility-2'] == 'no') %}
                 <li>
-                  <p>your organisation will not deliver projects funded by UKSPF in the UK</p>
+                  <p>Your organisation will not deliver projects funded by UK Shared Prosperity Fund in the UK</p>
                 </li>
                 {% endif %}
 
                 {% if(data['eligibility-3'] == 'no') %}
                 <li>
-                  your organisation does not have a UK business bank account or building society account
+                  Your organisation does not have a UK business bank account or building society account
                 </li>
                 {% endif %}
 
                 {% if(data['eligibility-4'] == 'no') %}
                 <li>
-                  your organisation is not a registered company, charity, or a non-registered public body
+                  Your organisation is not a registered company, charity or a non-registered public body
                 </li>
                 {% endif %}
 
                 {% if(data['eligibility-5'] == 'no') %}
                 <li>
-                  your organisation has not filed a full set of accounts within the last 12 months
+                  Your organisation has not filed a full set of accounts within the last 12 months
                 </li>
                 {% endif %}
               </ul>
-
-              <p>You can <a href="ukspf-competitions">return to all compititions </a>or go back to the <a href="start">UK Shared Prosperity Fund homepage</a></p>
+              <p>The eligibility criteria is defined in the competition details. Please refer back to this to find out how you can become a partner of an eligible applicant in a consortium.</p>
+              <p>You can <a href="/version-4/ukspf-competitions">return to all compititions </a>or go back to the <a href="/version-4/start">UK Shared Prosperity Fund start page</a>.</p>
         </div>
 
     </div>
