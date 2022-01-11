@@ -28,23 +28,36 @@
               <p>Your organisation does not match our eligibility criteria for lead applicants.</p>
               <p>The eligibility criteria is defined in the competition brief. Please refer back to this to find out how you can become a partner of a lead applicant in a consortium.</p>
               <p>Based on the answers you have provided, you cannot apply because:</p>
-              <p> Here it is - {{ data['event-name'] }} </p>
               <ul class="govuk-list govuk-list--bullet govuk-list--spaced">
+                {% if(data['eligibility-1'] == 'no') %}
                 <li>
-                  <p> Here it is - {{ data['invitation-ref-number'] }} </p>
+                  <p>your organisation cannot meet all of the needs listed in the competition</p>
                 </li>
+                {% endif %}
+
+                {% if(data['eligibility-2'] == 'no') %}
                 <li>
-                  your organisation will not deliver projects funded by UKSPF in the UK
+                  <p>your organisation will not deliver projects funded by UKSPF in the UK</p>
                 </li>
+                {% endif %}
+
+                {% if(data['eligibility-3'] == 'no') %}
                 <li>
                   your organisation does not have a UK business bank account or building society account
                 </li>
+                {% endif %}
+
+                {% if(data['eligibility-4'] == 'no') %}
                 <li>
                   your organisation is not a registered company, charity, or a non-registered public body
                 </li>
+                {% endif %}
+
+                {% if(data['eligibility-5'] == 'no') %}
                 <li>
                   your organisation has not filed a full set of accounts within the last 12 months
                 </li>
+                {% endif %}
               </ul>
 
               <p>You can <a href="ukspf-competitions">return to all compititions </a>or go back to the <a href="start">UK Shared Prosperity Fund homepage</a></p>

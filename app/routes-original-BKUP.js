@@ -13,8 +13,19 @@ module.exports = {
     // Includes
 
     // Prototypes and exploration
+    require('./routes/p1.js')(app);
+    require('./routes/p2.js')(app);
+    require('./routes/p3.js')(app);
+    require('./routes/p4.js')(app);
+    require('./routes/p4-ni.js')(app);
+    require('./routes/p4-ru.js')(app);
     require('./routes/p5.js')(app);
+    require('./routes/test.js')(app);
     // Reference screens
+    require('./routes/r1.js')(app);
+    require('./routes/r2.js')(app);
+    require('./routes/r3.js')(app);
+    require('./routes/j1.js')(app);
     require('./routes/eligibility.js')(app);
   }
 }
