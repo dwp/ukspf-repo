@@ -23,215 +23,158 @@
         <h1 class="govuk-heading-l">
           Check your answers before submitting your application
         </h1>
-
-        <h2 class="govuk-heading-m">
-          Invitation
+        <h2 class="govuk-heading-l">
+              Application team
         </h2>
-        <dl class="govuk-summary-list">
-          <div class="govuk-summary-list__row">
-            <dt class="govuk-summary-list__key">
-              Enter invitation number
-            </dt>
-            <dd class="govuk-summary-list__value">
-              ABC123
-            </dd>
-          </div>
-{#
+        <h3 class="govuk-heading-m">
+              Organisation structure
+        </h3>
+        <dl class="govuk-summary-list govuk-!-margin-bottom-9">
             <div class="govuk-summary-list__row">
-            <dt class="govuk-summary-list__key">
-              Invitation name
-            </dt>
-            <dd class="govuk-summary-list__value">
-              This is the invitation name
-            </dd>
-          </div>
-#}
+              <dt class="govuk-summary-list__key govuk-!-width-one-quarter">
+                Partner organisation name
+              </dt>
+              <dd class="govuk-summary-list__value">
+                Prince's Trust
+              </dd>
+              <dd class="govuk-summary-list__actions">
+                <a class="govuk-link" href="/application-team/organisations/add-partner">
+                  Change<span class="govuk-visually-hidden"> Partner organisation name</span>
+                </a>
+              </dd>
+            </div>
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key govuk-!-width-one-quarter">
+                Partner organisation type
+              </dt>
+              <dd class="govuk-summary-list__value">
+                Charity
+              </dd>
+              <dd class="govuk-summary-list__actions">
+                <a class="govuk-link" href="/application-team/organisations/add-partner">
+                  Change<span class="govuk-visually-hidden"> Partner organisation type</span>
+                </a>
+              </dd>
+            </div>
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key govuk-!-width-one-quarter">
+                Contact full name
+              </dt>
+              <dd class="govuk-summary-list__value">
+                Stephen Hurst
+              </dd>
+              <dd class="govuk-summary-list__actions">
+                <a class="govuk-link" href="/application-team/organisations/add-partner">
+                  Change<span class="govuk-visually-hidden"> Partner organisation name</span>
+                </a>
+              </dd>
+            </div>
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key govuk-!-width-one-quarter">
+                Contact email
+              </dt>
+              <dd class="govuk-summary-list__value">
+                stephen.hurst@email.com
+              </dd>
+              <dd class="govuk-summary-list__actions">
+                <a class="govuk-link" href="/application-team/organisations/add-partner">
+                  Change<span class="govuk-visually-hidden"> contact email</span>
+                </a>
+              </dd>
+            </div>
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key govuk-!-width-one-quarter">
+                Contact organisation role
+              </dt>
+              <dd class="govuk-summary-list__value">
+                CEO
+              </dd>
+              <dd class="govuk-summary-list__actions">
+                <a class="govuk-link" href="/application-team/organisations/add-partner">
+                  Change<span class="govuk-visually-hidden"> Contact organisation role</span>
+                </a>
+              </dd>
+            </div>
         </dl>
-<br>
-        <h2 class="govuk-heading-m">
-          Contact details
-        </h2>
 
-        <dl class="govuk-summary-list">
+        <h3 class="govuk-heading-m">
+              Contributors
+        </h3>
+      <dl class="govuk-summary-list govuk-!-margin-bottom-9">
           <div class="govuk-summary-list__row">
-            <dt class="govuk-summary-list__key">
-              Full name
+            <dt class="govuk-summary-list__key govuk-!-width-one-quarter">
+              Contributor full name
             </dt>
             <dd class="govuk-summary-list__value">
-              John Doe
-              {{ data['full-name'] }}
+              Joe Bloggs
             </dd>
             <dd class="govuk-summary-list__actions">
-              <a class="govuk-link" href="who-can-we-contact-about-your-application">
-                Change <span class="govuk-visually-hidden">name</span>
+              <a class="govuk-link" href="/application-team/contributors/add-contributor">
+                Change<span class="govuk-visually-hidden"> Contributor full name</span>
               </a>
             </dd>
           </div>
-
           <div class="govuk-summary-list__row">
             <dt class="govuk-summary-list__key">
-              Phone number
+              Contributor email
             </dt>
             <dd class="govuk-summary-list__value">
-              07468428911
-              {{ data['telephone-number'] }}
+              Joe@bloggs.com
             </dd>
             <dd class="govuk-summary-list__actions">
-              <a class="govuk-link" href="who-can-we-contact-about-your-application">
-                Change <span class="govuk-visually-hidden">telephone-number</span>
+              <a class="govuk-link" href="/application-team/contributors/add-contributor">
+                Change<span class="govuk-visually-hidden"> Contributor email</span>
               </a>
             </dd>
           </div>
-
           <div class="govuk-summary-list__row">
             <dt class="govuk-summary-list__key">
-              Email
+              Contributor organisation role
             </dt>
             <dd class="govuk-summary-list__value">
-              john.doe@backtoworkalliance.com
-              {{ data['email'] }}
+              Bid Writer
             </dd>
-            <dd class="govuk-summary-list__actions">
-              <a class="govuk-link" href="who-can-we-contact-about-your-application">
-                Change <span class="govuk-visually-hidden">email</span>
+          <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="/application-team/contributors/add-contributor">
+                Change<span class="govuk-visually-hidden"> Bid Writer</span>
               </a>
             </dd>
+          </div>
         </dl>
-<br>
-
-    <h2 class="govuk-heading-m">
-            Organisation details
-    </h2>
-    <dl class="govuk-summary-list">
-      <div class="govuk-summary-list__row">
-        <dt class="govuk-summary-list__key">
-            Organisation name
-        </dt>
-        <dd class="govuk-summary-list__value">
-          Back To Work Alliance
-            {{ data['organisation-name'] }}
-        </dd>
-        <dd class="govuk-summary-list__actions">
-          <a class="govuk-link" href="enter-organisation-details">
-            Change <span class="govuk-visually-hidden">address-postcode</span>
-          </a>
-        </dd>
-      </div>
-
-      <div class="govuk-summary-list__row">
-        <dt class="govuk-summary-list__key">
-            Address
-        </dt>
-        <dd class="govuk-summary-list__value">
-            33 Middleton Row<br>
-            Chillingworth<br>
-            York<br>
-            CH22 8DS
-    {# Hiding variables
-            {{ data['address-line-1'] }}<br>
-            {{ data['address-line-2'] }}<br>
-            {{ data['address-town'] }}<br>
-            {{ data['address-county'] }}<br>
-            {{ data['address-postcode'] }}
-    #}
-        </dd>
-        <dd class="govuk-summary-list__actions">
-          <a class="govuk-link" href="enter-organisation-details">
-            Change <span class="govuk-visually-hidden">building-and-street</span>
-          </a>
-        </dd>
-      </div>
-
-      <div class="govuk-summary-list__row">
-        <dt class="govuk-summary-list__key">
-          Who is your organisation registered with?
-        </dt>
-        <dd class="govuk-summary-list__value">
-          Companies House<br>
-          Companies House number: 123456
-          {{ data['companies-house-number'] }}
-        </dd>
-        <dd class="govuk-summary-list__actions">
-          <a class="govuk-link" href="who-is-your-organisation-registered-with">
-            Change <span class="govuk-visually-hidden">registered-organisation</span>
-          </a>
-        </dd>
-      </div>
-    </dl>
-<br>
-
-      <h2 class="govuk-heading-m">
-              Bank details
-      </h2>
-      <dl class="govuk-summary-list">
-        <div class="govuk-summary-list__row">
-          <dt class="govuk-summary-list__key">
-              Name on the account
-          </dt>
-          <dd class="govuk-summary-list__value">
-              John F Doe
-              {{ data['account-holder-name'] }}
-          </dd>
-          <dd class="govuk-summary-list__actions">
-            <a class="govuk-link" href="what-are-your-organisation-bank-or-building-society-account-details">
-              Change <span class="govuk-visually-hidden">account-holder-name</span>
-            </a>
-          </dd>
-        </div>
-        <div class="govuk-summary-list__row">
-          <dt class="govuk-summary-list__key">
-              Sort code
-          </dt>
-          <dd class="govuk-summary-list__value">
-              112233
-              {{ data['sort-code'] }}
-          </dd>
-          <dd class="govuk-summary-list__actions">
-            <a class="govuk-link" href="what-are-your-organisation-bank-or-building-society-account-details">
-              Change <span class="govuk-visually-hidden">sort-code</span>
-            </a>
-          </dd>
-        </div>
-
-        <div class="govuk-summary-list__row">
-          <dt class="govuk-summary-list__key">
-              Account number
-          </dt>
-          <dd class="govuk-summary-list__value">
-            999999999
-              {{ data['account-number'] }}
-          </dd>
-          <dd class="govuk-summary-list__actions">
-            <a class="govuk-link" href="what-are-your-organisation-bank-or-building-society-account-details">
-              Change <span class="govuk-visually-hidden">account-number</span>
-            </a>
-          </dd>
-        </div>
-
-        <div class="govuk-summary-list__row">
-          <dt class="govuk-summary-list__key">
-              Building society roll number
-          </dt>
-          <dd class="govuk-summary-list__value">
-              A12345
-              {{ data['roll-number'] }}
-          </dd>
-          <dd class="govuk-summary-list__actions">
-            <a class="govuk-link" href="what-are-your-organisation-bank-or-building-society-account-details">
-              Change <span class="govuk-visually-hidden">building-society-roll-number</span>
-            </a>
-        </dd>
-    </dl>
 
 <br>
-        <h2 class="govuk-heading-m">
+        <h2 class="govuk-heading-l">
           Project details
         </h2>
+        <h3 class="govuk-heading-m">
+              Project name
+        </h3>
 
         <dl class="govuk-summary-list">
           <div class="govuk-summary-list__row">
             <dt class="govuk-summary-list__key">
-                How will your project meet the needs listed in your invitation?
+                Name
+            </dt>
+            <dd class="govuk-summary-list__value">
+              Expediate
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="/project-details/name-and-team/">
+                Change <span class="govuk-visually-hidden">project name</span>
+              </a>
+            </dd>
+          </div>
+        </dl>
+
+<br>
+        <h3 class="govuk-heading-m">
+          Description
+        </h3>
+
+        <dl class="govuk-summary-list">
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+                How will your project meet all of the needs listed in the competition?
             </dt>
             <dd class="govuk-summary-list__value">
               <details class="govuk-details" data-module="govuk-details">
@@ -251,74 +194,123 @@
               </details>
             </dd>
             <dd class="govuk-summary-list__actions">
-              <a class="govuk-link" href="how-will-your-project-meet-the-needs-listed-in-your-invitation">
-                Change <span class="govuk-visually-hidden">monitoring</span>
+              <a class="govuk-link" href="/project-details/description">
+                Change <span class="govuk-visually-hidden">description</span>
               </a>
             </dd>
           </div>
         </dl>
 
-        <dl class="govuk-summary-list">
+
+<br>
+        <h3 class="govuk-heading-m">
+          Timeline
+        </h3>
+
+        <dl class="govuk-summary-list govuk-!-margin-bottom-9">
           <div class="govuk-summary-list__row">
             <dt class="govuk-summary-list__key">
-                What will you use the money for?
+              Project start date
             </dt>
             <dd class="govuk-summary-list__value">
-              <details class="govuk-details" data-module="govuk-details">
-                <summary class="govuk-details__summary">
-                  <span class="govuk-details__summary-text">
-                     View your answer
-                  </span>
-                </summary>
-                <div class="govuk-details__text">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque vitae commodo arcu, at tristique ex. Maecenas egestas condimentum ex id mattis. Nulla felis metus, vehicula non cursus cursus, laoreet non sapien. Duis pharetra nibh tellus, ut euismod lorem pretium eu. Cras ac sodales tellus. Vivamus ullamcorper dolor turpis. Fusce lacus lorem, iaculis non lectus ut, sagittis commodo velit. Nulla venenatis eu nisl sed euismod. Sed interdum lobortis lectus, sit amet aliquam tortor gravida eget.
-                  Nulla nec sem nunc. Duis sed congue lacus, ut mollis ligula. Cras tempus nisl eget eros facilisis, ut vestibulum nunc molestie. Nunc a ligula pharetra, pulvinar nisi eget, varius risus. Curabitur sit amet molestie augue. Nullam et quam diam. Fusce id diam risus. Vestibulum maximus est eleifend, facilisis neque sed, eleifend augue. Nullam finibus sed metus at eleifend. Sed et ex eu arcu iaculis accumsan.
-                  Suspendisse non est id tellus rutrum viverra. Sed tellus leo, tristique malesuada porttitor vel, bibendum et tortor. Etiam sodales egestas felis ac viverra. Maecenas et justo tincidunt, tincidunt nunc ut, blandit leo. Quisque id mi eu leo venenatis interdum. Nam aliquet tempor ultrices. Sed in efficitur nunc, ac lobortis augue. Sed ac rhoncus ipsum, eget commodo lacus. Nulla nec mauris ultricies, dapibus ante quis, sodales sem. Mauris pulvinar venenatis nibh, sed lacinia odio feugiat et. Aliquam sagittis et arcu a porttitor. Fusce varius, velit at maximus cursus, urna lacus fermentum enim, id semper ipsum justo sed ex. Mauris vitae lacinia mi. Nulla commodo finibus nisi, euismod laoreet nibh tincidunt id. Quisque commodo libero ex, eget ultricies augue consectetur quis. Maecenas et tortor massa.
-                  Maecenas vestibulum vehicula lacus ut vestibulum. Donec dignissim id leo sit amet ultrices. Morbi blandit viverra purus non mattis. Duis faucibus felis quis dui vestibulum, nec lobortis nulla interdum. Etiam id ultricies lacus. Aenean quis aliquet orci. Aliquam erat volutpat. Donec congue risus cursus, malesuada augue a, venenatis augue. Vestibulum aliquet vitae justo quis rutrum.
-                  Curabitur consectetur dui a enim interdum tempus. Aliquam erat volutpat. Nullam vitae ligula sit amet ipsum tincidunt ornare sed ut lorem. Nam felis felis, vehicula quis orci mattis, iaculis porta ligula. Morbi vitae turpis sapien. Etiam quis ipsum vel orci sagittis auctor quis vulputate turpis. Proin pharetra ipsum id euismod viverra. Aenean faucibus mattis sapien in auctor. Cras aliquet laoreet interdum. Aliquam ullamcorper odio consequat urna ultricies, pharetra congue ex ultricies.
-                  Donec rutrum metus in ligula facilisis convallis. Sed consectetur, turpis sed tristique feugiat, erat urna laoreet nulla, ut tempus sapien urna at arcu. Etiam eu mauris in ligula vestibulum consequat. Suspendisse potenti. Nulla egestas justo quis massa egestas, non ullamcorper enim lobortis. Integer non consectetur dolor. Ut ut varius lorem. Quisque sed dapibus lacus. Cras feugiat ligula felis. Pellentesque malesuada maximus leo, ac vestibulum enim porttitor sed.
-                  Sed ornare accumsan porttitor. Nullam libero urna, pharetra eu neque eget, placerat imperdiet ante. Nullam accumsan egestas velit, sit amet rutrum lacus laoreet non. Curabitur sollicitudin eget mi id placerat. Proin dictum a sapien non dapibus. Mauris scelerisque dapibus tellus, et efficitur tellus cursus sed.                </div>
-              </details>
-
+              30 4 2022
             </dd>
             <dd class="govuk-summary-list__actions">
-              <a class="govuk-link" href="what-will-you-use-the-money-for">
-                Change <span class="govuk-visually-hidden">money-for</span>
+              <a class="govuk-link" href="/project-details/timeline">
+                Change<span class="govuk-visually-hidden"> project start date</span>
               </a>
             </dd>
           </div>
-        </dl>
-
-        <dl class="govuk-summary-list">
           <div class="govuk-summary-list__row">
             <dt class="govuk-summary-list__key">
-                How will you manage the money?
+              Project end date
             </dt>
             <dd class="govuk-summary-list__value">
-              <details class="govuk-details" data-module="govuk-details">
-                <summary class="govuk-details__summary">
-                  <span class="govuk-details__summary-text">
-                     View your answer
-                  </span>
-                </summary>
-                <div class="govuk-details__text">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque vitae commodo arcu, at tristique ex. Maecenas egestas condimentum ex id mattis. Nulla felis metus, vehicula non cursus cursus, laoreet non sapien. Duis pharetra nibh tellus, ut euismod lorem pretium eu. Cras ac sodales tellus. Vivamus ullamcorper dolor turpis. Fusce lacus lorem, iaculis non lectus ut, sagittis commodo velit. Nulla venenatis eu nisl sed euismod. Sed interdum lobortis lectus, sit amet aliquam tortor gravida eget.
-                  Nulla nec sem nunc. Duis sed congue lacus, ut mollis ligula. Cras tempus nisl eget eros facilisis, ut vestibulum nunc molestie. Nunc a ligula pharetra, pulvinar nisi eget, varius risus. Curabitur sit amet molestie augue. Nullam et quam diam. Fusce id diam risus. Vestibulum maximus est eleifend, facilisis neque sed, eleifend augue. Nullam finibus sed metus at eleifend. Sed et ex eu arcu iaculis accumsan.
-                  Suspendisse non est id tellus rutrum viverra. Sed tellus leo, tristique malesuada porttitor vel, bibendum et tortor. Etiam sodales egestas felis ac viverra. Maecenas et justo tincidunt, tincidunt nunc ut, blandit leo. Quisque id mi eu leo venenatis interdum. Nam aliquet tempor ultrices. Sed in efficitur nunc, ac lobortis augue. Sed ac rhoncus ipsum, eget commodo lacus. Nulla nec mauris ultricies, dapibus ante quis, sodales sem. Mauris pulvinar venenatis nibh, sed lacinia odio feugiat et. Aliquam sagittis et arcu a porttitor. Fusce varius, velit at maximus cursus, urna lacus fermentum enim, id semper ipsum justo sed ex. Mauris vitae lacinia mi. Nulla commodo finibus nisi, euismod laoreet nibh tincidunt id. Quisque commodo libero ex, eget ultricies augue consectetur quis. Maecenas et tortor massa.
-                  Maecenas vestibulum vehicula lacus ut vestibulum. Donec dignissim id leo sit amet ultrices. Morbi blandit viverra purus non mattis. Duis faucibus felis quis dui vestibulum, nec lobortis nulla interdum. Etiam id ultricies lacus. Aenean quis aliquet orci. Aliquam erat volutpat. Donec congue risus cursus, malesuada augue a, venenatis augue. Vestibulum aliquet vitae justo quis rutrum.
-                  Curabitur consectetur dui a enim interdum tempus. Aliquam erat volutpat. Nullam vitae ligula sit amet ipsum tincidunt ornare sed ut lorem. Nam felis felis, vehicula quis orci mattis, iaculis porta ligula. Morbi vitae turpis sapien. Etiam quis ipsum vel orci sagittis auctor quis vulputate turpis. Proin pharetra ipsum id euismod viverra. Aenean faucibus mattis sapien in auctor. Cras aliquet laoreet interdum. Aliquam ullamcorper odio consequat urna ultricies, pharetra congue ex ultricies.
-                  Donec rutrum metus in ligula facilisis convallis. Sed consectetur, turpis sed tristique feugiat, erat urna laoreet nulla, ut tempus sapien urna at arcu. Etiam eu mauris in ligula vestibulum consequat. Suspendisse potenti. Nulla egestas justo quis massa egestas, non ullamcorper enim lobortis. Integer non consectetur dolor. Ut ut varius lorem. Quisque sed dapibus lacus. Cras feugiat ligula felis. Pellentesque malesuada maximus leo, ac vestibulum enim porttitor sed.
-                  Sed ornare accumsan porttitor. Nullam libero urna, pharetra eu neque eget, placerat imperdiet ante. Nullam accumsan egestas velit, sit amet rutrum lacus laoreet non. Curabitur sollicitudin eget mi id placerat. Proin dictum a sapien non dapibus. Mauris scelerisque dapibus tellus, et efficitur tellus cursus sed.                </div>
-              </details>
+              15 11 2023
             </dd>
             <dd class="govuk-summary-list__actions">
-              <a class="govuk-link" href="how-will-you-manage-the-money">
-                Change <span class="govuk-visually-hidden">manage-the-money</span>
+              <a class="govuk-link" href="/project-details/timeline">
+                Change<span class="govuk-visually-hidden"> project end date</span>
+              </a>
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Project duration
+            </dt>
+            <dd class="govuk-summary-list__value">
+              565 months
+            </dd>
+            <dd class="govuk-summary-list__actions">
+            </dd>
+          </div>
+        </dl>
+
+        <h3 class="govuk-heading-m">Milestones</h3>
+        <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Milestone
+            </dt>
+            <dd class="govuk-summary-list__value">
+              This is a milestone<br>
+              10 2022
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="/project-details/timeline/milestones">
+                Change<span class="govuk-visually-hidden"> milestone</span>
+              </a>
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Milestone
+            </dt>
+            <dd class="govuk-summary-list__value">
+              This is another milestone<br>
+              12 2022
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="/project-details/timeline/milestones">
+                Change<span class="govuk-visually-hidden"> milestone</span>
               </a>
             </dd>
           </div>
         </dl>
 
+        <h3 class="govuk-heading-m">Outcomes</h3>
+        <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Outcome
+            </dt>
+            <dd class="govuk-summary-list__value">
+              This is an outcome
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="/project-details/timeline/outcomes">
+                Change<span class="govuk-visually-hidden"> outcome</span>
+              </a>
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Outcome
+            </dt>
+            <dd class="govuk-summary-list__value">
+              This is another outcome
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="/project-details/timeline/outcomes">
+                Change<span class="govuk-visually-hidden"> outcome</span>
+              </a>
+            </dd>
+          </div>
+        </dl>
+
+        <h3 class="govuk-heading-m">
+          Project management
+        </h3>
         <dl class="govuk-summary-list">
           <div class="govuk-summary-list__row">
             <dt class="govuk-summary-list__key">
@@ -340,35 +332,330 @@
                   Donec rutrum metus in ligula facilisis convallis. Sed consectetur, turpis sed tristique feugiat, erat urna laoreet nulla, ut tempus sapien urna at arcu. Etiam eu mauris in ligula vestibulum consequat. Suspendisse potenti. Nulla egestas justo quis massa egestas, non ullamcorper enim lobortis. Integer non consectetur dolor. Ut ut varius lorem. Quisque sed dapibus lacus. Cras feugiat ligula felis. Pellentesque malesuada maximus leo, ac vestibulum enim porttitor sed.
                   Sed ornare accumsan porttitor. Nullam libero urna, pharetra eu neque eget, placerat imperdiet ante. Nullam accumsan egestas velit, sit amet rutrum lacus laoreet non. Curabitur sollicitudin eget mi id placerat. Proin dictum a sapien non dapibus. Mauris scelerisque dapibus tellus, et efficitur tellus cursus sed.                </div>
               </details>
-
             </dd>
             <dd class="govuk-summary-list__actions">
-              <a class="govuk-link" href="how-will-you-manage-the-performance-of-your-project">
-                Change <span class="govuk-visually-hidden">reason-for-applying</span>
+              <a class="govuk-link" href="/project-details/management">
+                Change <span class="govuk-visually-hidden">management</span>
               </a>
             </dd>
           </div>
         </dl>
-      </div>
-</div>
+
+        <dl class="govuk-summary-list">
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+                How will you manage the risks associated with your project?
+            </dt>
+            <dd class="govuk-summary-list__value">
+              <details class="govuk-details" data-module="govuk-details">
+                <summary class="govuk-details__summary">
+                  <span class="govuk-details__summary-text">
+                     View your answer
+                  </span>
+                </summary>
+                <div class="govuk-details__text">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque vitae commodo arcu, at tristique ex. Maecenas egestas condimentum ex id mattis. Nulla felis metus, vehicula non cursus cursus, laoreet non sapien. Duis pharetra nibh tellus, ut euismod lorem pretium eu. Cras ac sodales tellus. Vivamus ullamcorper dolor turpis. Fusce lacus lorem, iaculis non lectus ut, sagittis commodo velit. Nulla venenatis eu nisl sed euismod. Sed interdum lobortis lectus, sit amet aliquam tortor gravida eget.
+                  Nulla nec sem nunc. Duis sed congue lacus, ut mollis ligula. Cras tempus nisl eget eros facilisis, ut vestibulum nunc molestie. Nunc a ligula pharetra, pulvinar nisi eget, varius risus. Curabitur sit amet molestie augue. Nullam et quam diam. Fusce id diam risus. Vestibulum maximus est eleifend, facilisis neque sed, eleifend augue. Nullam finibus sed metus at eleifend. Sed et ex eu arcu iaculis accumsan.
+                  Suspendisse non est id tellus rutrum viverra. Sed tellus leo, tristique malesuada porttitor vel, bibendum et tortor. Etiam sodales egestas felis ac viverra. Maecenas et justo tincidunt, tincidunt nunc ut, blandit leo. Quisque id mi eu leo venenatis interdum. Nam aliquet tempor ultrices. Sed in efficitur nunc, ac lobortis augue. Sed ac rhoncus ipsum, eget commodo lacus. Nulla nec mauris ultricies, dapibus ante quis, sodales sem. Mauris pulvinar venenatis nibh, sed lacinia odio feugiat et. Aliquam sagittis et arcu a porttitor. Fusce varius, velit at maximus cursus, urna lacus fermentum enim, id semper ipsum justo sed ex. Mauris vitae lacinia mi. Nulla commodo finibus nisi, euismod laoreet nibh tincidunt id. Quisque commodo libero ex, eget ultricies augue consectetur quis. Maecenas et tortor massa.
+                  Maecenas vestibulum vehicula lacus ut vestibulum. Donec dignissim id leo sit amet ultrices. Morbi blandit viverra purus non mattis. Duis faucibus felis quis dui vestibulum, nec lobortis nulla interdum. Etiam id ultricies lacus. Aenean quis aliquet orci. Aliquam erat volutpat. Donec congue risus cursus, malesuada augue a, venenatis augue. Vestibulum aliquet vitae justo quis rutrum.
+                  Curabitur consectetur dui a enim interdum tempus. Aliquam erat volutpat. Nullam vitae ligula sit amet ipsum tincidunt ornare sed ut lorem. Nam felis felis, vehicula quis orci mattis, iaculis porta ligula. Morbi vitae turpis sapien. Etiam quis ipsum vel orci sagittis auctor quis vulputate turpis. Proin pharetra ipsum id euismod viverra. Aenean faucibus mattis sapien in auctor. Cras aliquet laoreet interdum. Aliquam ullamcorper odio consequat urna ultricies, pharetra congue ex ultricies.
+                  Donec rutrum metus in ligula facilisis convallis. Sed consectetur, turpis sed tristique feugiat, erat urna laoreet nulla, ut tempus sapien urna at arcu. Etiam eu mauris in ligula vestibulum consequat. Suspendisse potenti. Nulla egestas justo quis massa egestas, non ullamcorper enim lobortis. Integer non consectetur dolor. Ut ut varius lorem. Quisque sed dapibus lacus. Cras feugiat ligula felis. Pellentesque malesuada maximus leo, ac vestibulum enim porttitor sed.
+                  Sed ornare accumsan porttitor. Nullam libero urna, pharetra eu neque eget, placerat imperdiet ante. Nullam accumsan egestas velit, sit amet rutrum lacus laoreet non. Curabitur sollicitudin eget mi id placerat. Proin dictum a sapien non dapibus. Mauris scelerisque dapibus tellus, et efficitur tellus cursus sed.                </div>
+              </details>
+
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="/project-details/management/project-management-page-2">
+                Change <span class="govuk-visually-hidden">management</span>
+              </a>
+            </dd>
+          </div>
+        </dl>
 
 <br>
-      <div>
-        <h2 class="govuk-label-wrapper"><label class="govuk-label govuk-label--m" for="with-hint">
-            Declaration
-          </label>
+        <h3 class="govuk-heading-m">
+          Compliance
+        </h3>
+
+        <dl class="govuk-summary-list">
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              How will you comply with the Equality Act 2010 for the “protected characteristics” of the people delivering your project and its beneficiaries?
+            </dt>
+            <dd class="govuk-summary-list__value">
+              <details class="govuk-details" data-module="govuk-details">
+                <summary class="govuk-details__summary">
+                  <span class="govuk-details__summary-text">
+                     View your answer
+                  </span>
+                </summary>
+                <div class="govuk-details__text">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque vitae commodo arcu, at tristique ex. Maecenas egestas condimentum ex id mattis. Nulla felis metus, vehicula non cursus cursus, laoreet non sapien. Duis pharetra nibh tellus, ut euismod lorem pretium eu. Cras ac sodales tellus. Vivamus ullamcorper dolor turpis. Fusce lacus lorem, iaculis non lectus ut, sagittis commodo velit. Nulla venenatis eu nisl sed euismod. Sed interdum lobortis lectus, sit amet aliquam tortor gravida eget.
+                  Nulla nec sem nunc. Duis sed congue lacus, ut mollis ligula. Cras tempus nisl eget eros facilisis, ut vestibulum nunc molestie. Nunc a ligula pharetra, pulvinar nisi eget, varius risus. Curabitur sit amet molestie augue. Nullam et quam diam. Fusce id diam risus. Vestibulum maximus est eleifend, facilisis neque sed, eleifend augue. Nullam finibus sed metus at eleifend. Sed et ex eu arcu iaculis accumsan.
+                  Suspendisse non est id tellus rutrum viverra. Sed tellus leo, tristique malesuada porttitor vel, bibendum et tortor. Etiam sodales egestas felis ac viverra. Maecenas et justo tincidunt, tincidunt nunc ut, blandit leo. Quisque id mi eu leo venenatis interdum. Nam aliquet tempor ultrices. Sed in efficitur nunc, ac lobortis augue. Sed ac rhoncus ipsum, eget commodo lacus. Nulla nec mauris ultricies, dapibus ante quis, sodales sem. Mauris pulvinar venenatis nibh, sed lacinia odio feugiat et. Aliquam sagittis et arcu a porttitor. Fusce varius, velit at maximus cursus, urna lacus fermentum enim, id semper ipsum justo sed ex. Mauris vitae lacinia mi. Nulla commodo finibus nisi, euismod laoreet nibh tincidunt id. Quisque commodo libero ex, eget ultricies augue consectetur quis. Maecenas et tortor massa.
+                  Maecenas vestibulum vehicula lacus ut vestibulum. Donec dignissim id leo sit amet ultrices. Morbi blandit viverra purus non mattis. Duis faucibus felis quis dui vestibulum, nec lobortis nulla interdum. Etiam id ultricies lacus. Aenean quis aliquet orci. Aliquam erat volutpat. Donec congue risus cursus, malesuada augue a, venenatis augue. Vestibulum aliquet vitae justo quis rutrum.
+                  Curabitur consectetur dui a enim interdum tempus. Aliquam erat volutpat. Nullam vitae ligula sit amet ipsum tincidunt ornare sed ut lorem. Nam felis felis, vehicula quis orci mattis, iaculis porta ligula. Morbi vitae turpis sapien. Etiam quis ipsum vel orci sagittis auctor quis vulputate turpis. Proin pharetra ipsum id euismod viverra. Aenean faucibus mattis sapien in auctor. Cras aliquet laoreet interdum. Aliquam ullamcorper odio consequat urna ultricies, pharetra congue ex ultricies.
+                  Donec rutrum metus in ligula facilisis convallis. Sed consectetur, turpis sed tristique feugiat, erat urna laoreet nulla, ut tempus sapien urna at arcu. Etiam eu mauris in ligula vestibulum consequat. Suspendisse potenti. Nulla egestas justo quis massa egestas, non ullamcorper enim lobortis. Integer non consectetur dolor. Ut ut varius lorem. Quisque sed dapibus lacus. Cras feugiat ligula felis. Pellentesque malesuada maximus leo, ac vestibulum enim porttitor sed.
+                  Sed ornare accumsan porttitor. Nullam libero urna, pharetra eu neque eget, placerat imperdiet ante. Nullam accumsan egestas velit, sit amet rutrum lacus laoreet non. Curabitur sollicitudin eget mi id placerat. Proin dictum a sapien non dapibus. Mauris scelerisque dapibus tellus, et efficitur tellus cursus sed.                </div>
+              </details>
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="/project-details/compliance">
+                Change <span class="govuk-visually-hidden">compliance</span>
+              </a>
+            </dd>
+          </div>
+        </dl>
+
+<br>
+        <h2 class="govuk-heading-l">
+          Finance details
         </h2>
-        <p>By sending this application you confirm that:</p>
-        <ul class="govuk-list govuk-list--bullet">
-          <li>the information you've given is complete and correct as far as you know</li>
-          <li>this project is not already funded by any other government grants</li>
-        </ul>
+        <h3 class="govuk-heading-m">
+          Annual income
+        </h3>
+        <dl class="govuk-summary-list">
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+                What is your annual income and expenditure as shown in your most recent audited accounts?
+            </dt>
+            <dd class="govuk-summary-list__value">
+              £50,000
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="/finance-details/annual-income/">
+                Change
+              </a>
+            </dd>
+          </div>
+        </dl>
+<br>
+        <dl class="govuk-summary-list">
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-!-font-size-24 govuk-summary-list__key">
+              Cost breakdown
+            </dt>
+            <dd class="govuk-summary-list__value">
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="/finance-details/cost-breakdown">
+                Change <span class="govuk-visually-hidden">cost breakdown</span>
+              </a>
+            </dd>
+          </div>
+        </dl>
+
+        <table class="govuk-table">
+          <thead class="govuk-table__head">
+            <tr class="govuk-table__row">
+              <th scope="col" class="govuk-table__header govuk-!-width-one-quarter"></th>
+              <th scope="col" class="govuk-table__header govuk-!-width-one-quarter">Year 1</th>
+              <th scope="col" class="govuk-table__header govuk-!-width-one-quarter">Year 2</th>
+              <th scope="col" class="govuk-table__header govuk-!-width-one-quarter">Year 3</th>
+            </tr>
+          </thead>
+          <tbody class="govuk-table__body">
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header">Direct staff costs</th>
+              <td class="govuk-table__cell">£109.80 per week</td>
+              <td class="govuk-table__cell">£59.10 per week</td>
+              <td class="govuk-table__cell">£59.10 per week</td>
+            </tr>
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header">Premises costs</th>
+              <td class="govuk-table__cell">£159.80 per week</td>
+              <td class="govuk-table__cell">£89.10 per week</td>
+              <td class="govuk-table__cell">£89.10 per week</td>
+            </tr>
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header">Equipment Hire</th>
+              <td class="govuk-table__cell">£4,282.20</td>
+              <td class="govuk-table__cell">£2,182.20</td>
+              <td class="govuk-table__cell">£2,182.20</td>
+            </tr>
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header">Consumables</th>
+              <td class="govuk-table__cell">£4,282.20</td>
+              <td class="govuk-table__cell">£2,182.20</td>
+              <td class="govuk-table__cell">£2,182.20</td>
+            </tr>
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header">Items valued less than £1k</th>
+              <td class="govuk-table__cell">£4,282.20</td>
+              <td class="govuk-table__cell">£2,182.20</td>
+              <td class="govuk-table__cell">£2,182.20</td>
+            </tr>
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header">Audit</th>
+              <td class="govuk-table__cell">£4,282.20</td>
+              <td class="govuk-table__cell">£2,182.20</td>
+              <td class="govuk-table__cell">£2,182.20</td>
+            </tr>
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header">Consultants</th>
+              <td class="govuk-table__cell">£4,282.20</td>
+              <td class="govuk-table__cell">£2,182.20</td>
+              <td class="govuk-table__cell">£2,182.20</td>
+            </tr>
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header">Volunteer expenses</th>
+              <td class="govuk-table__cell">£4,282.20</td>
+              <td class="govuk-table__cell">£2,182.20</td>
+              <td class="govuk-table__cell">£2,182.20</td>
+            </tr>
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header">Marketing and publicity</th>
+              <td class="govuk-table__cell">£4,282.20</td>
+              <td class="govuk-table__cell">£2,182.20</td>
+              <td class="govuk-table__cell">£2,182.20</td>
+            </tr>
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header">Care provider running costs</th>
+              <td class="govuk-table__cell">£4,282.20</td>
+              <td class="govuk-table__cell">£2,182.20</td>
+              <td class="govuk-table__cell">£2,182.20</td>
+            </tr>
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header">Other</th>
+              <td class="govuk-table__cell">£4,282.20</td>
+              <td class="govuk-table__cell">£2,182.20</td>
+              <td class="govuk-table__cell">£2,182.20</td>
+            </tr>
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header">Flat rate indirect costs @ 40%</th>
+              <td class="govuk-table__cell">£4,282.20</td>
+              <td class="govuk-table__cell">£2,182.20</td>
+              <td class="govuk-table__cell">£2,182.20</td>
+            </tr>
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header">Flat rate indirect costs @ 15%</th>
+              <td class="govuk-table__cell">£4,282.20</td>
+              <td class="govuk-table__cell">£2,182.20</td>
+              <td class="govuk-table__cell">£2,182.20</td>
+            </tr>
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header">Total per year</th>
+              <td class="govuk-table__cell">£4,282.20</td>
+              <td class="govuk-table__cell">£2,182.20</td>
+              <td class="govuk-table__cell">£2,182.20</td>
+            </tr>
+          </tbody>
+        </table>
+        <dl class="govuk-summary-list">
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Tell us how you have ensured the costings are accurate
+            </dt>
+            <dd class="govuk-summary-list__value">
+              <details class="govuk-details" data-module="govuk-details">
+                <summary class="govuk-details__summary">
+                  <span class="govuk-details__summary-text">
+                     View your answer
+                  </span>
+                </summary>
+                <div class="govuk-details__text">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque vitae commodo arcu, at tristique ex. Maecenas egestas condimentum ex id mattis. Nulla felis metus, vehicula non cursus cursus, laoreet non sapien. Duis pharetra nibh tellus, ut euismod lorem pretium eu. Cras ac sodales tellus. Vivamus ullamcorper dolor turpis. Fusce lacus lorem, iaculis non lectus ut, sagittis commodo velit. Nulla venenatis eu nisl sed euismod. Sed interdum lobortis lectus, sit amet aliquam tortor gravida eget.
+                  Nulla nec sem nunc. Duis sed congue lacus, ut mollis ligula. Cras tempus nisl eget eros facilisis, ut vestibulum nunc molestie. Nunc a ligula pharetra, pulvinar nisi eget, varius risus. Curabitur sit amet molestie augue. Nullam et quam diam. Fusce id diam risus. Vestibulum maximus est eleifend, facilisis neque sed, eleifend augue. Nullam finibus sed metus at eleifend. Sed et ex eu arcu iaculis accumsan.
+                  Suspendisse non est id tellus rutrum viverra. Sed tellus leo, tristique malesuada porttitor vel, bibendum et tortor. Etiam sodales egestas felis ac viverra. Maecenas et justo tincidunt, tincidunt nunc ut, blandit leo. Quisque id mi eu leo venenatis interdum. Nam aliquet tempor ultrices. Sed in efficitur nunc, ac lobortis augue. Sed ac rhoncus ipsum, eget commodo lacus. Nulla nec mauris ultricies, dapibus ante quis, sodales sem. Mauris pulvinar venenatis nibh, sed lacinia odio feugiat et. Aliquam sagittis et arcu a porttitor. Fusce varius, velit at maximus cursus, urna lacus fermentum enim, id semper ipsum justo sed ex. Mauris vitae lacinia mi. Nulla commodo finibus nisi, euismod laoreet nibh tincidunt id. Quisque commodo libero ex, eget ultricies augue consectetur quis. Maecenas et tortor massa.
+                  Maecenas vestibulum vehicula lacus ut vestibulum. Donec dignissim id leo sit amet ultrices. Morbi blandit viverra purus non mattis. Duis faucibus felis quis dui vestibulum, nec lobortis nulla interdum. Etiam id ultricies lacus. Aenean quis aliquet orci. Aliquam erat volutpat. Donec congue risus cursus, malesuada augue a, venenatis augue. Vestibulum aliquet vitae justo quis rutrum.
+                  Curabitur consectetur dui a enim interdum tempus. Aliquam erat volutpat. Nullam vitae ligula sit amet ipsum tincidunt ornare sed ut lorem. Nam felis felis, vehicula quis orci mattis, iaculis porta ligula. Morbi vitae turpis sapien. Etiam quis ipsum vel orci sagittis auctor quis vulputate turpis. Proin pharetra ipsum id euismod viverra. Aenean faucibus mattis sapien in auctor. Cras aliquet laoreet interdum. Aliquam ullamcorper odio consequat urna ultricies, pharetra congue ex ultricies.
+                  Donec rutrum metus in ligula facilisis convallis. Sed consectetur, turpis sed tristique feugiat, erat urna laoreet nulla, ut tempus sapien urna at arcu. Etiam eu mauris in ligula vestibulum consequat. Suspendisse potenti. Nulla egestas justo quis massa egestas, non ullamcorper enim lobortis. Integer non consectetur dolor. Ut ut varius lorem. Quisque sed dapibus lacus. Cras feugiat ligula felis. Pellentesque malesuada maximus leo, ac vestibulum enim porttitor sed.
+                  Sed ornare accumsan porttitor. Nullam libero urna, pharetra eu neque eget, placerat imperdiet ante. Nullam accumsan egestas velit, sit amet rutrum lacus laoreet non. Curabitur sollicitudin eget mi id placerat. Proin dictum a sapien non dapibus. Mauris scelerisque dapibus tellus, et efficitur tellus cursus sed.                </div>
+              </details>
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="/finance-details/cost-breakdown/">
+                Change <span class="govuk-visually-hidden">compliance</span>
+              </a>
+            </dd>
+          </div>
+        </dl>
+
+<br>
+        <h3 class="govuk-heading-m">
+          Financial management
+        </h3>
+        <dl class="govuk-summary-list">
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              How will you manage the financial aspects of your project?
+            </dt>
+            <dd class="govuk-summary-list__value">
+              <details class="govuk-details" data-module="govuk-details">
+                <summary class="govuk-details__summary">
+                  <span class="govuk-details__summary-text">
+                     View your answer
+                  </span>
+                </summary>
+                <div class="govuk-details__text">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque vitae commodo arcu, at tristique ex. Maecenas egestas condimentum ex id mattis. Nulla felis metus, vehicula non cursus cursus, laoreet non sapien. Duis pharetra nibh tellus, ut euismod lorem pretium eu. Cras ac sodales tellus. Vivamus ullamcorper dolor turpis. Fusce lacus lorem, iaculis non lectus ut, sagittis commodo velit. Nulla venenatis eu nisl sed euismod. Sed interdum lobortis lectus, sit amet aliquam tortor gravida eget.
+                  Nulla nec sem nunc. Duis sed congue lacus, ut mollis ligula. Cras tempus nisl eget eros facilisis, ut vestibulum nunc molestie. Nunc a ligula pharetra, pulvinar nisi eget, varius risus. Curabitur sit amet molestie augue. Nullam et quam diam. Fusce id diam risus. Vestibulum maximus est eleifend, facilisis neque sed, eleifend augue. Nullam finibus sed metus at eleifend. Sed et ex eu arcu iaculis accumsan.
+                  Suspendisse non est id tellus rutrum viverra. Sed tellus leo, tristique malesuada porttitor vel, bibendum et tortor. Etiam sodales egestas felis ac viverra. Maecenas et justo tincidunt, tincidunt nunc ut, blandit leo. Quisque id mi eu leo venenatis interdum. Nam aliquet tempor ultrices. Sed in efficitur nunc, ac lobortis augue. Sed ac rhoncus ipsum, eget commodo lacus. Nulla nec mauris ultricies, dapibus ante quis, sodales sem. Mauris pulvinar venenatis nibh, sed lacinia odio feugiat et. Aliquam sagittis et arcu a porttitor. Fusce varius, velit at maximus cursus, urna lacus fermentum enim, id semper ipsum justo sed ex. Mauris vitae lacinia mi. Nulla commodo finibus nisi, euismod laoreet nibh tincidunt id. Quisque commodo libero ex, eget ultricies augue consectetur quis. Maecenas et tortor massa.
+                  Maecenas vestibulum vehicula lacus ut vestibulum. Donec dignissim id leo sit amet ultrices. Morbi blandit viverra purus non mattis. Duis faucibus felis quis dui vestibulum, nec lobortis nulla interdum. Etiam id ultricies lacus. Aenean quis aliquet orci. Aliquam erat volutpat. Donec congue risus cursus, malesuada augue a, venenatis augue. Vestibulum aliquet vitae justo quis rutrum.
+                  Curabitur consectetur dui a enim interdum tempus. Aliquam erat volutpat. Nullam vitae ligula sit amet ipsum tincidunt ornare sed ut lorem. Nam felis felis, vehicula quis orci mattis, iaculis porta ligula. Morbi vitae turpis sapien. Etiam quis ipsum vel orci sagittis auctor quis vulputate turpis. Proin pharetra ipsum id euismod viverra. Aenean faucibus mattis sapien in auctor. Cras aliquet laoreet interdum. Aliquam ullamcorper odio consequat urna ultricies, pharetra congue ex ultricies.
+                  Donec rutrum metus in ligula facilisis convallis. Sed consectetur, turpis sed tristique feugiat, erat urna laoreet nulla, ut tempus sapien urna at arcu. Etiam eu mauris in ligula vestibulum consequat. Suspendisse potenti. Nulla egestas justo quis massa egestas, non ullamcorper enim lobortis. Integer non consectetur dolor. Ut ut varius lorem. Quisque sed dapibus lacus. Cras feugiat ligula felis. Pellentesque malesuada maximus leo, ac vestibulum enim porttitor sed.
+                  Sed ornare accumsan porttitor. Nullam libero urna, pharetra eu neque eget, placerat imperdiet ante. Nullam accumsan egestas velit, sit amet rutrum lacus laoreet non. Curabitur sollicitudin eget mi id placerat. Proin dictum a sapien non dapibus. Mauris scelerisque dapibus tellus, et efficitur tellus cursus sed.                </div>
+              </details>
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="/finance-details/management">
+                Change <span class="govuk-visually-hidden">finance management</span>
+              </a>
+            </dd>
+        </dl>
+
+<br>
+      <h2 class="govuk-heading-l">
+            Declarations
+      </h2>
+      <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Evidence
+          </dt>
+          <dd class="govuk-summary-list__value">
+            I understand I may be asked to provide evidence
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="/declarations/evidence">
+              Change<span class="govuk-visually-hidden"> evidence</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            False or incomplete information
+          </dt>
+          <dd class="govuk-summary-list__value">
+            I have read and understood the statement
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="/declarations/false-information/">
+              Change<span class="govuk-visually-hidden"> False or incomplete information</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            GDPR and Freedom of Information Act
+          </dt>
+          <dd class="govuk-summary-list__value">
+            I have read and understood the statement
+          </dd>
+        <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="/declarations/gdpr/">
+              Change<span class="govuk-visually-hidden"> GDPR and Freedom of Information Act</span>
+            </a>
+          </dd>
+        </div>
+      </dl>
 
         <div>
-          <a href="application-submitted" role="button" draggable="false" class="govuk-button" data-module="govuk-button">
-          I agree - send application
+          <a href="/p5/list" role="button" draggable="false" class="govuk-button" data-module="govuk-button">
+          Return to list
           </a>
         </div>
     </div>
+</div>
 
   {% endblock %}

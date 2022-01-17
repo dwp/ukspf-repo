@@ -46,6 +46,7 @@ module.exports = function (app) {
       req.session.sectionCount = 0;
     }
 
+
     // organisations
     if (req.query.organisations == 'completed') {
       if (req.session.sectionStatus.organisations != 'completed') {
@@ -222,14 +223,6 @@ module.exports = function (app) {
       req.session.sectionStatus.approval = req.query.approval
     };
 
-
-    // if (req.query.supportingevidence) {
-    //   if (req.session.sectionStatus.supportingevidence == undefined) {
-    //     req.session.sectionCount = (req.session.sectionCount + 1)
-    //   }
-    //   req.session.sectionStatus.supportingevidence = req.query.supportingevidence
-    // };
-
     res.render('p5/list.html', {sectionStatus: req.session.sectionStatus, sectionCount: req.session.sectionCount});
   });
 
@@ -244,302 +237,102 @@ module.exports = function (app) {
 
   // Organisations
   app.get('/application-team/organisations/index-answer', function(req, res) {
-        res.redirect('/application-team/organisations/check')
+        req.session.sectionStatus.organisations = 'completed';
+        res.redirect('/application-team/contributors')
   });
 
   // Contributors
   app.get('/application-team/contributors/index-answer', function(req, res) {
-        res.redirect('/application-team/contributors/check')
+    req.session.sectionStatus.contributors = 'completed';
+    res.redirect('/project-details/name-and-team')
   });
 
 
   // Name and team
   app.get('/project-details/name-and-team/index-answer', function(req, res) {
-        res.redirect('/project-details/name-and-team/check')
-  });
-
-  // Timeline
-  app.get('/project-details/timeline/index-answer', function(req, res) {
-        res.redirect('/project-details/milestones')
-  });
-
-  // Project management
-  app.get('/project-details/management/index-answer', function(req, res) {
-        res.redirect('/project-details/management/project-management-page-2')
-  });
-
-  // Compliance
-  app.get('/project-details/compliance/index-answer', function(req, res) {
-        res.redirect('/project-details/compliance/check')
-  });
-
-  // Annual income
-  app.get('/finance-details/annual-income/index-answer', function(req, res) {
-        res.redirect('/finance-details/annual-income/check')
-  });
-
-  // Cost breakdown
-  app.get('/finance-details/cost-breakdown/index-answer', function(req, res) {
-        res.redirect('/finance-details/cost-breakdown/check')
-  });
-
-  // Finance Management
-  app.get('/finance-details/management/index-answer', function(req, res) {
-        res.redirect('/finance-details/management/check')
-  });
-
-  // Milestones
-  app.get('/project-details/milestones/index-answer', function(req, res) {
-        res.redirect('/project-details/outcomes')
-  });
-
-  // Outcomes
-  app.get('/project-details/outcomes/index-answer', function(req, res) {
-        res.redirect('/project-details/outcomes/check')
+    req.session.sectionStatus.nameandteam = 'completed';
+    res.redirect('/project-details/description')
   });
 
   // Description
   app.get('/project-details/description/index-answer', function(req, res) {
-        res.redirect('/project-details/description/check')
+    req.session.sectionStatus.description = 'completed';
+    res.redirect('/project-details/timeline')
+  });
+
+  // Timeline
+  app.get('/project-details/timeline/index-answer', function(req, res) {
+    res.redirect('/project-details/timeline/milestones')
+  });
+
+  // Milestones
+  app.get('/project-details/timeline/milestones/index-answer', function(req, res) {
+    res.redirect('/project-details/timeline/outcomes')
+  });
+
+  // Outcomes
+  app.get('/project-details/timeline/outcomes/index-answer', function(req, res) {
+    req.session.sectionStatus.timeline = 'completed';
+    res.redirect('/project-details/management')
+  });
+
+  // Project management
+  app.get('/project-details/management/index-answer', function(req, res) {
+    res.redirect('/project-details/management/project-management-page-2')
+  });
+
+  // Project management
+  app.get('/project-details/management/project-management-page-2/index-answer', function(req, res) {
+    req.session.sectionStatus.projectmanagement = 'completed';
+    res.redirect('/project-details/compliance')
+  });
+
+  // Compliance
+  app.get('/project-details/compliance/index-answer', function(req, res) {
+    req.session.sectionStatus.compliance = 'completed';
+    res.redirect('/finance-details/annual-income')
+  });
+
+  // Annual income
+  app.get('/finance-details/annual-income/index-answer', function(req, res) {
+    req.session.sectionStatus.annualincome = 'completed';
+    res.redirect('/finance-details/cost-breakdown')
+  });
+
+  // Cost breakdown
+  app.get('/finance-details/cost-breakdown/index-answer', function(req, res) {
+    req.session.sectionStatus.costbreakdown = 'completed';
+    res.redirect('/finance-details/management')
+  });
+
+  // Finance Management
+  app.get('/finance-details/management/index-answer', function(req, res) {
+    req.session.sectionStatus.financemanagement = 'completed';
+    res.redirect('/declarations/evidence')
   });
 
   // Evidence
   app.get('/declarations/evidence/index-answer', function(req, res) {
-        res.redirect('/declarations/false-information')
+    req.session.sectionStatus.evidence = 'completed';
+    res.redirect('/declarations/false-information')
   });
 
   // False information
   app.get('/declarations/false-information/index-answer', function(req, res) {
-        res.redirect('/declarations/gdpr')
+    req.session.sectionStatus.falseinformation = 'completed';
+    res.redirect('/declarations/gdpr')
   });
 
   // gdpr
   app.get('/declarations/gdpr/index-answer', function(req, res) {
-        res.redirect('/declarations/gdpr/check')
+    req.session.sectionStatus.gdpr = 'completed';
+    res.redirect('/version-4/check-your-answers-before-submitting-your-application')
   });
 
   // Approval
   app.get('/approval/index-answer', function(req, res) {
-        res.redirect('/approval/check')
-  });
-
-  // Additional information
-
-  app.get('/p5/additional-information/index-answer', function(req, res) {
-
-    let question = req.session.data['additionalinformation-question']
-
-    if (question === 'Yes') {
-        res.redirect('details')
-      } else {
-        res.redirect('check')
-      }
-  });
-
-  // Apply
-
-  app.get('/p5/apply/pdf-answer', function(req, res) {
-
-    let question = req.session.data['download']
-
-    if (question === 'yes') {
-        res.redirect('download')
-      } else {
-        res.redirect('confirmation')
-      }
-  });
-
-
-  // Supporting evidence
-
-  app.get('/p5/supporting-evidence/supporting-evidence-data', function(req, res) {
-
-    let question = req.session.data['question']
-
-    if (question === 'yes') {
-        res.redirect('file-upload-help')
-      } else {
-        res.redirect('../apply/declaration')
-      }
-  });
-
-  app.get('/p5/supporting-evidence/supporting-evidence-uploaded-1-data', function(req, res) {
-
-    let question = req.session.data['question']
-
-    if (question === 'yes') {
-        res.redirect('supporting-evidence-upload-2')
-      } else {
-        res.redirect('../apply/declaration')
-      }
-  });
-
-  app.get('/p5/supporting-evidence/supporting-evidence-uploaded-2-data', function(req, res) {
-
-    let question = req.session.data['question']
-
-    if (question === 'yes') {
-        res.redirect('supporting-evidence-upload-3')
-      } else {
-        res.redirect('../apply/declaration')
-      }
-  });
-
-  app.get('/p5/supporting-evidence/supporting-evidence-uploaded-3-data', function(req, res) {
-
-    let question = req.session.data['question']
-
-    if (question === 'yes') {
-        res.redirect('supporting-evidence-upload-4')
-      } else {
-        res.redirect('../apply/declaration')
-      }
-  });
-
-
-  // Uploading screens
-
-  app.get('/p5/supporting-evidence/uploading-supporting-evidence-1', function(req, res) {
-    res.render('p5/supporting-evidence/uploading', { 'file' : 'supporting-evidence-1' });
-  });
-
-  app.get('/p5/supporting-evidence/uploading-supporting-evidence-2', function(req, res) {
-    res.render('p5/supporting-evidence/uploading', { 'file' : 'supporting-evidence-2' });
-  });
-
-  app.get('/p5/supporting-evidence/uploading-supporting-evidence-3', function(req, res) {
-    res.render('p5/supporting-evidence/uploading', { 'file' : 'supporting-evidence-3' });
-  });
-
-// // Coming back uploading evidence
-
-//   app.get('/p5/coming-back/supporting-evidence-uploaded-1', function(req, res) {
-
-//     let question = req.session.data['question']
-
-//     if (question === 'yes') {
-//         res.redirect('/p5/coming-back/supporting-evidence-upload-2')
-//       } else {
-//         res.redirect('/p5/coming-back/confirmation-returning')
-//       }
-//   });
-
-
-
-
-  // Check you answers variations
-
-  app.get('/p5/supporting-evidence/upload-cya', function(req, res) {
-    res.render('p5/supporting-evidence/upload', { 'cya' : 'true' });
-  });
-
-  app.get('/p5/supporting-evidence/uploading-cya', function(req, res) {
-    res.render('p5/supporting-evidence/uploading', { 'cya' : 'true' });
-  });
-
-  app.get('/p5/supporting-evidence/uploaded-1-cya', function(req, res) {
-    res.render('p5/supporting-evidence/uploaded-1', { 'cya' : 'true' });
-  });
-
-  app.get('/p5/supporting-evidence/supporting-evidence-cya', function(req, res) {
-    res.render('p5/supporting-evidence/supporting-evidence', { 'cya' : 'true' });
-  });
-
-  app.get('/p5/supporting-evidence/supporting-evidence-data-cya', function(req, res) {
-
-    let question = req.session.data['question']
-
-    if (question === 'yes') {
-        res.redirect('interruption-screen-cya')
-      } else {
-        res.redirect('check')
-      }
-  });
-
-  app.get('/p5/supporting-evidence/interruption-screen-cya', function(req, res) {
-    res.render('p5/supporting-evidence/interruption-screen', { 'cya' : 'true' });
-  });
-
-  app.get('/p5/supporting-evidence/supporting-evidence-upload-1-cya', function(req, res) {
-    res.render('p5/supporting-evidence/supporting-evidence-upload-1', { 'cya' : 'true' });
-  });
-
-  app.get('/p5/supporting-evidence-upload-2-cya', function(req, res) {
-    res.render('p5/supporting-evidence-upload-2', { 'cya' : 'true' });
-  });
-
-  app.get('/p5/supporting-evidence/supporting-evidence-upload-3-cya', function(req, res) {
-    res.render('p5/supporting-evidence/supporting-evidence-upload-3', { 'cya' : 'true' });
-  });
-
-  app.get('/p5/supporting-evidence/uploading-supporting-evidence-1-cya', function(req, res) {
-    res.render('p5/supporting-evidence/uploading', { 'file' : 'supporting-evidence-1', 'cya' : 'true' });
-  });
-
-  app.get('/p5/supporting-evidence/uploading-supporting-evidence-2-cya', function(req, res) {
-    res.render('p5/supporting-evidence/uploading', { 'file' : 'supporting-evidence-2', 'cya' : 'true' });
-  });
-
-  app.get('/p5/supporting-evidence/uploading-supporting-evidence-3-cya', function(req, res) {
-    res.render('p5/supporting-evidence/uploading', { 'file' : 'supporting-evidence-3', 'cya' : 'true' });
-  });
-
-
-  app.get('/p5/supporting-evidence/supporting-evidence-upload-1-cya', function(req, res) {
-    res.render('p5/supporting-evidence/supporting-evidence-upload-1', { 'cya' : 'true' });
-  });
-
-  app.get('/p5/supporting-evidence/supporting-evidence-upload-cya', function(req, res) {
-    res.render('p5/supporting-evidence/supporting-evidence-upload-2', { 'cya' : 'true' });
-  });
-
-  app.get('/p5/supporting-evidence/supporting-evidence-upload-3-cya', function(req, res) {
-    res.render('p5/supporting-evidence/supporting-evidence-upload-3', { 'cya' : 'true' });
-  });
-
-  app.get('/p5/supporting-evidence/supporting-evidence-uploaded-1-cya', function(req, res) {
-    res.render('p5/supporting-evidence/supporting-evidence-uploaded-1', { 'cya' : 'true' });
-  });
-
-  app.get('/p5/supporting-evidence/supporting-evidence-uploaded-2-cya', function(req, res) {
-    res.render('p5/supporting-evidence/supporting-evidence-uploaded-2', { 'cya' : 'true' });
-  });
-
-  app.get('/p5/supporting-evidence/supporting-evidence-uploaded-3-cya', function(req, res) {
-    res.render('p5/supporting-evidence/supporting-evidence-uploaded-3', { 'cya' : 'true' });
-  });
-
-  app.get('/p5/supporting-evidence/supporting-evidence-uploaded-1-data-cya', function(req, res) {
-
-    let question = req.session.data['question']
-
-    if (question === 'yes') {
-        res.redirect('supporting-evidence-upload-2-cya')
-      } else {
-        res.redirect('check')
-      }
-  });
-
-  app.get('/p5/supporting-evidence/supporting-evidence-uploaded-2-data-cya', function(req, res) {
-
-    let question = req.session.data['question']
-
-    if (question === 'yes') {
-        res.redirect('supporting-evidence-upload-3-cya')
-      } else {
-        res.redirect('check')
-      }
-  });
-
-  app.get('/p5/supporting-evidence/supporting-evidence-uploaded-3-data-cya', function(req, res) {
-
-    let question = req.session.data['question']
-
-    if (question === 'yes') {
-        res.redirect('supporting-evidence-upload-4-cya')
-      } else {
-        res.redirect('check')
-      }
+    req.session.sectionStatus.approval = 'completed';
+    res.redirect('/approval/check')
   });
 
 

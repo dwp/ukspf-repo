@@ -22,10 +22,8 @@
 {% block content %}
 
 <div class="govuk-grid-row">
-  <div class="govuk-grid-column-full-width">
-
+  <div class="govuk-grid-column-full">
     <form action="/declarations/evidence/index-answer" method="post" novalidate>
-      <div class="govuk-form-group">
         <fieldset class="govuk-fieldset" aria-describedby="declaration-hint">
           <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
             <span class="govuk-caption-l">Declarations</span>
@@ -34,6 +32,7 @@
             </h1>
           </legend>
           <p>We may ask you to provide the following evidence if you are awarded funding. Please confirm your organisation has:</p>
+
           <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
             <div class="govuk-checkboxes__item">
               <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses">
@@ -41,6 +40,7 @@
                 Equal Opportunities Policy Statement
               </label>
             </div>
+
             <div class="govuk-checkboxes__item">
               <input class="govuk-checkboxes__input" id="waste-2" name="waste" type="checkbox" value="mines">
               <label class="govuk-label govuk-checkboxes__label" for="waste-2">
@@ -104,7 +104,6 @@
           </div>
 
         </fieldset>
-      </div>
       <br>
       {{ govukButton({
         text: "Save and continue"
@@ -114,6 +113,6 @@
 
     {% include "declarations/evidence/_return-link.html" %}
 
-  </div><!-- govuk-grid-column-two-thirds -->
-</div><!-- govuk-grid-row -->
+  </div>
+</div>
 {% endblock %}
