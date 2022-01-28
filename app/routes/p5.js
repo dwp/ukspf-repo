@@ -42,193 +42,211 @@ module.exports = function (app) {
       }
     }
 
+    // sectioncount
     if (!req.session.sectionCount){
       req.session.sectionCount = 0;
     }
 
+    // organisations
+    if (!req.session.orgcount){
+      req.session.orgcount = 0;
+    }
 
     // organisations
-    if (req.query.organisations == 'completed') {
-      if (req.session.sectionStatus.organisations != 'completed') {
+    if (!req.session.organisationscount){
+      req.session.organisationscount = 0;
+    }
+
+    // contributors
+    if (!req.session.contributorscount){
+      req.session.contributorscount = 0;
+    }
+
+    // nameandteam
+    if (!req.session.nameandteamcount){
+      req.session.nameandteamcount = 0;
+    }
+
+    // description
+    if (!req.session.descriptioncount){
+      req.session.descriptioncount = 0;
+    }
+
+    // timeline
+    if (!req.session.timelinecount){
+      req.session.timelinecount = 0;
+    }
+
+    // milestones and outcomes are not included here as timeline is the only list ID related to the timeline section status
+
+    // projectmanagement
+    if (!req.session.projectmanagementcount){
+      req.session.projectmanagementcount = 0;
+    }
+
+    // compliance
+    if (!req.session.compliancecount){
+      req.session.compliancecount = 0;
+    }
+
+    // annualincome
+    if (!req.session.annualincomecount){
+      req.session.annualincomecount = 0;
+    }
+
+    // costbreakdown
+    if (!req.session.costbreakdowncount){
+      req.session.costbreakdowncount = 0;
+    }
+
+    // financemanagement
+    if (!req.session.financemanagementcount){
+      req.session.financemanagementcount = 0;
+    }
+
+    // evidence
+    if (!req.session.evidencecount){
+      req.session.evidencecount = 0;
+    }
+
+    // falseinformation
+    if (!req.session.falseinformationcount){
+      req.session.falseinformationcount = 0;
+    }
+
+    // gdpr
+    if (!req.session.gdprcount){
+      req.session.gdprcount = 0;
+    }
+
+    // approval
+    if (!req.session.approvalcount){
+      req.session.approvalcount = 0;
+    }
+
+
+    // organisations
+    if (req.session.sectionStatus.organisations == 'completed') {
+      if (req.session.orgcount == 0) {
+        console.log('help');
         req.session.sectionCount = (req.session.sectionCount + 1);
+        req.session.orgcount = 1;
       }
-      req.session.sectionStatus.organisations = req.query.organisations
-    };
-    if (req.query.organisations == 'inprogress') {
-      req.session.sectionStatus.organisations = req.query.organisations
     };
 
     // contributors
-    if (req.query.contributors == 'completed') {
-      if (req.session.sectionStatus.contributors != 'completed') {
+    if (req.session.sectionStatus.contributors == 'completed') {
+      if (req.session.contributorscount == 0) {
         req.session.sectionCount = (req.session.sectionCount + 1);
+        req.session.contributorscount = 1;
       }
-      req.session.sectionStatus.contributors = req.query.contributors
-    };
-    if (req.query.contributors == 'inprogress') {
-      req.session.sectionStatus.contributors = req.query.contributors
     };
 
     // nameandteam
-    if (req.query.nameandteam == 'completed') {
-      if (req.session.sectionStatus.nameandteam != 'completed') {
+    if (req.session.sectionStatus.nameandteam == 'completed') {
+      if (req.session.nameandteamcount == 0) {
         req.session.sectionCount = (req.session.sectionCount + 1);
+        req.session.nameandteamcount = 1;
       }
-      req.session.sectionStatus.nameandteam = req.query.nameandteam
-    };
-    if (req.query.nameandteam == 'inprogress') {
-      req.session.sectionStatus.nameandteam = req.query.nameandteam
     };
 
     // description
-    if (req.query.description == 'completed') {
-      if (req.session.sectionStatus.description != 'completed') {
+    if (req.session.sectionStatus.description == 'completed') {
+      if (req.session.descriptioncount == 0) {
         req.session.sectionCount = (req.session.sectionCount + 1);
+        req.session.descriptioncount = 1;
       }
-      req.session.sectionStatus.description = req.query.description
-    };
-    if (req.query.description == 'inprogress') {
-      req.session.sectionStatus.description = req.query.description
     };
 
     // timeline
-    if (req.query.timeline == 'completed') {
-      if (req.session.sectionStatus.timeline != 'completed') {
+    if (req.session.sectionStatus.timeline == 'completed') {
+      if (req.session.timelinecount == 0) {
+        console.log('timeline');
         req.session.sectionCount = (req.session.sectionCount + 1);
+        req.session.timelinecount = 1;
+        console.log(req.session.timelinecount);
       }
-      req.session.sectionStatus.timeline = req.query.timeline
-    };
-    if (req.query.timeline == 'inprogress') {
-      req.session.sectionStatus.timeline = req.query.timeline
-    };
-
-    // milestones
-    if (req.query.milestones == 'completed') {
-      if (req.session.sectionStatus.timeline != 'completed') {
-        req.session.sectionCount = (req.session.sectionCount + 1);
-      }
-      req.session.sectionStatus.timeline = req.query.timeline
-    };
-    if (req.query.timeline == 'inprogress') {
-      req.session.sectionStatus.timeline = req.query.timeline
-    };
-
-    // outcomes
-    if (req.query.outcomes == 'completed') {
-      if (req.session.sectionStatus.timeline != 'completed') {
-        req.session.sectionCount = (req.session.sectionCount + 1);
-      }
-      req.session.sectionStatus.timeline = req.query.timeline
-    };
-    if (req.query.timeline == 'inprogress') {
-      req.session.sectionStatus.timeline = req.query.timeline
     };
 
     // projectmanagement
-    if (req.query.projectmanagement == 'completed') {
-      if (req.session.sectionStatus.projectmanagement != 'completed') {
+    if (req.session.sectionStatus.projectmanagement == 'completed') {
+      if (req.session.projectmanagementcount == 0) {
         req.session.sectionCount = (req.session.sectionCount + 1);
+        req.session.projectmanagementcount = 1;
       }
-      req.session.sectionStatus.projectmanagement = req.query.projectmanagement
-    };
-    if (req.query.projectmanagement == 'inprogress') {
-      req.session.sectionStatus.projectmanagement = req.query.projectmanagement
     };
 
     // compliance
-    if (req.query.compliance == 'completed') {
-      if (req.session.sectionStatus.compliance != 'completed') {
+    if (req.session.sectionStatus.compliance == 'completed') {
+      if (req.session.compliancecount == 0) {
         req.session.sectionCount = (req.session.sectionCount + 1);
+        req.session.compliancecount = 1;
       }
-      req.session.sectionStatus.compliance = req.query.compliance
-    };
-    if (req.query.compliance == 'inprogress') {
-      req.session.sectionStatus.compliance = req.query.compliance
     };
 
     // annualincome
-    if (req.query.annualincome == 'completed') {
-      if (req.session.sectionStatus.annualincome != 'completed') {
+    if (req.session.sectionStatus.annualincome == 'completed') {
+      if (req.session.annualincomecount == 0) {
         req.session.sectionCount = (req.session.sectionCount + 1);
+        req.session.annualincomecount = 1;
       }
-      req.session.sectionStatus.annualincome = req.query.annualincome
-    };
-    if (req.query.annualincome == 'inprogress') {
-      req.session.sectionStatus.annualincome = req.query.annualincome
     };
 
     // costbreakdown
-    if (req.query.costbreakdown == 'completed') {
-      if (req.session.sectionStatus.costbreakdown != 'completed') {
+    if (req.session.sectionStatus.costbreakdown == 'completed') {
+      if (req.session.costbreakdowncount == 0) {
         req.session.sectionCount = (req.session.sectionCount + 1);
+        req.session.costbreakdowncount = 1;
       }
-      req.session.sectionStatus.costbreakdown = req.query.costbreakdown
-    };
-    if (req.query.costbreakdown == 'inprogress') {
-      req.session.sectionStatus.costbreakdown = req.query.costbreakdown
     };
 
     // financemanagement
-    if (req.query.financemanagement == 'completed') {
-      if (req.session.sectionStatus.financemanagement != 'completed') {
+    if (req.session.sectionStatus.financemanagement == 'completed') {
+      if (req.session.financemanagementcount == 0) {
         req.session.sectionCount = (req.session.sectionCount + 1);
+        req.session.financemanagementcount = 1;
       }
-      req.session.sectionStatus.financemanagement = req.query.financemanagement
-    };
-    if (req.query.financemanagement == 'inprogress') {
-      req.session.sectionStatus.financemanagement = req.query.financemanagement
     };
 
     // evidence
-    if (req.query.evidence == 'completed') {
-      if (req.session.sectionStatus.evidence != 'completed') {
+    if (req.session.sectionStatus.evidence == 'completed') {
+      if (req.session.evidencecount == 0) {
         req.session.sectionCount = (req.session.sectionCount + 1);
+        req.session.evidencecount = 1;
       }
-      req.session.sectionStatus.evidence = req.query.evidence
-    };
-    if (req.query.evidence == 'inprogress') {
-      req.session.sectionStatus.evidence = req.query.evidence
     };
 
     // falseinformation
-    if (req.query.falseinformation == 'completed') {
-      if (req.session.sectionStatus.falseinformation != 'completed') {
+    if (req.session.sectionStatus.falseinformation == 'completed') {
+      if (req.session.falseinformationcount == 0) {
         req.session.sectionCount = (req.session.sectionCount + 1);
+        req.session.falseinformationcount = 1;
       }
-      req.session.sectionStatus.falseinformation = req.query.falseinformation
-    };
-    if (req.query.falseinformation == 'inprogress') {
-      req.session.sectionStatus.falseinformation = req.query.falseinformation
     };
 
     // gdpr
-    if (req.query.gdpr == 'completed') {
-      if (req.session.sectionStatus.gdpr != 'completed') {
+    if (req.session.sectionStatus.gdpr == 'completed') {
+      if (req.session.gdprcount == 0) {
         req.session.sectionCount = (req.session.sectionCount + 1);
+        req.session.gdprcount = 1;
       }
-      req.session.sectionStatus.gdpr = req.query.gdpr
-    };
-    if (req.query.gdpr == 'inprogress') {
-      req.session.sectionStatus.gdpr = req.query.gdpr
     };
 
     // approval
-    if (req.query.approval == 'completed') {
-      if (req.session.sectionStatus.approval != 'completed') {
+    if (req.session.sectionStatus.approval == 'completed') {
+      if (req.session.approvalcount == 0) {
         req.session.sectionCount = (req.session.sectionCount + 1);
+        req.session.approvalcount = 1;
       }
-      req.session.sectionStatus.approval = req.query.approval
-    };
-    if (req.query.approval == 'inprogress') {
-      req.session.sectionStatus.approval = req.query.approval
     };
 
-    res.render('p5/list.html', {sectionStatus: req.session.sectionStatus, sectionCount: req.session.sectionCount});
-  });
 
-  // Clear data on the 'application cancelled' screen
+      res.render('p5/list.html', {sectionStatus: req.session.sectionStatus, sectionCount: req.session.sectionCount});
+    });
 
-  app.get('/*/clear-p5', function (req, res) {
+    // Clear data on the 'application cancelled' screen
+
+  app.get('/prototype-admin/clear-data', function (req, res) {
     req.session.destroy()
     res.render('p5/application-cancelled')
   })
