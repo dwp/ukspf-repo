@@ -30,6 +30,9 @@
   <div class="govuk-grid-column-full-width">
     <div class="govuk-grid-column-three-quarters">
       <h1 class="govuk-heading-l">UK Shared Prosperity Fund competitions</h1>
+      <p>From: <a href="#">Department for Work and Pensions</a></p>
+      <p>Applies to: England, Scotland, Wales and Northern Ireland</p>
+      <p>Apply to run projects backed by the UK Shared Prosperity Fund (UKSPF), which aims to improve employment prospects for people who are furthest from the labour market.</p>
     </div>
   </div>
 </div>
@@ -37,8 +40,8 @@
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-one-quarter">
     <div class="govuk-form-group">
-      <h3 class="govuk-heading-s">Search competitions</h3>
-      <label class="govuk-label" for="input-with-suffix"> Keywords </label>
+      <h3 class="govuk-heading-s"></h3>
+      <label class="govuk-label" for="input-with-suffix">Search</label>
       <div class="govuk-input__wrapper">
         <input class="govuk-input" id="input-with-suffix" name="weight" type="text">
         <div class="govuk-input__suffix" aria-hidden="true">
@@ -47,7 +50,36 @@
       </div>
     </div>
     <div>
-      <p>Filters:</p>
+
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset" aria-describedby="sort-hint">
+          <div>
+            <p class="govuk-body govuk-!-font-weight-bold">Status</p>
+          </div>
+          <div class="govuk-radios govuk-radios--small" data-module="govuk-radios">
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="sort-1" name="sort" type="radio" value="open">
+              <label class="govuk-label govuk-radios__label" for="sort-1">
+                Open
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="sort-2" name="sort" type="radio" value="closed">
+              <label class="govuk-label govuk-radios__label" for="sort-2">
+                Closed
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="sort-3" name="sort" type="radio" value="upcoming">
+              <label class="govuk-label govuk-radios__label" for="sort-3">
+                Upcoming
+              </label>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+
+      <hr>
       <p class="govuk-body govuk-!-font-weight-bold">Area</p>
     </div>
 
@@ -103,11 +135,11 @@
           </div>
         </div>
     </div>
-  <hr>
 
-  <div>
-    <p class="govuk-body govuk-!-font-weight-bold">Fund amount</p>
-  </div>
+    <div>
+      <hr>
+      <p class="govuk-body govuk-!-font-weight-bold">Fund amount</p>
+    </div>
   <div class="govuk-form-group ex1">
       <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
         <div class="govuk-checkboxes__item">
@@ -136,35 +168,7 @@
         </div>
       </div>
   </div>
-<hr>
-
-    <div class="govuk-form-group">
-      <fieldset class="govuk-fieldset" aria-describedby="sort-hint">
-        <div>
-          <p class="govuk-body govuk-!-font-weight-bold">Status</p>
-        </div>
-        <div class="govuk-radios govuk-radios--small" data-module="govuk-radios">
-          <div class="govuk-radios__item">
-            <input class="govuk-radios__input" id="sort-1" name="sort" type="radio" value="open">
-            <label class="govuk-label govuk-radios__label" for="sort-1">
-              Open
-            </label>
-          </div>
-          <div class="govuk-radios__item">
-            <input class="govuk-radios__input" id="sort-2" name="sort" type="radio" value="closed">
-            <label class="govuk-label govuk-radios__label" for="sort-2">
-              Closed
-            </label>
-          </div>
-          <div class="govuk-radios__item">
-            <input class="govuk-radios__input" id="sort-3" name="sort" type="radio" value="upcoming">
-            <label class="govuk-label govuk-radios__label" for="sort-3">
-              Upcoming
-            </label>
-          </div>
-        </div>
-      </fieldset>
-    </div>
+  <hr>
   </div>
 
   <div class="govuk-grid-column-three-quarters">
@@ -176,14 +180,15 @@
     <p></p>
   </div>
   <div class="govuk-grid-column-three-quarters">
-    <h3 class="govuk-heading-s"><a href="competition/summary">OPEN - Strengthening Employment Skills for the over 50s</a></h3>
+    <h3 class="govuk-heading-s"><a href="competition/summary">OPEN: Strengthening Employment Skills for the over 50s</a></h3>
+    <p>Summary description.</p>
     <h3 class="govuk-heading-s govuk-!-margin-bottom-1">Area</h3>
     <p>Greater Manchester</p>
-    <h3 class="govuk-heading-s govuk-!-margin-bottom-1">Fund amount</h3>
+    <h3 class="govuk-heading-s govuk-!-margin-bottom-1">Amount</h3>
     <p>£600,000 over 3 years</p>
     <h3 class="govuk-heading-s govuk-!-margin-bottom-1">When to apply</h3>
-    <p class="govuk-!-margin-bottom-1">Open date: 7 October 2021 at 12:00 am</p>
-    <p>Closing date: 7 January 2022 at 12:00 am</p>
+    <p class="govuk-!-margin-bottom-1">Opens: 7 October 2021 at 12:00 am</p>
+    <p>Closes: 7 January 2022 at 12:00 am</p>
     <hr>
   </div>
 
@@ -191,15 +196,14 @@
     <p></p>
   </div>
     <div class="govuk-grid-column-three-quarters">
-      <br>
-      <h3 class="govuk-heading-s"><a href="competition/summary">OPEN - Support for the homeless</a></h3>
+      <h3 class="govuk-heading-s"><a href="competition/summary">OPEN: Support for the homeless</a></h3>
       <h3 class="govuk-heading-s govuk-!-margin-bottom-1">Area</h3>
       <p>London</p>
-      <h3 class="govuk-heading-s govuk-!-margin-bottom-1">Fund amount</h3>
+      <h3 class="govuk-heading-s govuk-!-margin-bottom-1">Amount</h3>
       <p>£1,000,000 over 3 years</p>
       <h3 class="govuk-heading-s govuk-!-margin-bottom-1">When to apply</h3>
-      <p class="govuk-!-margin-bottom-1">Open date: 11 February 2022 at 12:00 am</p>
-      <p>Closing date: 7 June 2022 at 12:00 am</p>
+      <p class="govuk-!-margin-bottom-1">Opens: 11 February 2022 at 12:00 am</p>
+      <p>Closes: 11 June 2022 at 12:00 am</p>
     </div>
 
 </div>
