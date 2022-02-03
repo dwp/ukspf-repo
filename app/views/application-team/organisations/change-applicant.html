@@ -16,49 +16,67 @@
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
 
-    <form action="/application-team/contributors/contributor-added" method="post" novalidate>
+    <form action="/application-team/organisations/check-your-answers-applicant" method="post" novalidate>
 
       <span class="govuk-caption-l">Application team</span>
       <h1 class="govuk-heading-l">
-        Contributors
+        Organisation structure
       </h1>
+
       <h2 class="govuk-heading-m">
-        Add a contributor
+        Change applicant details
       </h2>
 
-      <div class="govuk-form-group">
+  <div>
+      <div>
         <label class="govuk-label" for="event-name">
-            Organisation
+            Organisation name
         </label>
         <input class="govuk-input" id="name" name="team-member" type="text" value="">
       </div>
-      <div class="govuk-form-group">
+      <p></p>
+      <p></p>
+  </div>
+
+  <div>
+      <div>
         <label class="govuk-label" for="event-name">
-            Full name
-        </label>
-        <input class="govuk-input" id="name" name="team-member" type="text" value="">
-      </div>
-      <div class="govuk-form-group">
-        <label class="govuk-label" for="event-name">
-            Email
-        </label>
-        <input class="govuk-input" id="name" name="team-member" type="text" value="">
-      </div>
-      <div class="govuk-form-group">
-        <label class="govuk-label" for="event-name">
-            Role
+            Organisation type
         </label>
         <input class="govuk-input govuk-input--width-20" id="name" name="team-member" type="text" value="">
       </div>
+      <p></p>
+      <p></p>
+  </div>
 
+  <div>
+      <div>
+        <label class="govuk-label" for="event-name">
+            Registration number
+        </label>
+        <input class="govuk-input govuk-input--width-10" id="name" name="registration-number" type="text" value="">
+      </div>
+      <p></p>
+      <p></p>
+  </div>
 
+  <div>
+      <div>
+        <label class="govuk-label" for="event-name">
+            Status
+        </label>
+        <input class="govuk-input govuk-input--width-10" id="name" name="team-member" type="text" value="">
+      </div>
+      <p></p>
+      <p></p>
+  </div>
+
+<br>
       {{ govukButton({
         text: "Save and continue"
       }) }}
 
     </form>
-
-    {% include "application-team/contributors/_return-link.html" %}
 
   </div><!-- govuk-grid-column-two-thirds -->
 </div><!-- govuk-grid-row -->

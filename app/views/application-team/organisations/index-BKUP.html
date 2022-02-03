@@ -1,0 +1,109 @@
+{% set pageTitle = "Does your condition affect you talking, listening and understanding?" %}
+
+{% extends "layout-account.html" %}
+
+{% block pageTitle %}
+  {{ pageTitle }} {% include "p5/_page-title-slug.html" %}
+{% endblock %}
+
+{% block beforeContent %}
+  {% include "p5/_beta-banner.html" %}
+  {% include "p5/_back-link.html" %}
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+
+    <form action="/application-team/organisations/index-answer" method="post" novalidate>
+
+      <span class="govuk-caption-l">Application team</span>
+      <h1 class="govuk-heading-l">
+        Organisation structure
+      </h1>
+      <!-- applicant -->
+            <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  <h2 class="govuk-heading-m">Applicant</h2>
+                </dt>
+                <dd class="govuk-summary-list__value">
+                </dd>
+                <dd class="govuk-summary-list__actions">
+                  <a class="govuk-link" href="#">
+                  <span class="govuk-visually-hidden"> remove</span>
+                  </a>
+                </dd>
+                <dd class="govuk-summary-list__actions">
+                  <!-- <a class="govuk-link" href="change-applicant">
+                    Change<span class="govuk-visually-hidden"> change</span>
+                  </a> -->
+                </dd>
+              </div>
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  Organisation name
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  Rehearse Ltd
+                </dd>
+                <dd class="govuk-summary-list__actions">
+                </dd>
+                <dd class="govuk-summary-list__actions">
+                </dd>
+              </div>
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  Organisation type
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  Registered company
+                </dd>
+                <dd class="govuk-summary-list__actions">
+                </dd>
+                <dd class="govuk-summary-list__actions">
+                </dd>
+              </div>
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  Registration number
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  A123456
+                </dd>
+                <dd class="govuk-summary-list__actions">
+                </dd>
+                <dd class="govuk-summary-list__actions">
+                </dd>
+              </div>
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  Status
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  Active
+                </dd>
+                <dd class="govuk-summary-list__actions">
+                </dd>
+                <dd class="govuk-summary-list__actions">
+                </dd>
+              </div>
+            </dl>
+<h2 class="govuk-heading-m">
+  Create consortium
+</h2>
+<p>Add a partner applicant to create a consortium. When you add a partner applicant and they accept your invitation, your organisation automatically becomes the lead applicant. Read more about consortium applications.</p>
+<p><a href="/application-team/organisations/add-partner">Add partner applicant</a></p>
+
+{{ govukButton({
+  text: "Save and continue"
+}) }}
+
+    </form>
+    {% include "application-team/organisations/_return-link.html" %}
+    <!-- <a href="/p5/list?organisations=completed" class="govuk-button">Save and return to application overview</a> -->
+
+  </div><!-- govuk-grid-column-two-thirds -->
+</div><!-- govuk-grid-row -->
+{% endblock %}
