@@ -1,0 +1,106 @@
+{% set pageTitle = "Page title" %}
+
+{% extends "layout-create-account.html" %}
+
+{% block pageTitle %}
+  {{ pageTitle }} {% include "version-4/_page-title-slug.html" %}
+{% endblock %}
+
+{% block beforeContent %}
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      alpha
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+    </span>
+  </p>
+</div>
+{% endblock %}
+
+{% block content %}
+
+
+{%- from "moj/components/side-navigation/macro.njk" import mojSideNavigation -%}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <h1 class="govuk-heading-l">Competition</h1>
+  </div>
+</div>
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-one-quarter">
+    <nav class="moj-side-navigation" aria-label="Side navigation">
+      <ul class="moj-side-navigation__list">
+        <li class="moj-side-navigation__item">
+          <a href="/version-4/competition/summary" aria-current="location">Summary</a>
+        </li>
+        <li class="moj-side-navigation__item">
+          <a href="/version-4/competition/eligibility">Eligibility</a>
+        </li>
+        <li class="moj-side-navigation__item">
+          <a href="/version-4/competition/scope">Scope</a>
+        </li>
+        <li class="moj-side-navigation__item">
+          <a href="/version-4/competition/dates">Dates</a>
+        </li>
+        <li class="moj-side-navigation__item">
+          <a href="/version-4/competition/how-to-apply">How to apply</a>
+        </li>
+        <li class="moj-side-navigation__item">
+          <a href="/version-4/competition/funding">Funding</a>
+        </li>
+        <li class="moj-side-navigation__item moj-side-navigation__item--active">
+          <a href="/version-4/competition/supporting-information">Supporting information</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+
+  <div class="govuk-grid-column-three-quarters">
+    <br>
+    <span class="govuk-caption-l">UKSPF Competition Details</span>
+    <h1 class="govuk-heading-m">Strengthening employment skills for the over-50s</h1>
+    <p>Organisations can apply for £600,000 over three years. </p>
+    <p class="govuk-body govuk-!-font-weight-bold govuk-body govuk-!-margin-bottom-1">Competition reference: <span class="govuk-body govuk-!-font-weight-regular">OC28S21P1837</span></p>
+    <br>
+    <p class="govuk-body govuk-!-font-weight-bold govuk-body govuk-!-margin-bottom-1">Published: <span class="govuk-body govuk-!-font-weight-regular">1 December 2021</span></p>
+    <p class="govuk-body govuk-!-font-weight-bold govuk-body govuk-!-margin-bottom-1">Last updated: <span class="govuk-body govuk-!-font-weight-regular">10 December 2021</span></p>
+    <br>
+    <p class="govuk-body govuk-!-font-weight-bold govuk-body govuk-!-margin-bottom-1">Competition opens: <span class="govuk-body govuk-!-font-weight-regular"> 29 December 2021 at 12:00</span></p>
+    <p class="govuk-body govuk-!-font-weight-bold govuk-body govuk-!-margin-bottom-5">Competition closes: <span class="govuk-body govuk-!-font-weight-regular"> 28 January 2022 at 12:00</span></p>
+  </div>
+
+  <div class="govuk-grid-column-one-quarter">
+    <p></p>
+  </div>
+
+  <div class="govuk-grid-column-three-quarters">
+    <p class="govuk-body govuk-!-margin-bottom-0"><a href="/version-4/do-you-have-an-account" role="button" draggable="false" class="govuk-button" data-module="govuk-button">Start new application</a></p>
+    <p>Or <a href="/version-4/sign-in-ukspf">sign in</a> to continue an existing application</p>
+    <hr>
+  </div>
+
+<div class="govuk-grid-column-one-quarter">
+  <p></p>
+</div>
+
+  <div class="govuk-grid-column-three-quarters">
+    <br>
+    <h2 class="govuk-heading-s">Guidance</h2>
+    <p></p>
+    <h2 class="govuk-heading-s">Frequently Asked Questions</h2>
+    <p></p>
+    <h2 class="govuk-heading-s">Technical support</h2>
+    <p></p>
+    <h2 class="govuk-heading-s">Contact us</h2>
+    <p></p>
+    <h2 class="govuk-heading-s">Downloads</h2>
+    <p></p>
+  </div>
+
+</div>
+
+{% endblock %}
